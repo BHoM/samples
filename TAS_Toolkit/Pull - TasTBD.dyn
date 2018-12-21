@@ -1,103 +1,182 @@
-<Workspace Version="1.3.3.4111" X="277.366454475627" Y="115.587363201994" zoom="0.294082046739992" ScaleFactor="1" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="True">
+<Workspace Version="1.3.3.4111" X="567.529417722918" Y="104.273122422529" zoom="0.288815865056615" ScaleFactor="1" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="True">
   <NamespaceResolutionMap>
     <ClassMap partialName="List" resolvedName="DSCore.List" assemblyName="DSCoreNodes.dll" />
   </NamespaceResolutionMap>
   <Elements>
-    <CoreNodeModels.Input.Filename guid="bbce8214-dac2-4f51-827e-49060801a85a" type="CoreNodeModels.Input.Filename" nickname="File Path" x="-252.067604157188" y="116.989185116178" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+    <CoreNodeModels.Input.Filename guid="bbce8214-dac2-4f51-827e-49060801a85a" type="CoreNodeModels.Input.Filename" nickname="File Path" x="-116.815840311443" y="374.852361046383" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
       <System.String>.\SAM_Live_2zones.tbd</System.String>
       <HintPath>C:\Users\mdengusi\Desktop\SAM_Bath\2018-11-21 LaundryBHoM\SAM_Live_2zones.tbd</HintPath>
     </CoreNodeModels.Input.Filename>
-    <CoreNodeModels.Input.BoolSelector guid="97160bc7-535a-4d5e-9646-73b26885b9f5" type="CoreNodeModels.Input.BoolSelector" nickname="Boolean" x="-218.194058129523" y="406.679005637686" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+    <BH.UI.Dynamo.Components.CreateAdapterComponent guid="f5694eef-6dce-4487-9824-49c0526c6901" type="BH.UI.Dynamo.Components.CreateAdapterComponent" nickname="TasTBDAdapter" x="102.155294994209" y="331.728673180787" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="True" />
+      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Adapter.TAS.TasTBDAdapter, TASTBD_Adapter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;.ctor&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
+    </BH.UI.Dynamo.Components.CreateAdapterComponent>
+    <BH.UI.Dynamo.Components.PullComponent guid="929a6676-5439-45ee-a9a6-1f6d27e8aea7" type="BH.UI.Dynamo.Components.PullComponent" nickname="Pull" x="380.328481875514" y="208.013276930056" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="True" />
+      <PortInfo index="2" default="True" />
+      <PortInfo index="3" default="True" />
+      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.UI.Components.PullCaller, BHoM_UI, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;Pull&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Adapter.BHoMAdapter, BHoM_Adapter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.oM.DataManipulation.Queries.IQuery\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Collections.Generic.Dictionary`2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot;, \&quot;GenericArguments\&quot; : [{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }, { \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }] }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
+    </BH.UI.Dynamo.Components.PullComponent>
+    <BH.UI.Dynamo.Components.CreateQueryComponent guid="a0d8d057-ae78-47d1-888f-7ac0ded1158b" type="BH.UI.Dynamo.Components.CreateQueryComponent" nickname="FilterQuery" x="146.155294994209" y="203.879987246282" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="True" />
+      <PortInfo index="1" default="True" />
+      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Engine.DataManipulation.Create, DataManipulation_Engine, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;FilterQuery&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
+    </BH.UI.Dynamo.Components.CreateQueryComponent>
+    <CoreNodeModels.Input.BoolSelector guid="97160bc7-535a-4d5e-9646-73b26885b9f5" type="CoreNodeModels.Input.BoolSelector" nickname="Boolean" x="-320.59646144219" y="276.583041803544" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
       <System.Boolean>False</System.Boolean>
     </CoreNodeModels.Input.BoolSelector>
-    <BH.UI.Basilisk.Components.CreateTypeComponent guid="45f613a1-add0-4d2b-b437-7670121668a9" type="BH.UI.Basilisk.Components.CreateTypeComponent" nickname="CreateType" x="-180.028861793535" y="298.717368882193" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="True" IsFrozen="false" isPinned="false">
+    <CoreNodeModels.Input.BoolSelector guid="bce4917c-9b9f-4827-af3f-dab9ed3fe332" type="CoreNodeModels.Input.BoolSelector" nickname="Boolean" x="-288.004465662125" y="659.3796956514" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.Boolean>True</System.Boolean>
+    </CoreNodeModels.Input.BoolSelector>
+    <CoreNodeModels.Input.Filename guid="31690046-09f1-49fe-894c-d7a24103e098" type="CoreNodeModels.Input.Filename" nickname="File Path" x="-155.361005875971" y="778.113639165601" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>.\SAM_Live_2zones.tbd</System.String>
+      <HintPath>C:\Users\mdengusi\Desktop\SAM_Bath\2018-11-21 LaundryBHoM\SAM_Live_2zones.tbd</HintPath>
+    </CoreNodeModels.Input.Filename>
+    <BH.UI.Dynamo.Components.CreateAdapterComponent guid="b060d2d9-e641-462e-8cad-58c3faa7b047" type="BH.UI.Dynamo.Components.CreateAdapterComponent" nickname="TasTBDAdapter" x="115.160100085697" y="722.860546439766" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="True" />
+      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Adapter.TAS.TasTBDAdapter, TASTBD_Adapter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;.ctor&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
+    </BH.UI.Dynamo.Components.CreateAdapterComponent>
+    <BH.UI.Dynamo.Components.CreateQueryComponent guid="6197b630-c4a1-4a6e-b2a7-f696ea4f8938" type="BH.UI.Dynamo.Components.CreateQueryComponent" nickname="FilterQuery" x="159.160100085697" y="595.011860505261" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="True" />
+      <PortInfo index="1" default="True" />
+      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Engine.DataManipulation.Create, DataManipulation_Engine, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;FilterQuery&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
+    </BH.UI.Dynamo.Components.CreateQueryComponent>
+    <BH.UI.Dynamo.Components.PullComponent guid="8bf43784-20e4-4e6f-b18b-5cbb5dc7a790" type="BH.UI.Dynamo.Components.PullComponent" nickname="Pull" x="393.333286967002" y="599.145150189035" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="True" />
+      <PortInfo index="2" default="True" />
+      <PortInfo index="3" default="True" />
+      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.UI.Components.PullCaller, BHoM_UI, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;Pull&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Adapter.BHoMAdapter, BHoM_Adapter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.oM.DataManipulation.Queries.IQuery\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Collections.Generic.Dictionary`2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot;, \&quot;GenericArguments\&quot; : [{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }, { \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }] }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
+    </BH.UI.Dynamo.Components.PullComponent>
+    <CoreNodeModels.Input.StringInput guid="8c19d61e-6f5b-4091-b610-237d8deecf06" type="CoreNodeModels.Input.StringInput" nickname="String" x="-151.399567755431" y="130.273683924902" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>BH.oM.Environment.Elements.Building</System.String>
+      <System.String value="BH.oM.Environment.Elements.Building" />
+    </CoreNodeModels.Input.StringInput>
+    <BH.UI.Dynamo.Components.CreateTypeComponent guid="0cc4b803-9a5c-434a-bdfc-bab2f9712653" type="BH.UI.Dynamo.Components.CreateTypeComponent" nickname="CreateType" x="-20.1995677554315" y="212.960597234547" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <Component value="{ &quot;_t&quot; : &quot;System.Type&quot;, &quot;Name&quot; : &quot;BH.oM.Environment.Elements.Building&quot; }" />
+    </BH.UI.Dynamo.Components.CreateTypeComponent>
+    <CoreNodeModels.Input.BoolSelector guid="e7d6f04a-7c24-4fc5-b673-5bd2c9a32d71" type="CoreNodeModels.Input.BoolSelector" nickname="Boolean" x="-201.400833729381" y="1041.48639165522" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.Boolean>False</System.Boolean>
+    </CoreNodeModels.Input.BoolSelector>
+    <BH.UI.Dynamo.Components.CreateQueryComponent guid="2d68f00e-cd1d-4b2f-818a-74a60aac6ecb" type="BH.UI.Dynamo.Components.CreateQueryComponent" nickname="FilterQuery" x="160.187301012685" y="990.144697754621" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="True" />
+      <PortInfo index="1" default="True" />
+      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Engine.DataManipulation.Create, DataManipulation_Engine, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;FilterQuery&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
+    </BH.UI.Dynamo.Components.CreateQueryComponent>
+    <CoreNodeModels.Input.Filename guid="7d259576-b845-4a42-8da9-60211bc3f1b8" type="CoreNodeModels.Input.Filename" nickname="File Path" x="-102.783834292967" y="1161.11707155472" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>.\SAM_Live_2zones.tbd</System.String>
+      <HintPath>C:\Users\mdengusi\Desktop\SAM_Bath\2018-11-21 LaundryBHoM\SAM_Live_2zones.tbd</HintPath>
+    </CoreNodeModels.Input.Filename>
+    <BH.UI.Dynamo.Components.CreateAdapterComponent guid="4457b932-d2d9-451f-9fef-53e55f75b949" type="BH.UI.Dynamo.Components.CreateAdapterComponent" nickname="TasTBDAdapter" x="116.187301012685" y="1117.99338368913" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="True" />
+      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Adapter.TAS.TasTBDAdapter, TASTBD_Adapter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;.ctor&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
+    </BH.UI.Dynamo.Components.CreateAdapterComponent>
+    <BH.UI.Dynamo.Components.PullComponent guid="5b8ac332-579d-470b-9c35-814cb8bfe9b4" type="BH.UI.Dynamo.Components.PullComponent" nickname="Pull" x="394.36048789399" y="994.277987438395" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="True" />
+      <PortInfo index="2" default="True" />
+      <PortInfo index="3" default="True" />
+      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.UI.Components.PullCaller, BHoM_UI, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;Pull&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Adapter.BHoMAdapter, BHoM_Adapter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.oM.DataManipulation.Queries.IQuery\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Collections.Generic.Dictionary`2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot;, \&quot;GenericArguments\&quot; : [{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }, { \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }] }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
+    </BH.UI.Dynamo.Components.PullComponent>
+    <CoreNodeModels.Input.BoolSelector guid="3ed3b040-9524-4413-a8cb-3e471a470525" type="CoreNodeModels.Input.BoolSelector" nickname="Boolean" x="-191.418723042535" y="1443.40581273707" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.Boolean>False</System.Boolean>
+    </CoreNodeModels.Input.BoolSelector>
+    <BH.UI.Dynamo.Components.CreateQueryComponent guid="d15315a0-3603-4acb-8175-51539fdce71b" type="BH.UI.Dynamo.Components.CreateQueryComponent" nickname="FilterQuery" x="170.169411699531" y="1392.06411883647" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="True" />
+      <PortInfo index="1" default="True" />
+      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Engine.DataManipulation.Create, DataManipulation_Engine, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;FilterQuery&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
+    </BH.UI.Dynamo.Components.CreateQueryComponent>
+    <CoreNodeModels.Input.Filename guid="c91185ad-fba8-420e-ac33-325ec8db9c2a" type="CoreNodeModels.Input.Filename" nickname="File Path" x="-92.8017236061208" y="1563.03649263657" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>.\SAM_Live_2zones.tbd</System.String>
+      <HintPath>C:\Users\mdengusi\Desktop\SAM_Bath\2018-11-21 LaundryBHoM\SAM_Live_2zones.tbd</HintPath>
+    </CoreNodeModels.Input.Filename>
+    <BH.UI.Dynamo.Components.CreateAdapterComponent guid="109e7885-4dc6-4fa3-b21f-6d8a4687b6ba" type="BH.UI.Dynamo.Components.CreateAdapterComponent" nickname="TasTBDAdapter" x="126.169411699531" y="1519.91280477097" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="True" />
+      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Adapter.TAS.TasTBDAdapter, TASTBD_Adapter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;.ctor&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
+    </BH.UI.Dynamo.Components.CreateAdapterComponent>
+    <BH.UI.Dynamo.Components.PullComponent guid="4d1e196d-a5af-4e67-83b0-85058e532d33" type="BH.UI.Dynamo.Components.PullComponent" nickname="Pull" x="404.342598580836" y="1396.19740852024" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="True" />
+      <PortInfo index="2" default="True" />
+      <PortInfo index="3" default="True" />
+      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.UI.Components.PullCaller, BHoM_UI, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;Pull&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Adapter.BHoMAdapter, BHoM_Adapter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.oM.DataManipulation.Queries.IQuery\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Collections.Generic.Dictionary`2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot;, \&quot;GenericArguments\&quot; : [{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }, { \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }] }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
+    </BH.UI.Dynamo.Components.PullComponent>
+    <BH.UI.Dynamo.Components.CreateTypeComponent guid="e30b1a89-bea2-422b-9a7a-1e4b9c98ba09" type="BH.UI.Dynamo.Components.CreateTypeComponent" nickname="CreateType" x="-78.9683252929034" y="589.819985123585" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="True" IsFrozen="false" isPinned="false">
       <Component value="{ &quot;_t&quot; : &quot;System.Type&quot;, &quot;Name&quot; : &quot;BH.oM.Environment.Elements.BuildingElement&quot; }" />
-    </BH.UI.Basilisk.Components.CreateTypeComponent>
-    <BH.UI.Basilisk.Components.PullComponent guid="cd0a158d-d40b-429e-8b69-66f6f29368d5" type="BH.UI.Basilisk.Components.PullComponent" nickname="Pull" x="391.068577304507" y="167.325470872227" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+    </BH.UI.Dynamo.Components.CreateTypeComponent>
+    <CoreNodeModels.Input.Filename guid="e3cc6aeb-031f-45c4-a369-871ec6b8a95d" type="CoreNodeModels.Input.Filename" nickname="File Path" x="-89.6623590950368" y="1969.09181100488" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>.\SAM_Live_2zones.tbd</System.String>
+      <HintPath>C:\Users\mdengusi\Desktop\SAM_Bath\2018-11-21 LaundryBHoM\SAM_Live_2zones.tbd</HintPath>
+    </CoreNodeModels.Input.Filename>
+    <BH.UI.Dynamo.Components.CreateAdapterComponent guid="55ff0991-a4ab-4a57-a0f1-e8dde7daad37" type="BH.UI.Dynamo.Components.CreateAdapterComponent" nickname="TasTBDAdapter" x="129.308776210615" y="1925.96812313928" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="True" />
+      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Adapter.TAS.TasTBDAdapter, TASTBD_Adapter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;.ctor&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
+    </BH.UI.Dynamo.Components.CreateAdapterComponent>
+    <BH.UI.Dynamo.Components.PullComponent guid="4b00a5af-fa64-4a38-8a6c-7ed61baf3165" type="BH.UI.Dynamo.Components.PullComponent" nickname="Pull" x="407.48196309192" y="1802.25272688855" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
       <PortInfo index="0" default="False" />
       <PortInfo index="1" default="True" />
       <PortInfo index="2" default="True" />
       <PortInfo index="3" default="True" />
-      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.UI.Components.PullCaller, BHoM_UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;Pull&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Adapter.BHoMAdapter, BHoM_Adapter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.oM.DataManipulation.Queries.IQuery\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Collections.Generic.Dictionary`2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot;, \&quot;GenericArguments\&quot; : [{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }, { \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }] }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
-    </BH.UI.Basilisk.Components.PullComponent>
-    <BH.UI.Basilisk.Components.CreateQueryComponent guid="ffee7fbe-1ee5-4849-b59e-c0c31a1aaa94" type="BH.UI.Basilisk.Components.CreateQueryComponent" nickname="FilterQuery" x="143.932418864224" y="216.797610887739" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
-      <PortInfo index="0" default="True" />
-      <PortInfo index="1" default="True" />
-      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Engine.DataManipulation.Create, DataManipulation_Engine, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;FilterQuery&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
-    </BH.UI.Basilisk.Components.CreateQueryComponent>
-    <BH.UI.Basilisk.Components.CreateAdapterComponent guid="4c214356-ea76-4994-9025-e639a099b369" type="BH.UI.Basilisk.Components.CreateAdapterComponent" nickname="TasTBDAdapter" x="99.9312008647053" y="116.632492899328" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
-      <PortInfo index="0" default="True" />
-      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Adapter.TAS.TasTBDAdapter, TASTBD_Adapter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;.ctor&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
-    </BH.UI.Basilisk.Components.CreateAdapterComponent>
-    <CoreNodeModels.Input.Filename guid="4876b3e9-e480-4978-aa9d-de865df53a60" type="CoreNodeModels.Input.Filename" nickname="File Path" x="-227.415612205965" y="597.878476966937" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
-      <System.String>.\SAM_Live_2zones.tbd</System.String>
-      <HintPath>C:\Users\mdengusi\Desktop\SAM_Bath\2018-11-21 LaundryBHoM\SAM_Live_2zones.tbd</HintPath>
-    </CoreNodeModels.Input.Filename>
-    <CoreNodeModels.Input.BoolSelector guid="cfd5059c-c270-444a-a138-f185f11adbec" type="CoreNodeModels.Input.BoolSelector" nickname="Boolean" x="-193.5420661783" y="887.568297488445" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.UI.Components.PullCaller, BHoM_UI, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;Pull&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Adapter.BHoMAdapter, BHoM_Adapter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.oM.DataManipulation.Queries.IQuery\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Collections.Generic.Dictionary`2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot;, \&quot;GenericArguments\&quot; : [{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }, { \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }] }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
+    </BH.UI.Dynamo.Components.PullComponent>
+    <CoreNodeModels.Input.BoolSelector guid="dd13c323-3596-4f9b-b054-77ddcfaed5ca" type="CoreNodeModels.Input.BoolSelector" nickname="Boolean" x="-188.279358531451" y="1849.46113110538" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
       <System.Boolean>False</System.Boolean>
     </CoreNodeModels.Input.BoolSelector>
-    <BH.UI.Basilisk.Components.CreateQueryComponent guid="cf20e08a-815e-402f-85c2-b04a16058565" type="BH.UI.Basilisk.Components.CreateQueryComponent" nickname="FilterQuery" x="168.584410815447" y="697.686902738498" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+    <BH.UI.Dynamo.Components.CreateQueryComponent guid="dc3f5cf4-1135-4cc1-9e84-54ad9d282688" type="BH.UI.Dynamo.Components.CreateQueryComponent" nickname="FilterQuery" x="173.308776210615" y="1798.11943720478" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
       <PortInfo index="0" default="True" />
       <PortInfo index="1" default="True" />
-      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Engine.DataManipulation.Create, DataManipulation_Engine, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;FilterQuery&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
-    </BH.UI.Basilisk.Components.CreateQueryComponent>
-    <BH.UI.Basilisk.Components.CreateAdapterComponent guid="442a55e0-9597-4abe-9d83-9a1404aa0d0f" type="BH.UI.Basilisk.Components.CreateAdapterComponent" nickname="TasTBDAdapter" x="124.583192815928" y="597.521784750087" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
-      <PortInfo index="0" default="True" />
-      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Adapter.TAS.TasTBDAdapter, TASTBD_Adapter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;.ctor&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
-    </BH.UI.Basilisk.Components.CreateAdapterComponent>
-    <BH.UI.Basilisk.Components.PullComponent guid="310e0756-4195-404c-aebe-92bfa94f6b21" type="BH.UI.Basilisk.Components.PullComponent" nickname="Pull" x="415.72056925573" y="648.214762722986" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true">
-      <PortInfo index="0" default="False" />
-      <PortInfo index="1" default="True" />
-      <PortInfo index="2" default="True" />
-      <PortInfo index="3" default="True" />
-      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.UI.Components.PullCaller, BHoM_UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;Pull&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Adapter.BHoMAdapter, BHoM_Adapter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.oM.DataManipulation.Queries.IQuery\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Collections.Generic.Dictionary`2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot;, \&quot;GenericArguments\&quot; : [{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }, { \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }] }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
-    </BH.UI.Basilisk.Components.PullComponent>
-    <CoreNodeModels.Input.Filename guid="41d394c3-fd58-47e1-9590-727b9f0913ff" type="CoreNodeModels.Input.Filename" nickname="File Path" x="-209.584299855749" y="1079.08140650617" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
-      <System.String>.\SAM_Live_2zones.tbd</System.String>
-      <HintPath>C:\Users\mdengusi\Desktop\SAM_Bath\2018-11-21 LaundryBHoM\SAM_Live_2zones.tbd</HintPath>
-    </CoreNodeModels.Input.Filename>
-    <BH.UI.Basilisk.Components.CreateQueryComponent guid="d8f51cf5-ecd0-4247-af9e-199c04edfe79" type="BH.UI.Basilisk.Components.CreateQueryComponent" nickname="FilterQuery" x="186.415723165663" y="1178.88983227774" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
-      <PortInfo index="0" default="True" />
-      <PortInfo index="1" default="True" />
-      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Engine.DataManipulation.Create, DataManipulation_Engine, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;FilterQuery&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
-    </BH.UI.Basilisk.Components.CreateQueryComponent>
-    <BH.UI.Basilisk.Components.CreateAdapterComponent guid="013c08d4-3e9b-4189-a5fa-3f2b20ddb136" type="BH.UI.Basilisk.Components.CreateAdapterComponent" nickname="TasTBDAdapter" x="142.414505166144" y="1078.72471428932" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
-      <PortInfo index="0" default="True" />
-      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Adapter.TAS.TasTBDAdapter, TASTBD_Adapter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;.ctor&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
-    </BH.UI.Basilisk.Components.CreateAdapterComponent>
-    <BH.UI.Basilisk.Components.PullComponent guid="a2bca546-4f9d-48d1-83c6-336fa0f3d783" type="BH.UI.Basilisk.Components.PullComponent" nickname="Pull" x="433.551881605946" y="1129.41769226222" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true">
-      <PortInfo index="0" default="False" />
-      <PortInfo index="1" default="True" />
-      <PortInfo index="2" default="True" />
-      <PortInfo index="3" default="True" />
-      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.UI.Components.PullCaller, BHoM_UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;Pull&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Adapter.BHoMAdapter, BHoM_Adapter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.oM.DataManipulation.Queries.IQuery\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Collections.Generic.Dictionary`2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot;, \&quot;GenericArguments\&quot; : [{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }, { \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }] }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
-    </BH.UI.Basilisk.Components.PullComponent>
-    <BH.UI.Basilisk.Components.CreateTypeComponent guid="297b6ad6-db1e-4ada-979a-b0756c94627f" type="BH.UI.Basilisk.Components.CreateTypeComponent" nickname="CreateType" x="-207.243172252738" y="785.642476325819" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Engine.DataManipulation.Create, DataManipulation_Engine, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;FilterQuery&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
+    </BH.UI.Dynamo.Components.CreateQueryComponent>
+    <BH.UI.Dynamo.Components.CreateTypeComponent guid="f52aabf0-e872-48dd-a730-aba74af5853c" type="BH.UI.Dynamo.Components.CreateTypeComponent" nickname="CreateType" x="-18.164538387438" y="1811.31604726865" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <Component value="{ &quot;_t&quot; : &quot;System.Type&quot;, &quot;Name&quot; : &quot;BH.oM.Environment.Elements.BuildingElement&quot; }" />
+    </BH.UI.Dynamo.Components.CreateTypeComponent>
+    <BH.UI.Dynamo.Components.CreateTypeComponent guid="84180964-1279-484b-afc2-f63cbce0069d" type="BH.UI.Dynamo.Components.CreateTypeComponent" nickname="CreateType" x="-25.3704192953306" y="990.616479773892" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="True" IsFrozen="false" isPinned="false">
       <Component value="{ &quot;_t&quot; : &quot;System.Type&quot;, &quot;Name&quot; : &quot;BH.oM.Environment.Elements.Space&quot; }" />
-    </BH.UI.Basilisk.Components.CreateTypeComponent>
-    <CoreNodeModels.Input.BoolSelector guid="67857917-57a3-4969-986d-3535d66d840f" type="CoreNodeModels.Input.BoolSelector" nickname="Boolean" x="-175.218854953423" y="1369.26312590234" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
-      <System.Boolean>False</System.Boolean>
-    </CoreNodeModels.Input.BoolSelector>
-    <BH.UI.Basilisk.Components.CreateTypeComponent guid="6f58d5a5-cbe7-4416-ba14-b9841bcb9342" type="BH.UI.Basilisk.Components.CreateTypeComponent" nickname="CreateType" x="-137.142820740717" y="1270.02176415553" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="True" IsFrozen="false" isPinned="false">
+    </BH.UI.Dynamo.Components.CreateTypeComponent>
+    <BH.UI.Dynamo.Components.CreateTypeComponent guid="c66338ce-ef21-4d68-bde9-75f9524cc616" type="BH.UI.Dynamo.Components.CreateTypeComponent" nickname="CreateType" x="-33.480527328181" y="1394.39255569422" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="True" IsFrozen="false" isPinned="false">
       <Component value="{ &quot;_t&quot; : &quot;System.Type&quot;, &quot;Name&quot; : &quot;BH.oM.Environment.Elements.Construction&quot; }" />
-    </BH.UI.Basilisk.Components.CreateTypeComponent>
+    </BH.UI.Dynamo.Components.CreateTypeComponent>
+    <BH.UI.Dynamo.Components.ExplodeObjectNode guid="91a131a2-bbb7-43db-bd60-04d30a0e3b23" type="BH.UI.Dynamo.Components.ExplodeObjectNode" nickname="ExplodeObject (old)" x="668.219804560646" y="736.390051260281" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" outputcount="7">
+      <PortInfo index="0" default="False" />
+      <OutputNames>
+        <InputName value="BuildingElementProperties" />
+        <InputName value="PanelCurve" />
+        <InputName value="Openings" />
+        <InputName value="BHoM_Guid" />
+        <InputName value="Name" />
+        <InputName value="Tags" />
+        <InputName value="CustomData" />
+      </OutputNames>
+    </BH.UI.Dynamo.Components.ExplodeObjectNode>
   </Elements>
   <Connectors>
-    <Dynamo.Graph.Connectors.ConnectorModel start="bbce8214-dac2-4f51-827e-49060801a85a" start_index="0" end="4c214356-ea76-4994-9025-e639a099b369" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="97160bc7-535a-4d5e-9646-73b26885b9f5" start_index="0" end="cd0a158d-d40b-429e-8b69-66f6f29368d5" end_index="3" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="45f613a1-add0-4d2b-b437-7670121668a9" start_index="0" end="ffee7fbe-1ee5-4849-b59e-c0c31a1aaa94" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="ffee7fbe-1ee5-4849-b59e-c0c31a1aaa94" start_index="0" end="cd0a158d-d40b-429e-8b69-66f6f29368d5" end_index="1" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="4c214356-ea76-4994-9025-e639a099b369" start_index="0" end="cd0a158d-d40b-429e-8b69-66f6f29368d5" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="4876b3e9-e480-4978-aa9d-de865df53a60" start_index="0" end="442a55e0-9597-4abe-9d83-9a1404aa0d0f" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="cfd5059c-c270-444a-a138-f185f11adbec" start_index="0" end="310e0756-4195-404c-aebe-92bfa94f6b21" end_index="3" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="cf20e08a-815e-402f-85c2-b04a16058565" start_index="0" end="310e0756-4195-404c-aebe-92bfa94f6b21" end_index="1" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="442a55e0-9597-4abe-9d83-9a1404aa0d0f" start_index="0" end="310e0756-4195-404c-aebe-92bfa94f6b21" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="41d394c3-fd58-47e1-9590-727b9f0913ff" start_index="0" end="013c08d4-3e9b-4189-a5fa-3f2b20ddb136" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="d8f51cf5-ecd0-4247-af9e-199c04edfe79" start_index="0" end="a2bca546-4f9d-48d1-83c6-336fa0f3d783" end_index="1" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="013c08d4-3e9b-4189-a5fa-3f2b20ddb136" start_index="0" end="a2bca546-4f9d-48d1-83c6-336fa0f3d783" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="297b6ad6-db1e-4ada-979a-b0756c94627f" start_index="0" end="cf20e08a-815e-402f-85c2-b04a16058565" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="67857917-57a3-4969-986d-3535d66d840f" start_index="0" end="a2bca546-4f9d-48d1-83c6-336fa0f3d783" end_index="3" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="6f58d5a5-cbe7-4416-ba14-b9841bcb9342" start_index="0" end="d8f51cf5-ecd0-4247-af9e-199c04edfe79" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="bbce8214-dac2-4f51-827e-49060801a85a" start_index="0" end="f5694eef-6dce-4487-9824-49c0526c6901" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="f5694eef-6dce-4487-9824-49c0526c6901" start_index="0" end="929a6676-5439-45ee-a9a6-1f6d27e8aea7" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="a0d8d057-ae78-47d1-888f-7ac0ded1158b" start_index="0" end="929a6676-5439-45ee-a9a6-1f6d27e8aea7" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="97160bc7-535a-4d5e-9646-73b26885b9f5" start_index="0" end="929a6676-5439-45ee-a9a6-1f6d27e8aea7" end_index="3" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="bce4917c-9b9f-4827-af3f-dab9ed3fe332" start_index="0" end="8bf43784-20e4-4e6f-b18b-5cbb5dc7a790" end_index="3" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="31690046-09f1-49fe-894c-d7a24103e098" start_index="0" end="b060d2d9-e641-462e-8cad-58c3faa7b047" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="b060d2d9-e641-462e-8cad-58c3faa7b047" start_index="0" end="8bf43784-20e4-4e6f-b18b-5cbb5dc7a790" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="6197b630-c4a1-4a6e-b2a7-f696ea4f8938" start_index="0" end="8bf43784-20e4-4e6f-b18b-5cbb5dc7a790" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="8bf43784-20e4-4e6f-b18b-5cbb5dc7a790" start_index="0" end="91a131a2-bbb7-43db-bd60-04d30a0e3b23" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="0cc4b803-9a5c-434a-bdfc-bab2f9712653" start_index="0" end="a0d8d057-ae78-47d1-888f-7ac0ded1158b" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="e7d6f04a-7c24-4fc5-b673-5bd2c9a32d71" start_index="0" end="5b8ac332-579d-470b-9c35-814cb8bfe9b4" end_index="3" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="2d68f00e-cd1d-4b2f-818a-74a60aac6ecb" start_index="0" end="5b8ac332-579d-470b-9c35-814cb8bfe9b4" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="7d259576-b845-4a42-8da9-60211bc3f1b8" start_index="0" end="4457b932-d2d9-451f-9fef-53e55f75b949" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="4457b932-d2d9-451f-9fef-53e55f75b949" start_index="0" end="5b8ac332-579d-470b-9c35-814cb8bfe9b4" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="3ed3b040-9524-4413-a8cb-3e471a470525" start_index="0" end="4d1e196d-a5af-4e67-83b0-85058e532d33" end_index="3" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="d15315a0-3603-4acb-8175-51539fdce71b" start_index="0" end="4d1e196d-a5af-4e67-83b0-85058e532d33" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="c91185ad-fba8-420e-ac33-325ec8db9c2a" start_index="0" end="109e7885-4dc6-4fa3-b21f-6d8a4687b6ba" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="109e7885-4dc6-4fa3-b21f-6d8a4687b6ba" start_index="0" end="4d1e196d-a5af-4e67-83b0-85058e532d33" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="e30b1a89-bea2-422b-9a7a-1e4b9c98ba09" start_index="0" end="6197b630-c4a1-4a6e-b2a7-f696ea4f8938" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="e3cc6aeb-031f-45c4-a369-871ec6b8a95d" start_index="0" end="55ff0991-a4ab-4a57-a0f1-e8dde7daad37" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="55ff0991-a4ab-4a57-a0f1-e8dde7daad37" start_index="0" end="4b00a5af-fa64-4a38-8a6c-7ed61baf3165" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="dd13c323-3596-4f9b-b054-77ddcfaed5ca" start_index="0" end="4b00a5af-fa64-4a38-8a6c-7ed61baf3165" end_index="3" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="dc3f5cf4-1135-4cc1-9e84-54ad9d282688" start_index="0" end="4b00a5af-fa64-4a38-8a6c-7ed61baf3165" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="f52aabf0-e872-48dd-a730-aba74af5853c" start_index="0" end="dc3f5cf4-1135-4cc1-9e84-54ad9d282688" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="84180964-1279-484b-afc2-f63cbce0069d" start_index="0" end="2d68f00e-cd1d-4b2f-818a-74a60aac6ecb" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="c66338ce-ef21-4d68-bde9-75f9524cc616" start_index="0" end="d15315a0-3603-4acb-8175-51539fdce71b" end_index="0" portType="0" />
   </Connectors>
   <Notes>
     <Dynamo.Graph.Notes.NoteModel guid="2e789484-dcef-49a0-afe9-92300dfab254" text="Get Inputs from Revit etc." x="-290.61801376874" y="-281.538200220139" />
@@ -132,26 +211,43 @@
     <Dynamo.Graph.Annotations.AnnotationModel guid="e6dfc7e3-ce0e-453a-82a6-d1e5a9dd1146" annotationText="WIP &#xD;&#xA;Things" left="825.917259160133" top="-363.538200220139" width="180" height="126.4" fontSize="30" InitialTop="-281.538200220139" InitialHeight="140" TextblockHeight="72" backgrouund="#FFB5B5B5">
       <Models ModelGuid="6194658d-ac74-4b8f-98ff-df36aa12d1cc" />
     </Dynamo.Graph.Annotations.AnnotationModel>
-    <Dynamo.Graph.Annotations.AnnotationModel guid="64b317ae-c5ce-4dc9-b94e-6386799546a4" annotationText="Select Tas TBD" left="-262.067604157188" top="85.389185116178" width="172" height="126.6" fontSize="18" InitialTop="116.989185116178" InitialHeight="125" TextblockHeight="21.6" backgrouund="#FFD4B6DB">
+    <Dynamo.Graph.Annotations.AnnotationModel guid="64b317ae-c5ce-4dc9-b94e-6386799546a4" annotationText="Select Tas TBD" left="-126.815840311443" top="343.252361046383" width="172" height="126.6" fontSize="18" InitialTop="374.852361046383" InitialHeight="125" TextblockHeight="21.6" backgrouund="#FFD4B6DB">
       <Models ModelGuid="bbce8214-dac2-4f51-827e-49060801a85a" />
     </Dynamo.Graph.Annotations.AnnotationModel>
-    <Dynamo.Graph.Annotations.AnnotationModel guid="458705f7-da34-4d40-9b09-cfa706954c24" annotationText="Pull BuildingElements" left="-228.194058129523" top="245.517368882193" width="146.693333333333" height="228.961636755493" fontSize="18" InitialTop="298.717368882193" InitialHeight="122.6" TextblockHeight="43.2" backgrouund="#FF48B9FF">
-      <Models ModelGuid="45f613a1-add0-4d2b-b437-7670121668a9" />
+    <Dynamo.Graph.Annotations.AnnotationModel guid="458705f7-da34-4d40-9b09-cfa706954c24" annotationText="Pull Building" left="-330.59646144219" top="244.983041803544" width="148.8" height="99.4" fontSize="18" InitialTop="276.583041803544" InitialHeight="122.6" TextblockHeight="21.6" backgrouund="#FF48B9FF">
       <Models ModelGuid="97160bc7-535a-4d5e-9646-73b26885b9f5" />
     </Dynamo.Graph.Annotations.AnnotationModel>
-    <Dynamo.Graph.Annotations.AnnotationModel guid="8f7fd0ed-cbdc-442a-92dc-608a9beebc7e" annotationText="Select Tas TBD" left="-237.415612205965" top="566.278476966937" width="172" height="126.6" fontSize="18" InitialTop="597.878476966937" InitialHeight="125" TextblockHeight="21.6" backgrouund="#FFD4B6DB">
-      <Models ModelGuid="4876b3e9-e480-4978-aa9d-de865df53a60" />
+    <Dynamo.Graph.Annotations.AnnotationModel guid="968b6ebe-7c2f-41d7-8a50-5e5dbd62a884" annotationText="Pull BuildingElements" left="-298.004465662125" top="558.219985123585" width="310.636140369221" height="168.959710527815" fontSize="18" InitialTop="589.819985123585" InitialHeight="135.94508383673" TextblockHeight="21.6" backgrouund="#FF48B9FF">
+      <Models ModelGuid="bce4917c-9b9f-4827-af3f-dab9ed3fe332" />
+      <Models ModelGuid="e30b1a89-bea2-422b-9a7a-1e4b9c98ba09" />
     </Dynamo.Graph.Annotations.AnnotationModel>
-    <Dynamo.Graph.Annotations.AnnotationModel guid="21d1686c-fc13-49a2-9b91-cb8514c504d5" annotationText="pull Spaces" left="-217.243172252738" top="754.042476325819" width="162.501106074438" height="201.325821162626" fontSize="18" InitialTop="785.642476325819" InitialHeight="205.761636755493" TextblockHeight="21.6" backgrouund="#FF48B9FF">
-      <Models ModelGuid="cfd5059c-c270-444a-a138-f185f11adbec" />
-      <Models ModelGuid="297b6ad6-db1e-4ada-979a-b0756c94627f" />
+    <Dynamo.Graph.Annotations.AnnotationModel guid="32359165-467c-4735-9cd2-077534097156" annotationText="Select Tas TBD" left="-165.361005875971" top="746.513639165601" width="172" height="126.6" fontSize="18" InitialTop="778.113639165601" InitialHeight="125" TextblockHeight="21.6" backgrouund="#FFD4B6DB">
+      <Models ModelGuid="31690046-09f1-49fe-894c-d7a24103e098" />
     </Dynamo.Graph.Annotations.AnnotationModel>
-    <Dynamo.Graph.Annotations.AnnotationModel guid="7c2cc66f-a94d-41a5-9ca1-d4625f1c98fd" annotationText="Select Tas TBD" left="-219.584299855749" top="1047.48140650617" width="172" height="126.6" fontSize="18" InitialTop="1079.08140650617" InitialHeight="125" TextblockHeight="21.6" backgrouund="#FFD4B6DB">
-      <Models ModelGuid="41d394c3-fd58-47e1-9590-727b9f0913ff" />
+    <Dynamo.Graph.Annotations.AnnotationModel guid="9e51d427-2aee-449a-bb3e-f4d113989c0a" annotationText="Choose method how you want to specify Building there are few option chose one you like" left="-161.399567755431" top="69.8736839249019" width="232.8" height="235.686913309646" fontSize="14" InitialTop="130.273683924902" InitialHeight="205.286913309646" TextblockHeight="50.4" backgrouund="#FF48B9FF">
+      <Models ModelGuid="8c19d61e-6f5b-4091-b610-237d8deecf06" />
+      <Models ModelGuid="0cc4b803-9a5c-434a-bdfc-bab2f9712653" />
     </Dynamo.Graph.Annotations.AnnotationModel>
-    <Dynamo.Graph.Annotations.AnnotationModel guid="ba13a815-a629-4dfe-8e95-e1cc27a38f73" annotationText="Constructions" left="-185.218854953423" top="1238.42176415553" width="139.676034212706" height="198.64136174681" fontSize="18" InitialTop="1270.02176415553" InitialHeight="205.761636755493" TextblockHeight="21.6" backgrouund="#FF48B9FF">
-      <Models ModelGuid="67857917-57a3-4969-986d-3535d66d840f" />
-      <Models ModelGuid="6f58d5a5-cbe7-4416-ba14-b9841bcb9342" />
+    <Dynamo.Graph.Annotations.AnnotationModel guid="d7f4ee0e-8fad-49b2-98a9-7896bcc1112f" annotationText="Pull Spaces" left="-211.400833729381" top="959.016479773892" width="277.63041443405" height="150.26991188133" fontSize="18" InitialTop="990.616479773892" InitialHeight="135.94508383673" TextblockHeight="21.6" backgrouund="#FF48B9FF">
+      <Models ModelGuid="e7d6f04a-7c24-4fc5-b673-5bd2c9a32d71" />
+      <Models ModelGuid="84180964-1279-484b-afc2-f63cbce0069d" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="10562b01-c126-4f8d-be61-9c1e45fe8271" annotationText="Select Tas TBD" left="-112.783834292967" top="1129.51707155472" width="172" height="126.6" fontSize="18" InitialTop="1161.11707155472" InitialHeight="125" TextblockHeight="21.6" backgrouund="#FFD4B6DB">
+      <Models ModelGuid="7d259576-b845-4a42-8da9-60211bc3f1b8" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="5d6880b2-6a7f-40f5-95b0-2912d0dfd3ca" annotationText="Pull Constructions" left="-201.418723042535" top="1362.79255569422" width="259.538195714354" height="148.413257042851" fontSize="18" InitialTop="1394.39255569422" InitialHeight="135.94508383673" TextblockHeight="21.6" backgrouund="#FF48B9FF">
+      <Models ModelGuid="3ed3b040-9524-4413-a8cb-3e471a470525" />
+      <Models ModelGuid="c66338ce-ef21-4d68-bde9-75f9524cc616" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="6ed8fcc8-a7af-47c2-8a81-7e19db15f265" annotationText="Select Tas TBD" left="-102.801723606121" top="1531.43649263657" width="172" height="126.6" fontSize="18" InitialTop="1563.03649263657" InitialHeight="125" TextblockHeight="21.6" backgrouund="#FFD4B6DB">
+      <Models ModelGuid="c91185ad-fba8-420e-ac33-325ec8db9c2a" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="f4105dd7-0331-423e-a822-b10b781eb3c8" annotationText="Select Tas TBD" left="-99.6623590950368" top="1937.49181100488" width="172" height="126.6" fontSize="18" InitialTop="1969.09181100488" InitialHeight="125" TextblockHeight="21.6" backgrouund="#FFD4B6DB">
+      <Models ModelGuid="e3cc6aeb-031f-45c4-a369-871ec6b8a95d" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="396d303a-b3f3-45f8-81b1-c05b4b3cb146" annotationText="Pull InternalCondition" left="-198.279358531451" top="1779.71604726865" width="271.714820144013" height="137.54508383673" fontSize="18" InitialTop="1811.31604726865" InitialHeight="135.94508383673" TextblockHeight="21.6" backgrouund="#FF48B9FF">
+      <Models ModelGuid="dd13c323-3596-4f9b-b054-77ddcfaed5ca" />
+      <Models ModelGuid="f52aabf0-e872-48dd-a730-aba74af5853c" />
     </Dynamo.Graph.Annotations.AnnotationModel>
   </Annotations>
   <Presets />
