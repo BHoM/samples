@@ -1,0 +1,165 @@
+<Workspace Version="1.3.3.4651" X="183.03698774984" Y="188.227766009898" zoom="0.52589157318626" ScaleFactor="1" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <BH.UI.Dynamo.Components.CreateAdapterComponent guid="3c1afa6d-66b4-4a11-b52f-bb1fe25dae61" type="BH.UI.Dynamo.Components.CreateAdapterComponent" nickname="RevitAdapter" x="143.511185473363" y="314.071575353662" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="True" />
+      <PortInfo index="1" default="True" />
+      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Adapter.Revit.RevitAdapter, Revit_Adapter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;.ctor&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.oM.Adapters.Revit.Settings.RevitSettings\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
+    </BH.UI.Dynamo.Components.CreateAdapterComponent>
+    <BH.UI.Dynamo.Components.PullComponent guid="d5e2128a-d583-4106-a34c-0e1a652300b4" type="BH.UI.Dynamo.Components.PullComponent" nickname="Pull" x="370.792695659514" y="376.458651759275" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="True" />
+      <PortInfo index="2" default="True" />
+      <PortInfo index="3" default="True" />
+      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.UI.Components.PullCaller, BHoM_UI, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;Pull&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Adapter.BHoMAdapter, BHoM_Adapter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.oM.DataManipulation.Queries.IQuery\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Collections.Generic.Dictionary`2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot;, \&quot;GenericArguments\&quot; : [{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }, { \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }] }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
+    </BH.UI.Dynamo.Components.PullComponent>
+    <BH.UI.Dynamo.Components.CreateQueryComponent guid="43197858-2a84-4c2f-94a3-476cfee00ddc" type="BH.UI.Dynamo.Components.CreateQueryComponent" nickname="SelectionFilterQuery" x="-457.648670723869" y="370.907003698597" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Engine.Adapters.Revit.Create, Revit_Engine, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;SelectionFilterQuery&quot;, &quot;Parameters&quot; : [] }" />
+    </BH.UI.Dynamo.Components.CreateQueryComponent>
+    <CoreNodeModels.Input.BoolSelector guid="38d4127e-4349-4e0d-a0ee-0f12b74c43a6" type="CoreNodeModels.Input.BoolSelector" nickname="Boolean" x="-12" y="455" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.Boolean>True</System.Boolean>
+    </CoreNodeModels.Input.BoolSelector>
+    <BH.UI.Dynamo.Components.CreateObjectComponent guid="88c33a05-2e77-4a1b-ba6a-e09f65d36ed6" type="BH.UI.Dynamo.Components.CreateObjectComponent" nickname="RevitSettings" x="-150.352790588011" y="217.424839338936" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="True" />
+      <PortInfo index="1" default="True" />
+      <PortInfo index="2" default="True" />
+      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Engine.Adapters.Revit.Create, Revit_Engine, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;RevitSettings&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.oM.Adapters.Revit.Settings.ConnectionSettings\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.oM.Adapters.Revit.Settings.FamilyLoadSettings\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.oM.Adapters.Revit.Settings.GeneralSettings\&quot; }&quot;] }" />
+    </BH.UI.Dynamo.Components.CreateObjectComponent>
+    <BH.UI.Dynamo.Components.PushComponent guid="370ac5a9-a311-4e32-b9f5-d04cfd64b5e2" type="BH.UI.Dynamo.Components.PushComponent" nickname="Push" x="2456.83811812375" y="320.750983440366" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <PortInfo index="2" default="True" />
+      <PortInfo index="3" default="True" />
+      <PortInfo index="4" default="True" />
+      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.UI.Components.PushCaller, BHoM_UI, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;Push&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Adapter.BHoMAdapter, BHoM_Adapter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot;, \&quot;GenericArguments\&quot; : [{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.oM.Base.IObject\&quot; }] }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Collections.Generic.Dictionary`2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot;, \&quot;GenericArguments\&quot; : [{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }, { \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }] }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
+    </BH.UI.Dynamo.Components.PushComponent>
+    <CoreNodeModels.Input.BoolSelector guid="a6a17878-ad90-4eb5-98d4-a58297379572" type="CoreNodeModels.Input.BoolSelector" nickname="Boolean" x="2258.96779135433" y="639.540416682422" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.Boolean>True</System.Boolean>
+    </CoreNodeModels.Input.BoolSelector>
+    <BH.UI.Dynamo.Components.CreateObjectComponent guid="a143265c-c3ef-4add-a3d0-0f7dc00b3bac" type="BH.UI.Dynamo.Components.CreateObjectComponent" nickname="FamilyLoadSettings" x="-471.955945876565" y="216.996065262394" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="True" />
+      <PortInfo index="1" default="True" />
+      <PortInfo index="2" default="True" />
+      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Engine.Adapters.Revit.Create, Revit_Engine, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;FamilyLoadSettings&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.oM.Adapters.Revit.Generic.FamilyLibrary\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
+    </BH.UI.Dynamo.Components.CreateObjectComponent>
+    <BH.UI.Dynamo.Components.CreateObjectComponent guid="de37793c-64ce-49f4-b4b6-a431e18ece9c" type="BH.UI.Dynamo.Components.CreateObjectComponent" nickname="FamilyLibrary" x="-731.270914028575" y="216.996065262394" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="True" />
+      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Engine.Adapters.Revit.Create, Revit_Engine, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;FamilyLibrary&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
+    </BH.UI.Dynamo.Components.CreateObjectComponent>
+    <CoreNodeModels.Input.StringInput guid="049568ce-7cf3-4da2-afb2-05ac20464bb2" type="CoreNodeModels.Input.StringInput" nickname="String" x="-977.098621949116" y="217.815640268047" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>\\SRV-BATH03\Non_Project\Bath Region\Bath Building Services\Bath MEP Revit\Development Work (by permission only)\Addin\Files\2018\Projects\BH Schematic\1.0.5\res</System.String>
+      <System.String value="\\SRV-BATH03\Non_Project\Bath Region\Bath Building Services\Bath MEP Revit\Development Work (by permission only)\Addin\Files\2018\Projects\BH Schematic\1.0.5\res" />
+    </CoreNodeModels.Input.StringInput>
+    <BH.UI.Dynamo.Components.CreateQueryComponent guid="49a23fde-416d-45d2-8511-997153c2fb3c" type="BH.UI.Dynamo.Components.CreateQueryComponent" nickname="LogicalAndFilterQuery" x="-236.089019364071" y="400.15152035824" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Engine.Adapters.Revit.Create, Revit_Engine, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;LogicalAndFilterQuery&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.oM.DataManipulation.Queries.FilterQuery\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.oM.DataManipulation.Queries.FilterQuery\&quot; }&quot;] }" />
+    </BH.UI.Dynamo.Components.CreateQueryComponent>
+    <BH.UI.Dynamo.Components.CreateQueryComponent guid="0002df5e-9355-4e63-9616-bdea189dd48b" type="BH.UI.Dynamo.Components.CreateQueryComponent" nickname="CategoryFilterQuery" x="-534.819375633648" y="459.707826613837" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Engine.Adapters.Revit.Create, Revit_Engine, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;CategoryFilterQuery&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
+    </BH.UI.Dynamo.Components.CreateQueryComponent>
+    <CoreNodeModels.Input.StringInput guid="039c16dc-7003-4990-b141-ba9802eaecf8" type="CoreNodeModels.Input.StringInput" nickname="String" x="-624.16391311763" y="460.52740161949" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>Spaces</System.String>
+      <System.String value="Spaces" />
+    </CoreNodeModels.Input.StringInput>
+    <BH.UI.Dynamo.Components.CreateObjectComponent guid="587e981c-6f48-4b0c-93e1-49d942bbd7dd" type="BH.UI.Dynamo.Components.CreateObjectComponent" nickname="DraftingObject" x="1529.08329910855" y="443.755793169335" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <PortInfo index="2" default="False" />
+      <PortInfo index="3" default="False" />
+      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Engine.Adapters.Revit.Create, Revit_Engine, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;DraftingObject&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.oM.Geometry.Point\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
+    </BH.UI.Dynamo.Components.CreateObjectComponent>
+    <CoreNodeModels.Input.StringInput guid="870be3ce-1709-462e-86e4-ee657e1ede67" type="CoreNodeModels.Input.StringInput" nickname="String" x="1369.69489750293" y="622.482699697328" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>Drafting 1</System.String>
+      <System.String value="Drafting 1" />
+    </CoreNodeModels.Input.StringInput>
+    <CoreNodeModels.Input.StringInput guid="9ef11883-cac6-458c-9e02-455c6db09969" type="CoreNodeModels.Input.StringInput" nickname="String" x="1235.9957070318" y="388.232878376002" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>_BHm_DetailItem_SpaceVentilation</System.String>
+      <System.String value="_BHm_DetailItem_SpaceVentilation" />
+    </CoreNodeModels.Input.StringInput>
+    <CoreNodeModels.Input.StringInput guid="bf18b7bf-b401-48f8-a9d3-af7fa37cb625" type="CoreNodeModels.Input.StringInput" nickname="String" x="1389.02749018524" y="466.795333706333" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>Space</System.String>
+      <System.String value="Space" />
+    </CoreNodeModels.Input.StringInput>
+    <BH.UI.Dynamo.Components.CreateObjectComponent guid="70056088-3ecb-4c77-8be6-a70232ca0264" type="BH.UI.Dynamo.Components.CreateObjectComponent" nickname="Point" x="1220.83635041886" y="495.580741266182" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="True" />
+      <PortInfo index="1" default="True" />
+      <PortInfo index="2" default="True" />
+      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Engine.Geometry.Create, Geometry_Engine, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;Point&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
+    </BH.UI.Dynamo.Components.CreateObjectComponent>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="8d614112-95bc-4d5a-b9f4-66ce729dba06" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.Count" x="633.292036704655" y="378.140767404464" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.List.Count@var[]..[]">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <CoreNodeModels.Range guid="503e4eee-1826-43cd-9f6f-f84b5fb4252f" type="CoreNodeModels.Range" nickname="Range" x="868.745737966633" y="437.717181024668" isVisible="true" isUpstreamVisible="true" lacing="Longest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="True" />
+      <PortInfo index="1" default="True" />
+      <PortInfo index="2" default="True" />
+    </CoreNodeModels.Range>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="cbd74622-e3a5-42ac-970e-24b862314cd2" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="725.509118846692" y="469.492735833991" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="1;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="9a8aae7b-2c9c-46ae-8d78-cb27dc0ef18a" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1062.94747221307" y="441.180160987112" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="x * 0.05;" ShouldFocus="false">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.CodeBlockNodeModel>
+    <BH.UI.Dynamo.Components.GetPropertyComponent guid="c3fd0f62-0b17-4796-a23e-354c56660041" type="BH.UI.Dynamo.Components.GetPropertyComponent" nickname="GetProperty" x="1760.73188321367" y="689.893521368816" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.UI.Components.GetPropertyCaller, BHoM_UI, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;GetProperty&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
+    </BH.UI.Dynamo.Components.GetPropertyComponent>
+    <BH.UI.Dynamo.Components.SetPropertyComponent guid="f120dc9a-93a7-491e-a05c-d3bdf04e6a54" type="BH.UI.Dynamo.Components.SetPropertyComponent" nickname="SetProperty" x="2032.63436689646" y="593.890711417138" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <PortInfo index="2" default="False" />
+      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.UI.Components.SetPropertyCaller, BHoM_UI, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;SetProperty&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.oM.Base.BHoMObject\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
+    </BH.UI.Dynamo.Components.SetPropertyComponent>
+    <CoreNodeModels.Input.StringInput guid="d5fb541f-2339-4998-8a20-1651a25683fb" type="CoreNodeModels.Input.StringInput" nickname="String" x="1848.68515437347" y="620.583940232534" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>SPACE NAME</System.String>
+      <System.String value="SPACE NAME" />
+    </CoreNodeModels.Input.StringInput>
+    <CoreNodeModels.Input.StringInput guid="58bd8dd4-105b-43c0-918f-053c10e6fb99" type="CoreNodeModels.Input.StringInput" nickname="String" x="1664.58695874426" y="778.580229630611" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>Name</System.String>
+      <System.String value="Name" />
+    </CoreNodeModels.Input.StringInput>
+    <CoreNodeModels.Watch guid="7df57594-56b0-45da-9664-65aac817f826" type="CoreNodeModels.Watch" nickname="Watch" x="697.911652886973" y="691.092978784855" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+    </CoreNodeModels.Watch>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="3c1afa6d-66b4-4a11-b52f-bb1fe25dae61" start_index="0" end="d5e2128a-d583-4106-a34c-0e1a652300b4" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="3c1afa6d-66b4-4a11-b52f-bb1fe25dae61" start_index="0" end="370ac5a9-a311-4e32-b9f5-d04cfd64b5e2" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="d5e2128a-d583-4106-a34c-0e1a652300b4" start_index="0" end="8d614112-95bc-4d5a-b9f4-66ce729dba06" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="d5e2128a-d583-4106-a34c-0e1a652300b4" start_index="0" end="7df57594-56b0-45da-9664-65aac817f826" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="43197858-2a84-4c2f-94a3-476cfee00ddc" start_index="0" end="49a23fde-416d-45d2-8511-997153c2fb3c" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="38d4127e-4349-4e0d-a0ee-0f12b74c43a6" start_index="0" end="3c1afa6d-66b4-4a11-b52f-bb1fe25dae61" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="38d4127e-4349-4e0d-a0ee-0f12b74c43a6" start_index="0" end="d5e2128a-d583-4106-a34c-0e1a652300b4" end_index="3" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="88c33a05-2e77-4a1b-ba6a-e09f65d36ed6" start_index="0" end="3c1afa6d-66b4-4a11-b52f-bb1fe25dae61" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="a6a17878-ad90-4eb5-98d4-a58297379572" start_index="0" end="370ac5a9-a311-4e32-b9f5-d04cfd64b5e2" end_index="4" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="a143265c-c3ef-4add-a3d0-0f7dc00b3bac" start_index="0" end="88c33a05-2e77-4a1b-ba6a-e09f65d36ed6" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="de37793c-64ce-49f4-b4b6-a431e18ece9c" start_index="0" end="a143265c-c3ef-4add-a3d0-0f7dc00b3bac" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="049568ce-7cf3-4da2-afb2-05ac20464bb2" start_index="0" end="de37793c-64ce-49f4-b4b6-a431e18ece9c" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="49a23fde-416d-45d2-8511-997153c2fb3c" start_index="0" end="d5e2128a-d583-4106-a34c-0e1a652300b4" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="0002df5e-9355-4e63-9616-bdea189dd48b" start_index="0" end="49a23fde-416d-45d2-8511-997153c2fb3c" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="039c16dc-7003-4990-b141-ba9802eaecf8" start_index="0" end="0002df5e-9355-4e63-9616-bdea189dd48b" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="587e981c-6f48-4b0c-93e1-49d942bbd7dd" start_index="0" end="f120dc9a-93a7-491e-a05c-d3bdf04e6a54" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="870be3ce-1709-462e-86e4-ee657e1ede67" start_index="0" end="587e981c-6f48-4b0c-93e1-49d942bbd7dd" end_index="3" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="9ef11883-cac6-458c-9e02-455c6db09969" start_index="0" end="587e981c-6f48-4b0c-93e1-49d942bbd7dd" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="bf18b7bf-b401-48f8-a9d3-af7fa37cb625" start_index="0" end="587e981c-6f48-4b0c-93e1-49d942bbd7dd" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="70056088-3ecb-4c77-8be6-a70232ca0264" start_index="0" end="587e981c-6f48-4b0c-93e1-49d942bbd7dd" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="8d614112-95bc-4d5a-b9f4-66ce729dba06" start_index="0" end="503e4eee-1826-43cd-9f6f-f84b5fb4252f" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="503e4eee-1826-43cd-9f6f-f84b5fb4252f" start_index="0" end="9a8aae7b-2c9c-46ae-8d78-cb27dc0ef18a" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="cbd74622-e3a5-42ac-970e-24b862314cd2" start_index="0" end="503e4eee-1826-43cd-9f6f-f84b5fb4252f" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="cbd74622-e3a5-42ac-970e-24b862314cd2" start_index="0" end="503e4eee-1826-43cd-9f6f-f84b5fb4252f" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="9a8aae7b-2c9c-46ae-8d78-cb27dc0ef18a" start_index="0" end="70056088-3ecb-4c77-8be6-a70232ca0264" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="c3fd0f62-0b17-4796-a23e-354c56660041" start_index="0" end="f120dc9a-93a7-491e-a05c-d3bdf04e6a54" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="f120dc9a-93a7-491e-a05c-d3bdf04e6a54" start_index="0" end="370ac5a9-a311-4e32-b9f5-d04cfd64b5e2" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="d5fb541f-2339-4998-8a20-1651a25683fb" start_index="0" end="f120dc9a-93a7-491e-a05c-d3bdf04e6a54" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="58bd8dd4-105b-43c0-918f-053c10e6fb99" start_index="0" end="c3fd0f62-0b17-4796-a23e-354c56660041" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="7df57594-56b0-45da-9664-65aac817f826" start_index="0" end="c3fd0f62-0b17-4796-a23e-354c56660041" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
+  </Cameras>
+</Workspace>
