@@ -1,4 +1,4 @@
-<Workspace Version="1.3.3.4111" X="567.529417722918" Y="104.273122422529" zoom="0.288815865056615" ScaleFactor="1" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="True">
+<Workspace Version="1.3.4.6666" X="243.110333278398" Y="17.3213930624659" zoom="0.30101759896143" ScaleFactor="1" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="True">
   <NamespaceResolutionMap>
     <ClassMap partialName="List" resolvedName="DSCore.List" assemblyName="DSCoreNodes.dll" />
   </NamespaceResolutionMap>
@@ -27,7 +27,7 @@
       <System.Boolean>False</System.Boolean>
     </CoreNodeModels.Input.BoolSelector>
     <CoreNodeModels.Input.BoolSelector guid="bce4917c-9b9f-4827-af3f-dab9ed3fe332" type="CoreNodeModels.Input.BoolSelector" nickname="Boolean" x="-288.004465662125" y="659.3796956514" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
-      <System.Boolean>True</System.Boolean>
+      <System.Boolean>False</System.Boolean>
     </CoreNodeModels.Input.BoolSelector>
     <CoreNodeModels.Input.Filename guid="31690046-09f1-49fe-894c-d7a24103e098" type="CoreNodeModels.Input.Filename" nickname="File Path" x="-155.361005875971" y="778.113639165601" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
       <System.String>.\SAM_Live_2zones.tbd</System.String>
@@ -137,12 +137,26 @@
     <BH.UI.Dynamo.Components.CreateTypeComponent guid="c66338ce-ef21-4d68-bde9-75f9524cc616" type="BH.UI.Dynamo.Components.CreateTypeComponent" nickname="CreateType" x="-33.480527328181" y="1394.39255569422" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="True" IsFrozen="false" isPinned="false">
       <Component value="{ &quot;_t&quot; : &quot;System.Type&quot;, &quot;Name&quot; : &quot;BH.oM.Environment.Elements.Construction&quot; }" />
     </BH.UI.Dynamo.Components.CreateTypeComponent>
-    <BH.UI.Dynamo.Components.ExplodeObjectNode guid="91a131a2-bbb7-43db-bd60-04d30a0e3b23" type="BH.UI.Dynamo.Components.ExplodeObjectNode" nickname="ExplodeObject (old)" x="668.219804560646" y="736.390051260281" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" outputcount="7">
+    <BH.UI.Dynamo.Components.ExplodeObjectNode guid="5965a359-0138-41a1-a884-8f8ea9db9f13" type="BH.UI.Dynamo.Components.ExplodeObjectNode" nickname="ExplodeObject (old)" x="687.417505618923" y="202.385879813311" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" outputcount="9">
       <PortInfo index="0" default="False" />
       <OutputNames>
-        <InputName value="BuildingElementProperties" />
+        <InputName value="Latitude" />
+        <InputName value="Longitude" />
+        <InputName value="Elevation" />
+        <InputName value="Location" />
+        <InputName value="ExtendedProperties" />
+        <InputName value="BHoM_Guid" />
+        <InputName value="Name" />
+        <InputName value="Tags" />
+        <InputName value="CustomData" />
+      </OutputNames>
+    </BH.UI.Dynamo.Components.ExplodeObjectNode>
+    <BH.UI.Dynamo.Components.ExplodeObjectNode guid="4cd4fccc-d03c-4343-9687-18d74c8cde0a" type="BH.UI.Dynamo.Components.ExplodeObjectNode" nickname="ExplodeObject (old)" x="705.828274347426" y="603.86201338165" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="true" outputcount="7">
+      <PortInfo index="0" default="False" />
+      <OutputNames>
         <InputName value="PanelCurve" />
         <InputName value="Openings" />
+        <InputName value="ExtendedProperties" />
         <InputName value="BHoM_Guid" />
         <InputName value="Name" />
         <InputName value="Tags" />
@@ -153,13 +167,14 @@
   <Connectors>
     <Dynamo.Graph.Connectors.ConnectorModel start="bbce8214-dac2-4f51-827e-49060801a85a" start_index="0" end="f5694eef-6dce-4487-9824-49c0526c6901" end_index="0" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="f5694eef-6dce-4487-9824-49c0526c6901" start_index="0" end="929a6676-5439-45ee-a9a6-1f6d27e8aea7" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="929a6676-5439-45ee-a9a6-1f6d27e8aea7" start_index="0" end="5965a359-0138-41a1-a884-8f8ea9db9f13" end_index="0" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="a0d8d057-ae78-47d1-888f-7ac0ded1158b" start_index="0" end="929a6676-5439-45ee-a9a6-1f6d27e8aea7" end_index="1" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="97160bc7-535a-4d5e-9646-73b26885b9f5" start_index="0" end="929a6676-5439-45ee-a9a6-1f6d27e8aea7" end_index="3" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="bce4917c-9b9f-4827-af3f-dab9ed3fe332" start_index="0" end="8bf43784-20e4-4e6f-b18b-5cbb5dc7a790" end_index="3" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="31690046-09f1-49fe-894c-d7a24103e098" start_index="0" end="b060d2d9-e641-462e-8cad-58c3faa7b047" end_index="0" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="b060d2d9-e641-462e-8cad-58c3faa7b047" start_index="0" end="8bf43784-20e4-4e6f-b18b-5cbb5dc7a790" end_index="0" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="6197b630-c4a1-4a6e-b2a7-f696ea4f8938" start_index="0" end="8bf43784-20e4-4e6f-b18b-5cbb5dc7a790" end_index="1" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="8bf43784-20e4-4e6f-b18b-5cbb5dc7a790" start_index="0" end="91a131a2-bbb7-43db-bd60-04d30a0e3b23" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="8bf43784-20e4-4e6f-b18b-5cbb5dc7a790" start_index="0" end="4cd4fccc-d03c-4343-9687-18d74c8cde0a" end_index="0" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="0cc4b803-9a5c-434a-bdfc-bab2f9712653" start_index="0" end="a0d8d057-ae78-47d1-888f-7ac0ded1158b" end_index="0" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="e7d6f04a-7c24-4fc5-b673-5bd2c9a32d71" start_index="0" end="5b8ac332-579d-470b-9c35-814cb8bfe9b4" end_index="3" portType="0" />
     <Dynamo.Graph.Connectors.ConnectorModel start="2d68f00e-cd1d-4b2f-818a-74a60aac6ecb" start_index="0" end="5b8ac332-579d-470b-9c35-814cb8bfe9b4" end_index="1" portType="0" />
@@ -196,7 +211,7 @@
     <Dynamo.Graph.Annotations.AnnotationModel guid="da2dfa0b-0ee6-42ad-919a-5ae5e55bead7" annotationText="Chop / Change Things" left="-108.221212569349" top="-363.538200220139" width="197.6" height="126.4" fontSize="30" InitialTop="-281.538200220139" InitialHeight="140" TextblockHeight="72" backgrouund="#FFC1D676">
       <Models ModelGuid="7a4ea734-f3e5-4dc2-978e-28bea6d3fcfe" />
     </Dynamo.Graph.Annotations.AnnotationModel>
-    <Dynamo.Graph.Annotations.AnnotationModel guid="b993264d-ac4f-4730-a6c5-4591a8165cec" annotationText="Input Things" left="109.40593878476" top="-363.538200220139" width="151.2" height="126.4" fontSize="30" InitialTop="-281.538200220139" InitialHeight="140" TextblockHeight="72" backgrouund="#FF48B9FF">
+    <Dynamo.Graph.Annotations.AnnotationModel guid="b993264d-ac4f-4730-a6c5-4591a8165cec" annotationText="Input Things" left="109.40593878476" top="-363.538200220139" width="150.4" height="126.4" fontSize="30" InitialTop="-281.538200220139" InitialHeight="140" TextblockHeight="72" backgrouund="#FF48B9FF">
       <Models ModelGuid="f992ab84-8a3a-4fff-8c80-8630978734c4" />
     </Dynamo.Graph.Annotations.AnnotationModel>
     <Dynamo.Graph.Annotations.AnnotationModel guid="e3f92d56-7dc3-46eb-8ec5-c9e1df3311e3" annotationText="Calculate Things" left="283.344691406832" top="-363.538200220139" width="130.323333333333" height="126.4" fontSize="30" InitialTop="-281.538200220139" InitialHeight="140" TextblockHeight="72" backgrouund="#FFFF7BAC">
@@ -211,38 +226,38 @@
     <Dynamo.Graph.Annotations.AnnotationModel guid="e6dfc7e3-ce0e-453a-82a6-d1e5a9dd1146" annotationText="WIP &#xD;&#xA;Things" left="825.917259160133" top="-363.538200220139" width="180" height="126.4" fontSize="30" InitialTop="-281.538200220139" InitialHeight="140" TextblockHeight="72" backgrouund="#FFB5B5B5">
       <Models ModelGuid="6194658d-ac74-4b8f-98ff-df36aa12d1cc" />
     </Dynamo.Graph.Annotations.AnnotationModel>
-    <Dynamo.Graph.Annotations.AnnotationModel guid="64b317ae-c5ce-4dc9-b94e-6386799546a4" annotationText="Select Tas TBD" left="-126.815840311443" top="343.252361046383" width="172" height="126.6" fontSize="18" InitialTop="374.852361046383" InitialHeight="125" TextblockHeight="21.6" backgrouund="#FFD4B6DB">
+    <Dynamo.Graph.Annotations.AnnotationModel guid="64b317ae-c5ce-4dc9-b94e-6386799546a4" annotationText="Select Tas TBD" left="-126.815840311443" top="343.252361046383" width="170.4" height="125" fontSize="18" InitialTop="374.852361046383" InitialHeight="125" TextblockHeight="21.6" backgrouund="#FFD4B6DB">
       <Models ModelGuid="bbce8214-dac2-4f51-827e-49060801a85a" />
     </Dynamo.Graph.Annotations.AnnotationModel>
-    <Dynamo.Graph.Annotations.AnnotationModel guid="458705f7-da34-4d40-9b09-cfa706954c24" annotationText="Pull Building" left="-330.59646144219" top="244.983041803544" width="148.8" height="99.4" fontSize="18" InitialTop="276.583041803544" InitialHeight="122.6" TextblockHeight="21.6" backgrouund="#FF48B9FF">
+    <Dynamo.Graph.Annotations.AnnotationModel guid="458705f7-da34-4d40-9b09-cfa706954c24" annotationText="Pull Building" left="-330.59646144219" top="244.983041803544" width="155.2" height="99.4" fontSize="18" InitialTop="276.583041803544" InitialHeight="122.6" TextblockHeight="21.6" backgrouund="#FF48B9FF">
       <Models ModelGuid="97160bc7-535a-4d5e-9646-73b26885b9f5" />
     </Dynamo.Graph.Annotations.AnnotationModel>
-    <Dynamo.Graph.Annotations.AnnotationModel guid="968b6ebe-7c2f-41d7-8a50-5e5dbd62a884" annotationText="Pull BuildingElements" left="-298.004465662125" top="558.219985123585" width="310.636140369221" height="168.959710527815" fontSize="18" InitialTop="589.819985123585" InitialHeight="135.94508383673" TextblockHeight="21.6" backgrouund="#FF48B9FF">
+    <Dynamo.Graph.Annotations.AnnotationModel guid="968b6ebe-7c2f-41d7-8a50-5e5dbd62a884" annotationText="Pull BuildingElements" left="-298.004465662125" top="558.219985123585" width="310.636140369222" height="168.959710527815" fontSize="18" InitialTop="589.819985123585" InitialHeight="135.94508383673" TextblockHeight="21.6" backgrouund="#FF48B9FF">
       <Models ModelGuid="bce4917c-9b9f-4827-af3f-dab9ed3fe332" />
       <Models ModelGuid="e30b1a89-bea2-422b-9a7a-1e4b9c98ba09" />
     </Dynamo.Graph.Annotations.AnnotationModel>
-    <Dynamo.Graph.Annotations.AnnotationModel guid="32359165-467c-4735-9cd2-077534097156" annotationText="Select Tas TBD" left="-165.361005875971" top="746.513639165601" width="172" height="126.6" fontSize="18" InitialTop="778.113639165601" InitialHeight="125" TextblockHeight="21.6" backgrouund="#FFD4B6DB">
+    <Dynamo.Graph.Annotations.AnnotationModel guid="32359165-467c-4735-9cd2-077534097156" annotationText="Select Tas TBD" left="-165.361005875971" top="746.513639165601" width="170.4" height="125" fontSize="18" InitialTop="778.113639165601" InitialHeight="125" TextblockHeight="21.6" backgrouund="#FFD4B6DB">
       <Models ModelGuid="31690046-09f1-49fe-894c-d7a24103e098" />
     </Dynamo.Graph.Annotations.AnnotationModel>
-    <Dynamo.Graph.Annotations.AnnotationModel guid="9e51d427-2aee-449a-bb3e-f4d113989c0a" annotationText="Choose method how you want to specify Building there are few option chose one you like" left="-161.399567755431" top="69.8736839249019" width="232.8" height="235.686913309646" fontSize="14" InitialTop="130.273683924902" InitialHeight="205.286913309646" TextblockHeight="50.4" backgrouund="#FF48B9FF">
+    <Dynamo.Graph.Annotations.AnnotationModel guid="9e51d427-2aee-449a-bb3e-f4d113989c0a" annotationText="Choose method how you want to specify Building there are few option chose one you like" left="-161.399567755431" top="69.873683924902" width="232.8" height="235.686913309645" fontSize="14" InitialTop="130.273683924902" InitialHeight="205.286913309646" TextblockHeight="50.4" backgrouund="#FF48B9FF">
       <Models ModelGuid="8c19d61e-6f5b-4091-b610-237d8deecf06" />
       <Models ModelGuid="0cc4b803-9a5c-434a-bdfc-bab2f9712653" />
     </Dynamo.Graph.Annotations.AnnotationModel>
-    <Dynamo.Graph.Annotations.AnnotationModel guid="d7f4ee0e-8fad-49b2-98a9-7896bcc1112f" annotationText="Pull Spaces" left="-211.400833729381" top="959.016479773892" width="277.63041443405" height="150.26991188133" fontSize="18" InitialTop="990.616479773892" InitialHeight="135.94508383673" TextblockHeight="21.6" backgrouund="#FF48B9FF">
+    <Dynamo.Graph.Annotations.AnnotationModel guid="d7f4ee0e-8fad-49b2-98a9-7896bcc1112f" annotationText="Pull Spaces" left="-211.400833729381" top="959.016479773892" width="277.63041443405" height="150.269911881328" fontSize="18" InitialTop="990.616479773892" InitialHeight="135.94508383673" TextblockHeight="21.6" backgrouund="#FF48B9FF">
       <Models ModelGuid="e7d6f04a-7c24-4fc5-b673-5bd2c9a32d71" />
       <Models ModelGuid="84180964-1279-484b-afc2-f63cbce0069d" />
     </Dynamo.Graph.Annotations.AnnotationModel>
-    <Dynamo.Graph.Annotations.AnnotationModel guid="10562b01-c126-4f8d-be61-9c1e45fe8271" annotationText="Select Tas TBD" left="-112.783834292967" top="1129.51707155472" width="172" height="126.6" fontSize="18" InitialTop="1161.11707155472" InitialHeight="125" TextblockHeight="21.6" backgrouund="#FFD4B6DB">
+    <Dynamo.Graph.Annotations.AnnotationModel guid="10562b01-c126-4f8d-be61-9c1e45fe8271" annotationText="Select Tas TBD" left="-112.783834292967" top="1129.51707155472" width="170.4" height="125" fontSize="18" InitialTop="1161.11707155472" InitialHeight="125" TextblockHeight="21.6" backgrouund="#FFD4B6DB">
       <Models ModelGuid="7d259576-b845-4a42-8da9-60211bc3f1b8" />
     </Dynamo.Graph.Annotations.AnnotationModel>
-    <Dynamo.Graph.Annotations.AnnotationModel guid="5d6880b2-6a7f-40f5-95b0-2912d0dfd3ca" annotationText="Pull Constructions" left="-201.418723042535" top="1362.79255569422" width="259.538195714354" height="148.413257042851" fontSize="18" InitialTop="1394.39255569422" InitialHeight="135.94508383673" TextblockHeight="21.6" backgrouund="#FF48B9FF">
+    <Dynamo.Graph.Annotations.AnnotationModel guid="5d6880b2-6a7f-40f5-95b0-2912d0dfd3ca" annotationText="Pull Constructions" left="-201.418723042535" top="1362.79255569422" width="259.538195714354" height="148.41325704285" fontSize="18" InitialTop="1394.39255569422" InitialHeight="135.94508383673" TextblockHeight="21.6" backgrouund="#FF48B9FF">
       <Models ModelGuid="3ed3b040-9524-4413-a8cb-3e471a470525" />
       <Models ModelGuid="c66338ce-ef21-4d68-bde9-75f9524cc616" />
     </Dynamo.Graph.Annotations.AnnotationModel>
-    <Dynamo.Graph.Annotations.AnnotationModel guid="6ed8fcc8-a7af-47c2-8a81-7e19db15f265" annotationText="Select Tas TBD" left="-102.801723606121" top="1531.43649263657" width="172" height="126.6" fontSize="18" InitialTop="1563.03649263657" InitialHeight="125" TextblockHeight="21.6" backgrouund="#FFD4B6DB">
+    <Dynamo.Graph.Annotations.AnnotationModel guid="6ed8fcc8-a7af-47c2-8a81-7e19db15f265" annotationText="Select Tas TBD" left="-102.801723606121" top="1531.43649263657" width="170.4" height="125" fontSize="18" InitialTop="1563.03649263657" InitialHeight="125" TextblockHeight="21.6" backgrouund="#FFD4B6DB">
       <Models ModelGuid="c91185ad-fba8-420e-ac33-325ec8db9c2a" />
     </Dynamo.Graph.Annotations.AnnotationModel>
-    <Dynamo.Graph.Annotations.AnnotationModel guid="f4105dd7-0331-423e-a822-b10b781eb3c8" annotationText="Select Tas TBD" left="-99.6623590950368" top="1937.49181100488" width="172" height="126.6" fontSize="18" InitialTop="1969.09181100488" InitialHeight="125" TextblockHeight="21.6" backgrouund="#FFD4B6DB">
+    <Dynamo.Graph.Annotations.AnnotationModel guid="f4105dd7-0331-423e-a822-b10b781eb3c8" annotationText="Select Tas TBD" left="-99.6623590950368" top="1937.49181100488" width="170.4" height="125" fontSize="18" InitialTop="1969.09181100488" InitialHeight="125" TextblockHeight="21.6" backgrouund="#FFD4B6DB">
       <Models ModelGuid="e3cc6aeb-031f-45c4-a369-871ec6b8a95d" />
     </Dynamo.Graph.Annotations.AnnotationModel>
     <Dynamo.Graph.Annotations.AnnotationModel guid="396d303a-b3f3-45f8-81b1-c05b4b3cb146" annotationText="Pull InternalCondition" left="-198.279358531451" top="1779.71604726865" width="271.714820144013" height="137.54508383673" fontSize="18" InitialTop="1811.31604726865" InitialHeight="135.94508383673" TextblockHeight="21.6" backgrouund="#FF48B9FF">
