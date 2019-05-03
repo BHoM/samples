@@ -1,4 +1,4 @@
-<Workspace Version="1.3.4.6666" X="276.585378159225" Y="220.257621759666" zoom="0.257802446831963" ScaleFactor="1" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="True">
+<Workspace Version="1.3.4.6666" X="177.535976889707" Y="136.184977268133" zoom="0.455023896514732" ScaleFactor="1" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="False">
   <NamespaceResolutionMap>
     <ClassMap partialName="List.Ele" resolvedName="DSCore.List" assemblyName="DSCoreNodes.dll" />
     <ClassMap partialName="List" resolvedName="DSCore.List" assemblyName="DSCoreNodes.dll" />
@@ -62,7 +62,7 @@
     </BH.UI.Dynamo.Components.CreateObjectComponent>
     <BH.UI.Dynamo.Components.CreateEnumComponent guid="b22c8ff4-fed5-4cc7-a627-b9adaacd59e4" type="BH.UI.Dynamo.Components.CreateEnumComponent" nickname="ExportType" x="1141.81018007211" y="778.636166419556" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="True" IsFrozen="false" isPinned="false">
       <Component value="{ &quot;_t&quot; : &quot;System.Type&quot;, &quot;Name&quot; : &quot;BH.oM.XML.Enums.ExportType&quot; }" />
-      <SelectionIndex value="2" />
+      <SelectionIndex value="1" />
     </BH.UI.Dynamo.Components.CreateEnumComponent>
     <BH.UI.Dynamo.Components.CreateEnumComponent guid="93a47176-0be8-4feb-9d81-9ad3cb285862" type="BH.UI.Dynamo.Components.CreateEnumComponent" nickname="ExportDetail" x="1141.0251506173" y="864.989406448877" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="True" IsFrozen="false" isPinned="false">
       <Component value="{ &quot;_t&quot; : &quot;System.Type&quot;, &quot;Name&quot; : &quot;BH.oM.XML.Enums.ExportDetail&quot; }" />
@@ -210,6 +210,6 @@
   </Annotations>
   <Presets />
   <Cameras>
-    <Camera Name="Background Preview" eyeX="-28.0951562722117" eyeY="29.3496756365916" eyeZ="-61.1191773203606" lookX="43.8596153782211" lookY="-34.2433441915778" lookZ="31.5039902222133" upX="0.277785971900817" upY="0.93969257190119" upZ="0.199531319143221" />
+    <Camera Name="Background Preview" eyeX="-28.0951557159424" eyeY="29.3496761322021" eyeZ="-61.1191787719727" lookX="43.8596153259277" lookY="-34.2433433532715" lookZ="31.5039901733398" upX="0.277785986661911" upY="0.939692556858063" upZ="0.199531316757202" />
   </Cameras>
 </Workspace>
