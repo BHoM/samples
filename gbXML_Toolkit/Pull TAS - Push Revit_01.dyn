@@ -1,0 +1,105 @@
+<Workspace Version="1.3.4.6666" X="129.374771341262" Y="128.591541317188" zoom="0.558775617225463" ScaleFactor="1" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="False">
+  <NamespaceResolutionMap />
+  <Elements>
+    <BH.UI.Dynamo.Components.CreateAdapterComponent guid="0cdfb284-1964-4009-bd69-c26922d84ec1" type="BH.UI.Dynamo.Components.CreateAdapterComponent" nickname="TasTBDAdapter" x="397.13824012154" y="427.699506224219" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="True" />
+      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Adapter.TAS.TasTBDAdapter, TASTBD_Adapter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;.ctor&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
+    </BH.UI.Dynamo.Components.CreateAdapterComponent>
+    <CoreNodeModels.Input.Filename guid="1e3abdd0-1465-4d2a-bd1a-5c742db2583a" type="CoreNodeModels.Input.Filename" nickname="File Path" x="163.986272258339" y="427.511691545352" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>.\000000_SAM_Live_943.tbd</System.String>
+      <HintPath>C:\Users\mdengusi\Desktop\SAM_Bath\2019-01-18\000000_SAM_Live_943.tbd</HintPath>
+    </CoreNodeModels.Input.Filename>
+    <BH.UI.Dynamo.Components.PullComponent guid="3940bac3-c27a-4112-b2c1-28bafb321353" type="BH.UI.Dynamo.Components.PullComponent" nickname="Pull" x="742.558705637805" y="515.088089808637" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="True" />
+      <PortInfo index="2" default="True" />
+      <PortInfo index="3" default="True" />
+      <Component value="" />
+    </BH.UI.Dynamo.Components.PullComponent>
+    <CoreNodeModels.Input.BoolSelector guid="ae957eec-8402-41b1-8f3a-2f5d63867a1c" type="CoreNodeModels.Input.BoolSelector" nickname="Boolean" x="465.950266779091" y="656.151853562245" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.Boolean>True</System.Boolean>
+    </CoreNodeModels.Input.BoolSelector>
+    <BH.UI.Dynamo.Components.CreateTypeComponent guid="efce545b-6729-406a-aadd-e265a53a193a" type="BH.UI.Dynamo.Components.CreateTypeComponent" nickname="CreateType" x="315.889026448132" y="531.732938410314" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <Component value="" />
+    </BH.UI.Dynamo.Components.CreateTypeComponent>
+    <BH.UI.Dynamo.Components.PushComponent guid="3e375767-10d9-4a5a-b37e-c8a73fc48875" type="BH.UI.Dynamo.Components.PushComponent" nickname="Push" x="1578.27990989142" y="491.505783836986" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <PortInfo index="2" default="True" />
+      <PortInfo index="3" default="True" />
+      <PortInfo index="4" default="True" />
+      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.UI.Components.PushCaller, BHoM_UI, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;Push&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Adapter.BHoMAdapter, BHoM_Adapter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot;, \&quot;GenericArguments\&quot; : [{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.oM.Base.IObject\&quot; }] }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Collections.Generic.Dictionary`2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot;, \&quot;GenericArguments\&quot; : [{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }, { \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }] }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
+    </BH.UI.Dynamo.Components.PushComponent>
+    <BH.UI.Dynamo.Components.CreateAdapterComponent guid="1047472c-5ef4-4829-afca-f3d9b40dd0b4" type="BH.UI.Dynamo.Components.CreateAdapterComponent" nickname="RevitAdapter" x="1219.38149077437" y="440.758371058995" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="True" />
+      <PortInfo index="1" default="True" />
+      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Adapter.Revit.RevitAdapter, Revit_Adapter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;.ctor&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.oM.Adapters.Revit.Settings.RevitSettings\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
+    </BH.UI.Dynamo.Components.CreateAdapterComponent>
+    <CoreNodeModels.Input.BoolSelector guid="048e65fb-d25e-44e8-ad1b-97459bcb1839" type="CoreNodeModels.Input.BoolSelector" nickname="Boolean" x="1053.5950748791" y="612.056462823846" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.Boolean>True</System.Boolean>
+    </CoreNodeModels.Input.BoolSelector>
+    <BH.UI.Dynamo.Components.CreateRequestComponent guid="586637ca-f15c-4a8c-abc4-d42894c148c9" type="BH.UI.Dynamo.Components.CreateRequestComponent" nickname="FilterRequest" x="437.037644074899" y="516.697213673095" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="True" />
+      <PortInfo index="1" default="True" />
+      <Component value="{ &quot;_t&quot; : &quot;System.Reflection.MethodBase&quot;, &quot;TypeName&quot; : &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;BH.Engine.Data.Create, Data_Engine, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null\&quot; }&quot;, &quot;MethodName&quot; : &quot;FilterRequest&quot;, &quot;Parameters&quot; : [&quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;, &quot;{ \&quot;_t\&quot; : \&quot;System.Type\&quot;, \&quot;Name\&quot; : \&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\&quot; }&quot;] }" />
+    </BH.UI.Dynamo.Components.CreateRequestComponent>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="0cdfb284-1964-4009-bd69-c26922d84ec1" start_index="0" end="3940bac3-c27a-4112-b2c1-28bafb321353" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="1e3abdd0-1465-4d2a-bd1a-5c742db2583a" start_index="0" end="0cdfb284-1964-4009-bd69-c26922d84ec1" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="3940bac3-c27a-4112-b2c1-28bafb321353" start_index="0" end="3e375767-10d9-4a5a-b37e-c8a73fc48875" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="ae957eec-8402-41b1-8f3a-2f5d63867a1c" start_index="0" end="3940bac3-c27a-4112-b2c1-28bafb321353" end_index="3" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="efce545b-6729-406a-aadd-e265a53a193a" start_index="0" end="586637ca-f15c-4a8c-abc4-d42894c148c9" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="1047472c-5ef4-4829-afca-f3d9b40dd0b4" start_index="0" end="3e375767-10d9-4a5a-b37e-c8a73fc48875" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="048e65fb-d25e-44e8-ad1b-97459bcb1839" start_index="0" end="3e375767-10d9-4a5a-b37e-c8a73fc48875" end_index="4" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="048e65fb-d25e-44e8-ad1b-97459bcb1839" start_index="0" end="1047472c-5ef4-4829-afca-f3d9b40dd0b4" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="586637ca-f15c-4a8c-abc4-d42894c148c9" start_index="0" end="3940bac3-c27a-4112-b2c1-28bafb321353" end_index="1" portType="0" />
+  </Connectors>
+  <Notes>
+    <Dynamo.Graph.Notes.NoteModel guid="83341d85-88dc-4929-81c6-2e15b61a7010" text="Colour Coding Stategy" x="156.422192256937" y="-133.250662160963" />
+    <Dynamo.Graph.Notes.NoteModel guid="6699d665-1c3d-4909-ba7b-e624c9e474c9" text="Get Inputs from Revit etc." x="166.541087577127" y="-9.09988353982172" />
+    <Dynamo.Graph.Notes.NoteModel guid="95ad87a7-16d4-4919-ad7d-3b0ebf2baf02" text="Managing List / Filter Lists etc" x="358.937888776518" y="-9.09988353982172" />
+    <Dynamo.Graph.Notes.NoteModel guid="68bb72f7-5705-4238-8fd0-fc0fe072eef0" text="User Inputs Required" x="576.565040130627" y="-9.09988353982172" />
+    <Dynamo.Graph.Notes.NoteModel guid="b51faa10-5d57-4d6e-8180-5feae117539f" text="Calculations" x="750.5037927527" y="-9.09988353982172" />
+    <Dynamo.Graph.Notes.NoteModel guid="a6c80cd6-742a-4a1b-99cc-6fe82e34e17e" text="Export to external files / software" x="901.20250979678" y="-9.09988353982172" />
+    <Dynamo.Graph.Notes.NoteModel guid="4a1b0118-a5e1-41bf-80b5-96334ca59f7b" text="Dispay Outputs " x="1140.09429299623" y="-9.09988353982172" />
+    <Dynamo.Graph.Notes.NoteModel guid="df55b849-9d6d-42c4-accc-7b50ca1402f0" text="Things still under progress" x="1293.07636050599" y="-9.09988353982172" />
+    <Dynamo.Graph.Notes.NoteModel guid="59816f9f-d2d6-4189-821b-224d223b93f9" text="Script Purpose:&#xD;&#xA;Pull data from Tas EDSL&#xD;&#xA;&#xD;&#xA;Version Information to create script:&#xD;&#xA;Dynamo 1.3.3.4111&#xD;&#xA;Revit 2018.8.3 &#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Date created: 14/12/2018&#xD;&#xA;Date updated: 25/06/2019&#xD;&#xA;" x="156.342912874567" y="63.9042861904393" />
+  </Notes>
+  <Annotations>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="bc5cf07d-dbd7-4996-bdb0-fe47b2028084" annotationText="" left="153.986272258339" top="381.511691545352" width="197.6" height="139.4" fontSize="30" InitialTop="427.511691545352" InitialHeight="125" TextblockHeight="36" backgrouund="#FF48B9FF">
+      <Models ModelGuid="1e3abdd0-1465-4d2a-bd1a-5c742db2583a" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="21e2ebd6-7168-489a-9ef3-8a4c93a4c9f3" annotationText="Get &#xD;&#xA;Things" left="156.541087577127" top="-91.0998835398217" width="174.4" height="126.4" fontSize="30" InitialTop="-9.09988353982172" InitialHeight="140" TextblockHeight="72" backgrouund="#FFD4B6DB">
+      <Models ModelGuid="6699d665-1c3d-4909-ba7b-e624c9e474c9" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="03075579-f167-4bc6-8eb4-c4bb6c96ce39" annotationText="Chop / Change Things" left="348.937888776518" top="-91.0998835398217" width="197.6" height="126.4" fontSize="30" InitialTop="-9.09988353982172" InitialHeight="140" TextblockHeight="72" backgrouund="#FFC1D676">
+      <Models ModelGuid="95ad87a7-16d4-4919-ad7d-3b0ebf2baf02" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="decdca6f-ba74-490e-9c18-a1c1948ffd33" annotationText="Input Things" left="566.565040130627" top="-91.0998835398217" width="150.4" height="126.4" fontSize="30" InitialTop="-9.09988353982172" InitialHeight="140" TextblockHeight="72" backgrouund="#FF48B9FF">
+      <Models ModelGuid="68bb72f7-5705-4238-8fd0-fc0fe072eef0" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="3d7a53bc-7120-4413-9200-c1d644ce738b" annotationText="Calculate Things" left="740.5037927527" top="-91.0998835398217" width="130.323333333333" height="126.4" fontSize="30" InitialTop="-9.09988353982172" InitialHeight="140" TextblockHeight="72" backgrouund="#FFFF7BAC">
+      <Models ModelGuid="b51faa10-5d57-4d6e-8180-5feae117539f" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="6e41b266-a34e-441e-bbd3-09a9cd322ffd" annotationText="Export &#xD;&#xA;Things" left="891.20250979678" top="-91.0998835398217" width="214.4" height="126.4" fontSize="30" InitialTop="-9.09988353982172" InitialHeight="140" TextblockHeight="72" backgrouund="#FF71C6A8">
+      <Models ModelGuid="a6c80cd6-742a-4a1b-99cc-6fe82e34e17e" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="afc4912c-596d-4232-897a-0d978231e1a9" annotationText="See Things" left="1130.09429299623" top="-91.0998835398217" width="124.8" height="126.4" fontSize="30" InitialTop="-9.09988353982172" InitialHeight="140" TextblockHeight="72" backgrouund="#FFD8D8D8">
+      <Models ModelGuid="4a1b0118-a5e1-41bf-80b5-96334ca59f7b" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="3dfbe029-1746-4a80-a432-e7efdad5f275" annotationText="WIP &#xD;&#xA;Things" left="1283.07636050599" top="-91.0998835398217" width="180" height="126.4" fontSize="30" InitialTop="-9.09988353982172" InitialHeight="140" TextblockHeight="72" backgrouund="#FFB5B5B5">
+      <Models ModelGuid="df55b849-9d6d-42c4-accc-7b50ca1402f0" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="af253cb5-ff7b-4cda-a60f-8a6d9e519b80" annotationText="" left="732.558705637805" top="469.088089808637" width="196" height="215.4" fontSize="30" InitialTop="515.088089808637" InitialHeight="199.4" TextblockHeight="36" backgrouund="#FFD4B6DB">
+      <Models ModelGuid="3940bac3-c27a-4112-b2c1-28bafb321353" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="5707f69b-5790-4664-bc4b-c9c474b5df40" annotationText="" left="1568.27990989142" top="445.505783836986" width="232" height="241" fontSize="30" InitialTop="491.505783836986" InitialHeight="225" TextblockHeight="36" backgrouund="#FF71C6A8">
+      <Models ModelGuid="3e375767-10d9-4a5a-b37e-c8a73fc48875" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+  </Annotations>
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
+  </Cameras>
+</Workspace>
