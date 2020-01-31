@@ -1,0 +1,1783 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Pull Revit - Push gbXML_07",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "List.Ele": {
+        "Key": "DSCore.List",
+        "Value": "DSCoreNodes.dll"
+      },
+      "List": {
+        "Key": "DSCore.List",
+        "Value": "DSCoreNodes.dll"
+      }
+    }
+  },
+  "Inputs": [
+    {
+      "Id": "ccdeb3fea1a84bd1ad76987dbde59fe4",
+      "Name": "Boolean",
+      "Type": "boolean",
+      "Value": "true",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "Id": "2dbb184eacec49758afd1e7f87756972",
+      "Name": "Directory Path",
+      "Type": "string",
+      "Value": "C:\\Users\\DengusiakM\\Desktop\\SAM\\2020-01-19 GH",
+      "Description": "Allows you to select a directory on the system to get its path"
+    },
+    {
+      "Id": "517fd572daaf4b76b7ad6e6e0ff5ec34",
+      "Name": "String",
+      "Type": "string",
+      "Value": "BHoMgbXML_Dyn1",
+      "Description": "Creates a string."
+    },
+    {
+      "Id": "d83b19c422134c47ae35c1ce14342117",
+      "Name": "Boolean",
+      "Type": "boolean",
+      "Value": "true",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "Id": "f8aa6b5493fc46ad94702e78c3114441",
+      "Name": "Boolean",
+      "Type": "boolean",
+      "Value": "false",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "Id": "345220b600bc4bf6b8f4c60b78a5d4ea",
+      "Name": "Boolean",
+      "Type": "boolean",
+      "Value": "true",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "Id": "2b3588d33ca3422cb2ffe9cfed85d228",
+      "Name": "Boolean",
+      "Type": "boolean",
+      "Value": "true",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "Id": "ff30e27134304eb28f03f618a2fb218d",
+      "Name": "Boolean",
+      "Type": "boolean",
+      "Value": "false",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "Id": "c1195d6ac4f14c7988ef69a01a31c0e3",
+      "Name": "String",
+      "Type": "string",
+      "Value": "SAMRevit.json",
+      "Description": "Creates a string."
+    }
+  ],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.PullComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : null, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"45235e0b-6c51-4764-9789-e0340ec27e13\", \"Name\" : \"adapter\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.BHoMAdapter, BHoM_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\" }, \"Description\" : \"Adapter to the external software\\r\\nThis is a BHoMAdapter\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : { \"_t\" : \"DBNull\", \"BHoM_Guid\" : \"b0be88b7-a2b8-4859-86d0-9d4942b1b419\" } }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"cdcb4a4a-80a1-4301-9e42-5090ede50387\", \"Name\" : \"request\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Data.Requests.IRequest\" }, \"Description\" : \"Filter on the objects to pull\\r\\nThis is a IRequest:BatchRequest, CustomRequest, FilterRequest, IssueRequest, TeamRequest, ScrumColumnRequest, ScrumBoardRequest, OrganisationRequest, RepoRequest, GetRequest\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : null }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"c2a631c4-f58f-472c-b0f9-70ed2e59bfc3\", \"Name\" : \"config\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.Dictionary`2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, { \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }] }, \"Description\" : \"Pull config\\r\\nThis is a Dictionary<String, Object>\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : null }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"c743aada-f8d8-42b6-89f4-09945066dc86\", \"Name\" : \"active\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Execute the pull\\r\\nThis is a Boolean\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : false }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"6934ba17-de51-478c-a1c4-add6ef568c12\", \"Name\" : \"objects\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }] }, \"Description\" : \"Objects pulled\\r\\nThis is a IEnumerable<Object>\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"2a62748a-bbb9-4888-bcf6-e2382c7a27f2\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "8d562e87649b4282ae8ee63dc76fed91",
+      "Inputs": [
+        {
+          "Id": "75ddd206ecc745838219b9b4e6dd05fa",
+          "Name": "adapter",
+          "Description": "Adapter to the external software\r\nThis is a BHoMAdapter",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "41a2ff71cee5420fadc0d422d37800e3",
+          "Name": "request",
+          "Description": "Filter on the objects to pull\r\nThis is a IRequest:BatchRequest, CustomRequest, FilterRequest, IssueRequest, TeamRequest, ScrumColumnRequest, ScrumBoardRequest, OrganisationRequest, RepoRequest, GetRequest",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3cffd73b6f2d4ddeb7bd027dd03cf770",
+          "Name": "config",
+          "Description": "Pull config\r\nThis is a Dictionary<String, Object>",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b7ff63b9f19b416ca4fe6272e564ba85",
+          "Name": "active",
+          "Description": "Execute the pull\r\nThis is a Boolean",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "730417cd5cb143658654369f1e1d0033",
+          "Name": "objects",
+          "Description": "Objects pulled\r\nThis is a IEnumerable<Object>",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Pull objects from the external software\r\nPull is a Method of BH.UI.Components.PullCaller"
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.CreateAdapterComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Adapter.Revit.RevitAdapter, Revit_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \".ctor\", \"Parameters\" : [\"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Adapters.Revit.Settings.RevitSettings\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\"] }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"01316afc-88a0-43b2-a31b-268085e9b553\", \"Name\" : \"revitSettings\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Settings.RevitSettings\" }, \"Description\" : \"Connect RevitSettings to control what is being connected\\r\\nThis is a RevitSettings\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : null }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"e825f256-5838-43c4-83a0-0a337a5c6df9\", \"Name\" : \"active\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Establish connection with Revit by setting to 'True'\\r\\nThis is a Boolean\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : false }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"d9aceaee-25cd-4482-adbd-fe75de898900\", \"Name\" : \"adapter\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.Revit.RevitAdapter, Revit_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\" }, \"Description\" : \"Adapter to Revit\\r\\nThis is a RevitAdapter\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"93822a0c-4180-42ea-bb6e-febc5762a800\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "cec9977c1aea41e4bc13292541e46fcc",
+      "Inputs": [
+        {
+          "Id": "a8e13aaef5b64327a0e85f448f040e63",
+          "Name": "revitSettings",
+          "Description": "Connect RevitSettings to control what is being connected\r\nThis is a RevitSettings",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5c6900e777cf4b0ba32fbac4364a0aa4",
+          "Name": "active",
+          "Description": "Establish connection with Revit by setting to 'True'\r\nThis is a Boolean",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "302dea5635e94ad1a7ca70ae643e98e8",
+          "Name": "adapter",
+          "Description": "Adapter to Revit\r\nThis is a RevitAdapter",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Adapter to connect to an open Revit file. Connection will be made to the active document (based on active view). Make sure to only have ONE Revit Window open, or connection will not work as intended.\r\n.ctor is a Constructor of BH.Adapter.Revit.RevitAdapter"
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.CreateTypeComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.Building\" }, \"InputParams\" : [], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"46f7b031-f4e1-4f13-b038-1ef841dcc568\", \"Name\" : \"type\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"type definition\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"364bfb06-3815-4c72-86d5-ad17bc3a4682\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "94dcdf3ea97a4532acbea587efd55954",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "dddd40941a6742538b3e055907308106",
+          "Name": "type",
+          "Description": "type definition",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Creates a selected type definition"
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.PushComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.UI.Components.PushCaller, BHoM_UI, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \"Push\", \"Parameters\" : [\"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Adapter.BHoMAdapter, BHoM_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\", \\\"GenericArguments\\\" : [{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Base.IObject\\\" }] }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Collections.Generic.Dictionary`2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\", \\\"GenericArguments\\\" : [{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }, { \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }] }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\"] }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"c5b9537e-878e-4418-81bf-0f47b1879f2d\", \"Name\" : \"adapter\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.BHoMAdapter, BHoM_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\" }, \"Description\" : \"Adapter to the external software\\r\\nThis is a BHoMAdapter\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : { \"_t\" : \"DBNull\", \"BHoM_Guid\" : \"59030617-cdb1-48c7-a1e1-1884560ce1cd\" } }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"1a0706a7-bd3e-4ddb-8056-d296842b5bcf\", \"Name\" : \"objects\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.IObject\" }] }, \"Description\" : \"Objects to push\\r\\nThis is a IEnumerable<IObject>:Panel, Ray, Receiver, Room, Speaker, Rasti, RT60, SnRatio, SoundLevel, Grid, Roof, Wall, Level, Floor, CustomObject, and more...\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : { \"_t\" : \"DBNull\", \"BHoM_Guid\" : \"02a6ae2d-4c3a-49a1-b992-16f205120952\" } }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"a5c2f04b-94d6-4204-9f82-bfb140cf86e0\", \"Name\" : \"tag\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Tag to apply to the objects being pushed\\r\\nThis is a String\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : \"\" }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"a2b62a6a-bbb6-4a85-a18e-5c9a85040227\", \"Name\" : \"config\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.Dictionary`2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, { \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }] }, \"Description\" : \"Push config\\r\\nThis is a Dictionary<String, Object>\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : null }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"26a9f313-8d82-4c65-b4fb-bfa3883ba089\", \"Name\" : \"active\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Execute the push\\r\\nThis is a Boolean\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : false }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"73ec3be6-ea70-4842-a8d4-ce3169cb91b3\", \"Name\" : \"objects\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.IObject\" }] }, \"Description\" : \"Objects that have been pushed (with potentially additional information stored in their CustomData to reflect the push)\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"a8858c8d-23c7-40e6-9f89-f14cd6cafd78\", \"Name\" : \"success\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Define if the push was sucessful\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"675858fd-3e00-4214-89c4-3cbf3b741bf3\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "68515c19c4f24d8cb05adf8f5f35c1f0",
+      "Inputs": [
+        {
+          "Id": "79418e7df2a34416a93ec854b6bb8c39",
+          "Name": "adapter",
+          "Description": "Adapter to the external software\r\nThis is a BHoMAdapter",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "469d467137ba4a46be358e24439ed8b8",
+          "Name": "objects",
+          "Description": "Objects to push\r\nThis is a IEnumerable<IObject>:Panel, Ray, Receiver, Room, Speaker, Rasti, RT60, SnRatio, SoundLevel, Grid, Roof, Wall, Level, Floor, CustomObject, and more...",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6e52fe43378249faabc3b9c72eac8175",
+          "Name": "tag",
+          "Description": "Tag to apply to the objects being pushed\r\nThis is a String",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e5751beb9e934ad096cd906e9e3c9a58",
+          "Name": "config",
+          "Description": "Push config\r\nThis is a Dictionary<String, Object>",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f7be9102991d4078b0e6b30d3b300e2e",
+          "Name": "active",
+          "Description": "Execute the push\r\nThis is a Boolean",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "32d3e59f789b46f9ab38342475155aa2",
+          "Name": "objects",
+          "Description": "Objects that have been pushed (with potentially additional information stored in their CustomData to reflect the push)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3127c9b9651d4220a89903df340c2a46",
+          "Name": "success",
+          "Description": "Define if the push was sucessful",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Push objects to the external software\r\nPush is a Method of BH.UI.Components.PushCaller"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": true,
+      "Id": "ccdeb3fea1a84bd1ad76987dbde59fe4",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4405d64c7eca40baa9acbd024856c76c",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "5add7c555d594005b2788510342ca505",
+      "Inputs": [
+        {
+          "Id": "0d57e9facf034977be2d7be3b2d14d61",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "12fd75f0ae454f17bd2fdf5f7a3bf3b3",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Directory, CoreNodeModels",
+      "HintPath": "C:\\Users\\DengusiakM\\Desktop\\SAM\\2020-01-19 GH",
+      "InputValue": "C:\\Users\\DengusiakM\\Desktop\\SAM\\2020-01-19 GH",
+      "NodeType": "ExtensionNode",
+      "Id": "2dbb184eacec49758afd1e7f87756972",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e9913bbd47134b0289c896e7368c6bfe",
+          "Name": "",
+          "Description": "Directory",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a directory on the system to get its path"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.StringInput, CoreNodeModels",
+      "NodeType": "StringInputNode",
+      "InputValue": "BHoMgbXML_Dyn1",
+      "Id": "517fd572daaf4b76b7ad6e6e0ff5ec34",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "7bd848f5db31404db0b51f2ad756b178",
+          "Name": "",
+          "Description": "String",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a string."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": true,
+      "Id": "d83b19c422134c47ae35c1ce14342117",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ed99761c78704f71b27c32d4825aab36",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.CreateObjectComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Engine.XML.Create, XML_Engine, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \"DocumentBuilder\", \"Parameters\" : [\"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\", \\\"GenericArguments\\\" : [{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Base.IBHoMObject\\\" }] }\"] }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"bd8ef76d-dac6-42b5-b540-86df7566e562\", \"Name\" : \"objs\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.IBHoMObject\" }] }, \"Description\" : \"This is a List<IBHoMObject>:Panel, Ray, Receiver, Room, Speaker, Rasti, RT60, SnRatio, SoundLevel, Grid, Roof, Wall, Level, Floor, CustomObject, and more...\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : { \"_t\" : \"DBNull\", \"BHoM_Guid\" : \"1c0630ab-1c2c-44f4-abe3-31d209591b45\" } }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"01a6bf17-bda6-4b0f-8a09-91d057688649\", \"Name\" : \"D\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.XML.Environment.DocumentBuilder\" }, \"Description\" : \"This is a DocumentBuilder\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"ece84866-d391-4f90-8d7d-6658917b419b\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "4eab1a214290429395ec8dcc5c1e7469",
+      "Inputs": [
+        {
+          "Id": "b900538b581b482787cd937790221421",
+          "Name": "objs",
+          "Description": "This is a List<IBHoMObject>:Panel, Ray, Receiver, Room, Speaker, Rasti, RT60, SnRatio, SoundLevel, Grid, Roof, Wall, Level, Floor, CustomObject, and more...",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f1a756e5201344b0b4ccf308837bbaeb",
+          "Name": "D",
+          "Description": "This is a DocumentBuilder",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create a Document Builder object to collate data required for GBXML schema documents automatically from a given list of BHoM Objects\r\nDocumentBuilder is a Method of BH.Engine.XML.Create"
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.QueryComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Engine.Environment.Query, Environment_Engine, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \"Panels\", \"Parameters\" : [\"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\", \\\"GenericArguments\\\" : [{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Base.IBHoMObject\\\" }] }\"] }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"7ffa8185-802e-4f61-8755-b8cecadbb8b3\", \"Name\" : \"bhomObjects\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.IBHoMObject\" }] }, \"Description\" : \"A collection of generic BHoM objects\\r\\nThis is a List<IBHoMObject>:Panel, Ray, Receiver, Room, Speaker, Rasti, RT60, SnRatio, SoundLevel, Grid, Roof, Wall, Level, Floor, CustomObject, and more...\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : { \"_t\" : \"DBNull\", \"BHoM_Guid\" : \"66682986-b1bc-4982-8954-89ce3ae872b4\" } }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"91536f32-7928-48aa-8a1b-1c75369faa94\", \"Name\" : \"panels\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.Panel\" }] }, \"Description\" : \"A collection of Environment Panel objects\\r\\nThis is a List<Panel>\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"518eb343-4e89-469a-a36e-4740e79c220c\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "0e8d91570b3b4f0d9aae222201fb2783",
+      "Inputs": [
+        {
+          "Id": "cbb156445f7f4c42a376f1226daa66d8",
+          "Name": "bhomObjects",
+          "Description": "A collection of generic BHoM objects\r\nThis is a List<IBHoMObject>:Panel, Ray, Receiver, Room, Speaker, Rasti, RT60, SnRatio, SoundLevel, Grid, Roof, Wall, Level, Floor, CustomObject, and more...",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "375bb1a6d6e943abb32ac15461e14707",
+          "Name": "panels",
+          "Description": "A collection of Environment Panel objects\r\nThis is a List<Panel>",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns a collection of Environment Panels from a list of generic BHoM objects\r\nPanels is a Method of BH.Engine.Environment.Query"
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.QueryComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Engine.Environment.Query, Environment_Engine, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \"Buildings\", \"Parameters\" : [\"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\", \\\"GenericArguments\\\" : [{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Base.IBHoMObject\\\" }] }\"] }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"4cc5c969-b513-472a-ba11-c71c45b02409\", \"Name\" : \"bhomObjects\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.IBHoMObject\" }] }, \"Description\" : \"A collection of generic BHoM objects\\r\\nThis is a List<IBHoMObject>:Panel, Ray, Receiver, Room, Speaker, Rasti, RT60, SnRatio, SoundLevel, Grid, Roof, Wall, Level, Floor, CustomObject, and more...\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : { \"_t\" : \"DBNull\", \"BHoM_Guid\" : \"fdf84a8e-b190-4206-8832-4f1220658ad4\" } }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"2b6afebf-2b14-4472-8f99-0e03f98f034a\", \"Name\" : \"buildings\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.Building\" }] }, \"Description\" : \"A collection of Environment Building objects\\r\\nThis is a List<Building>\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"34ba6424-6653-499a-9d7c-3e9a5ce4bf93\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "09e1781c223d44fc95f3c90ab2f67612",
+      "Inputs": [
+        {
+          "Id": "a68f4834444846d7819f501b49351858",
+          "Name": "bhomObjects",
+          "Description": "A collection of generic BHoM objects\r\nThis is a List<IBHoMObject>:Panel, Ray, Receiver, Room, Speaker, Rasti, RT60, SnRatio, SoundLevel, Grid, Roof, Wall, Level, Floor, CustomObject, and more...",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "eafcf62a67df48fbb35a18612a7ca7be",
+          "Name": "buildings",
+          "Description": "A collection of Environment Building objects\r\nThis is a List<Building>",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns a collection of Environment Buildings from a list of generic BHoM objects\r\nBuildings is a Method of BH.Engine.Environment.Query"
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.QueryComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Engine.Environment.Query, Environment_Engine, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \"Spaces\", \"Parameters\" : [\"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\", \\\"GenericArguments\\\" : [{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Base.IBHoMObject\\\" }] }\"] }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"855917e4-0682-439c-b764-b4d7626395ee\", \"Name\" : \"bhomObjects\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.IBHoMObject\" }] }, \"Description\" : \"A collection of generic BHoM objects\\r\\nThis is a List<IBHoMObject>:Panel, Ray, Receiver, Room, Speaker, Rasti, RT60, SnRatio, SoundLevel, Grid, Roof, Wall, Level, Floor, CustomObject, and more...\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : { \"_t\" : \"DBNull\", \"BHoM_Guid\" : \"c984ff8d-944b-43a3-bc68-a5746d98c7ef\" } }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"37a6e893-d46b-4abe-8b6f-feaf67b4c37f\", \"Name\" : \"spaces\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.Space\" }] }, \"Description\" : \"A collection of Environment Space objects\\r\\nThis is a List<Space>\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"5969a7e9-f647-4965-9ad9-f940833c9159\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "cb84204bfd33449fb8f0163dbfbe5180",
+      "Inputs": [
+        {
+          "Id": "6d0a2da5882c479d8d4215b2c6193667",
+          "Name": "bhomObjects",
+          "Description": "A collection of generic BHoM objects\r\nThis is a List<IBHoMObject>:Panel, Ray, Receiver, Room, Speaker, Rasti, RT60, SnRatio, SoundLevel, Grid, Roof, Wall, Level, Floor, CustomObject, and more...",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "06d7daf9a0a949adb016b8fd778eaf28",
+          "Name": "spaces",
+          "Description": "A collection of Environment Space objects\r\nThis is a List<Space>",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns a collection of Environment Spaces from a list of generic BHoM objects\r\nSpaces is a Method of BH.Engine.Environment.Query"
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.CreateRequestComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Engine.Data.Create, Data_Engine, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \"FilterRequest\", \"Parameters\" : [\"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\"] }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"338ae8ae-36b7-477c-b57d-1caffc2a8140\", \"Name\" : \"type\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"This is a Type\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : null }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"a24f511f-c71c-49ff-8d50-0f3456cf740a\", \"Name\" : \"tag\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"This is a String\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : \"\" }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"e375ba8f-c288-427a-9d68-c148bbf9ae23\", \"Name\" : \"F\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Data.Requests.FilterRequest\" }, \"Description\" : \"This is a FilterRequest\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"d44fad9d-503b-4a6a-a021-2615ea1d76c5\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "d13e702df480463695d774aa6f3f2e9e",
+      "Inputs": [
+        {
+          "Id": "ca1886e91edb48b2bc278bc4d78b3f24",
+          "Name": "type",
+          "Description": "This is a Type",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "cecc0a3c81be4999a020fb24eb8b0a13",
+          "Name": "tag",
+          "Description": "This is a String",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "55398295f022463c8df68662036eab84",
+          "Name": "F",
+          "Description": "This is a FilterRequest",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "FilterRequest is a Method of BH.Engine.Data.Create"
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.QueryComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Engine.Environment.Query, Environment_Engine, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \"Polyline\", \"Parameters\" : [\"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Environment.Elements.Panel\\\" }\"] }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"44a026ba-3c27-4d1c-b77f-d89750a7e335\", \"Name\" : \"panel\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Environment.Elements.Panel\" }, \"Description\" : \"An Environment Panel to obtain the external boundary from\\r\\nThis is a Panel\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : { \"_t\" : \"DBNull\", \"BHoM_Guid\" : \"3faeeff1-9a93-45e4-9708-c6c8f7653f60\" } }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"69dd7129-b7e6-411f-b93d-6af9420ef483\", \"Name\" : \"polyline\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.Polyline\" }, \"Description\" : \"BHoM Geometry Polyline\\r\\nThis is a Polyline\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"0cd8377c-5ef3-449a-8b0f-ccd9e4ef2b5f\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "e43ee10cdead4b239fb55df346979733",
+      "Inputs": [
+        {
+          "Id": "71aa30d9a8be4fafa4d227ca2002a7aa",
+          "Name": "panel",
+          "Description": "An Environment Panel to obtain the external boundary from\r\nThis is a Panel",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "37d4ddd1e2fa4180a9d21cf241c708c6",
+          "Name": "polyline",
+          "Description": "BHoM Geometry Polyline\r\nThis is a Polyline",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns the external boundary from an Environment Panel as a BHoM Geometry Polyline\r\nPolyline is a Method of BH.Engine.Environment.Query"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": false,
+      "Id": "f8aa6b5493fc46ad94702e78c3114441",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "2842ddf2ca9b42c2ad93a1207f26a1c9",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": true,
+      "Id": "345220b600bc4bf6b8f4c60b78a5d4ea",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c1f0bc55a90f408baf9d9c2d5d5c25e5",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": true,
+      "Id": "2b3588d33ca3422cb2ffe9cfed85d228",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "942bfc1a5a714d4d8320bc2a6e5f1c04",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.CreateEnumComponent, Dynamo_UI",
+      "SelectedIndex": 1,
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.XML.Enums.UnitType\" }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"0b2af9b0-808a-4fb3-9227-c723ebdf7e7f\", \"Name\" : \"index\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"index of the enum value\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"0726bd57-6a44-4c8f-b6e8-f394340c1a37\", \"Name\" : \"enum\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Enum, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"enum value\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"faf15664-c7a3-49a7-8d49-786ffb905b64\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "c23534564cb947feb76082c2e37462d6",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "dc2627b0f5794d5887b602fc03b97fd1",
+          "Name": "enum",
+          "Description": "enum value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Creates a selected enum value"
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.CreateEnumComponent, Dynamo_UI",
+      "SelectedIndex": 2,
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.XML.Enums.ExportDetail\" }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"238c355d-9654-401c-8540-834c023c7612\", \"Name\" : \"index\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"index of the enum value\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"4c0c26e9-ff76-43a6-8ad5-4ef1e9668c79\", \"Name\" : \"enum\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Enum, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"enum value\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"47323ff3-4ef3-452d-8c43-7d23b409f706\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "111e824ed90a4aaf902d4dfb9dffb5d4",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "76b44643e8fb424b8a97e1aa27efc2ca",
+          "Name": "enum",
+          "Description": "enum value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Creates a selected enum value"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": false,
+      "Id": "ff30e27134304eb28f03f618a2fb218d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "373d45708d954b9fb3cd59b139942ccb",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.CreateAdapterComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Adapter.FileAdapter.FileAdapter, File_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \".ctor\", \"Parameters\" : [\"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\"] }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"710bc4f7-2307-4843-9ac9-ec82353f07be\", \"Name\" : \"folder\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Defaults to the path of your default drive (usually C://)\\r\\nThis is a String\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : null }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"b8c6cce3-c482-4715-aa46-780c308e727e\", \"Name\" : \"fileName\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Insert filename with extension.\\nCurrently supports only .json and .bson file types.\\r\\nThis is a String\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : \"\" }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"2897ca34-c01a-4f2d-8051-467394791e89\", \"Name\" : \"F\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.FileAdapter.FileAdapter, File_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\" }, \"Description\" : \"This is a FileAdapter\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"a0361e29-9b6f-4cde-94f5-2b78a02b2ec8\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "c44873afbcbf47c28df7c9c4c831d95e",
+      "Inputs": [
+        {
+          "Id": "3047466323bb48efa4c9e1ad5711e854",
+          "Name": "folder",
+          "Description": "Defaults to the path of your default drive (usually C://)\r\nThis is a String",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ac482940a4bb472898b42ea3bcc1b691",
+          "Name": "fileName",
+          "Description": "Insert filename with extension.\nCurrently supports only .json and .bson file types.\r\nThis is a String",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f25c0f3b29fd4d7193defc0b11bd5d08",
+          "Name": "F",
+          "Description": "This is a FileAdapter",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": ".ctor is a Constructor of BH.Adapter.FileAdapter.FileAdapter"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.StringInput, CoreNodeModels",
+      "NodeType": "StringInputNode",
+      "InputValue": "SAMRevit.json",
+      "Id": "c1195d6ac4f14c7988ef69a01a31c0e3",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "190912dddd50487ea57739cf4ca40645",
+          "Name": "",
+          "Description": "String",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a string."
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.CreateAdapterComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Adapter.XML.XMLAdapter, XML_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \".ctor\", \"Parameters\" : [\"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.XML.Settings.XMLFileSettings\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.XML.Settings.XMLSettings\\\" }\"] }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"9af0116d-e678-4c22-ad0a-6a9cd6467a76\", \"Name\" : \"xmlFileSettings\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.XML.Settings.XMLFileSettings\" }, \"Description\" : \"Input the file settings the XML Adapter should use, default null\\r\\nThis is a XMLFileSettings\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : null }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"b41d8370-0c51-48d3-93a6-862acb1f70bb\", \"Name\" : \"xmlSettings\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.XML.Settings.XMLSettings\" }, \"Description\" : \"Input the additional XML Settings the adapter should use. Only used when pushing to an XML file. Default null\\r\\nThis is a XMLSettings\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : null }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"f9dcd1fd-fd9b-4a4e-b0fe-c51bf6338418\", \"Name\" : \"adapter\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.XML.XMLAdapter, XML_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\" }, \"Description\" : \"Adapter to XML\\r\\nThis is a XMLAdapter\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"6048cc6b-e4c4-462b-9955-b5c9dc140875\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "ac4f2bbd31d04194aba091041f61dd21",
+      "Inputs": [
+        {
+          "Id": "7e8b3fa3aa844868b9e489cba023f5e4",
+          "Name": "xmlFileSettings",
+          "Description": "Input the file settings the XML Adapter should use, default null\r\nThis is a XMLFileSettings",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "600b078f4db24812979dfcee7b90526f",
+          "Name": "xmlSettings",
+          "Description": "Input the additional XML Settings the adapter should use. Only used when pushing to an XML file. Default null\r\nThis is a XMLSettings",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0105de6bf64b4d0da9bbe8564ee94b13",
+          "Name": "adapter",
+          "Description": "Adapter to XML\r\nThis is a XMLAdapter",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Specify XML file and properties for data transfer\r\n.ctor is a Constructor of BH.Adapter.XML.XMLAdapter"
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.CreateObjectComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Engine.XML.Create, XML_Engine, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \"XMLSettings\", \"Parameters\" : [\"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.XML.Enums.UnitType\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.XML.Enums.ExportDetail\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\"] }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"4da57443-9d6e-4ace-b62f-1f7429922897\", \"Name\" : \"replaceCurtainWalls\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Set to true if you want to replace curtain walls to have openings the same size as the wall. This is useful for IES exports. Default false\\r\\nThis is a Boolean\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : false }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"743db9c4-3034-4c66-8933-4296bddea4ff\", \"Name\" : \"replaceSolidOpeningsIntoDoors\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Set to true if you want to replace an opening which is marked as solid into a door. Useful for IES exports. Default false\\r\\nThis is a Boolean\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : false }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"c35559fb-72b6-49e8-8cde-2c042b9e2ba2\", \"Name\" : \"includeConstructions\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Set to true if you want to include construction and material data in the export. Default false\\r\\nThis is a Boolean\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : false }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"f0c6dac7-d49a-4015-8d8d-ed1f433d28a5\", \"Name\" : \"fixIncorrectAirTypes\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Set to true if you want air types with one adjacent space (i.e. external air walls) to have their type fixed based on their tilt. Default false\\r\\nThis is a Boolean\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : false }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"519f0ce4-46c3-4f79-ab3a-20567ef274d9\", \"Name\" : \"newFile\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Set to false if you want to append to a file when pushing XML. If set to true then a file will be created. If a file exists, it will be overwritten. Default true\\r\\nThis is a Boolean\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : true }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"a0edeba5-a695-4618-815d-285d3920a502\", \"Name\" : \"unitType\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.XML.Enums.UnitType\" }, \"Description\" : \"Set the unit type for the export to be either SI or Imperial. Default SI\\r\\nThis is a UnitType\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : 1 }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"f6840535-fce6-4da9-994c-dbb153165260\", \"Name\" : \"exportDetail\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.XML.Enums.ExportDetail\" }, \"Description\" : \"Set the detail of your export to be either full (whole building), shell (exterior walls only), or spaces (each individual space as its own XML file). Default full\\r\\nThis is a ExportDetail\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : 2 }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"93a0dc6c-f49d-435d-8284-d206650fca55\", \"Name\" : \"distanceTolerance\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"distanceTolerance is used as input for CleanPolyline method used for opening\\r\\nThis is a Double\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : 0.01 }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"7e22ed1d-e40e-40ae-9b7e-b6d9cc4a5959\", \"Name\" : \"xmlSettings\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.XML.Settings.XMLSettings\" }, \"Description\" : \"The XML settings to use with the XML adapter push\\r\\nThis is a XMLSettings\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"cc319a46-5bd6-4dad-ae71-9772c64ac1fb\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "662cdecd1ec34919876e7923a197b337",
+      "Inputs": [
+        {
+          "Id": "72ceffd761b8446db8c6315d762d5d7f",
+          "Name": "replaceCurtainWalls",
+          "Description": "Set to true if you want to replace curtain walls to have openings the same size as the wall. This is useful for IES exports. Default false\r\nThis is a Boolean",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "03b8c152f3724c03a90b73596918b682",
+          "Name": "replaceSolidOpeningsIntoDoors",
+          "Description": "Set to true if you want to replace an opening which is marked as solid into a door. Useful for IES exports. Default false\r\nThis is a Boolean",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "aedaf56bd00743ecab5d73f9df2c8f44",
+          "Name": "includeConstructions",
+          "Description": "Set to true if you want to include construction and material data in the export. Default false\r\nThis is a Boolean",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ab536738045549cdbe64699a34b07b82",
+          "Name": "fixIncorrectAirTypes",
+          "Description": "Set to true if you want air types with one adjacent space (i.e. external air walls) to have their type fixed based on their tilt. Default false\r\nThis is a Boolean",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6cc5b2ab04754e3588265fa89d4e5467",
+          "Name": "newFile",
+          "Description": "Set to false if you want to append to a file when pushing XML. If set to true then a file will be created. If a file exists, it will be overwritten. Default true\r\nThis is a Boolean",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3c3d890b99ee40038d8e03ee8d51570f",
+          "Name": "unitType",
+          "Description": "Set the unit type for the export to be either SI or Imperial. Default SI\r\nThis is a UnitType",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "51d09eff4eac45a5892402ae77aaf2d8",
+          "Name": "exportDetail",
+          "Description": "Set the detail of your export to be either full (whole building), shell (exterior walls only), or spaces (each individual space as its own XML file). Default full\r\nThis is a ExportDetail",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8312a03ba6974b8cab2ea6b58b287a57",
+          "Name": "distanceTolerance",
+          "Description": "distanceTolerance is used as input for CleanPolyline method used for opening\r\nThis is a Double",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "24ee34230fac46f3bfc966a2a9b2ccec",
+          "Name": "xmlSettings",
+          "Description": "The XML settings to use with the XML adapter push\r\nThis is a XMLSettings",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "XMLSettings is a Method of BH.Engine.XML.Create"
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.QueryComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Engine.Environment.Query, Environment_Engine, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \"Levels\", \"Parameters\" : [\"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\", \\\"GenericArguments\\\" : [{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Base.IBHoMObject\\\" }] }\"] }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"1a9137aa-45f3-4571-8ed9-bb5c930cab75\", \"Name\" : \"bhomObjects\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.IBHoMObject\" }] }, \"Description\" : \"A collection of generic BHoM objects\\r\\nThis is a List<IBHoMObject>:FamilyLoadSettings, ConnectionSettings, GeneralSettings, MapSettings, UpdatePropertySettings, PullSettings, RevitSettings, PushSettings, InstanceProperties, FamilyLibrary, RevitFilePreview, TypeMap, DraftingInstance, Family, ViewPlan, and more...\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : { \"_t\" : \"DBNull\" } }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"01771862-60ac-4ee8-a05e-06cb555048e1\", \"Name\" : \"levels\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.SettingOut.Level\" }] }, \"Description\" : \"A collection of Setting Out Level objects\\r\\nThis is a List<Level>\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"d57294ec-6350-4605-85a8-e3fe7124cff5\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "9575f2fe1c4b43bcbe46d43e8fa463b2",
+      "Inputs": [
+        {
+          "Id": "6be3fd5f5c3e457fa9e8a43f73a401eb",
+          "Name": "bhomObjects",
+          "Description": "A collection of generic BHoM objects\r\nThis is a List<IBHoMObject>:FamilyLoadSettings, ConnectionSettings, GeneralSettings, MapSettings, UpdatePropertySettings, PullSettings, RevitSettings, PushSettings, InstanceProperties, FamilyLibrary, RevitFilePreview, TypeMap, DraftingInstance, Family, ViewPlan, and more...",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a802829e8e3c42d6871e6a157805a133",
+          "Name": "levels",
+          "Description": "A collection of Setting Out Level objects\r\nThis is a List<Level>",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Shortest",
+      "Description": "Returns a collection of Setting Out Levels from a list of generic BHoM objects\r\nLevels is a Method of BH.Engine.Environment.Query"
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.CreateAdapterComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Adapter.Revit.RevitAdapter, Revit_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \".ctor\", \"Parameters\" : [\"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Adapters.Revit.Settings.RevitSettings\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\"] }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"27f99094-99c3-48d2-8474-93682dfe4117\", \"Name\" : \"revitSettings\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Settings.RevitSettings\" }, \"Description\" : \"Connect RevitSettings to control what is being connected\\r\\nThis is a BH.oM.Adapters.Revit.Settings.RevitSettings\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : null }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"71c181a8-49d2-47fa-8140-83827a9bd9cf\", \"Name\" : \"active\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Establish connection with Revit by setting to 'True'\\r\\nThis is a Boolean\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : false }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"e5d9cd59-481a-4bd3-92cc-a58de022c0af\", \"Name\" : \"adapter\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.Revit.RevitAdapter, Revit_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\" }, \"Description\" : \"Adapter to Revit\\r\\nThis is a BH.Adapter.Revit.RevitAdapter\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"d2de9863-ea5a-4c48-84f6-fbdb1d178d89\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "c1aa14f870514c46a7453befe91f1328",
+      "Inputs": [
+        {
+          "Id": "a8093229b9224987b41712f9c13df2f8",
+          "Name": "revitSettings",
+          "Description": "Connect RevitSettings to control what is being connected\r\nThis is a BH.oM.Adapters.Revit.Settings.RevitSettings",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b4ad9c9e0f0949ababb439b410b6ac3d",
+          "Name": "active",
+          "Description": "Establish connection with Revit by setting to 'True'\r\nThis is a Boolean",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ada4cc5124db471f9a691e9359b8a55c",
+          "Name": "adapter",
+          "Description": "Adapter to Revit\r\nThis is a BH.Adapter.Revit.RevitAdapter",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Shortest",
+      "Description": "Adapter to connect to an open Revit file. Connection will be made to the active document (based on active view). Make sure to only have ONE Revit Window open, or connection will not work as intended.\r\n.ctor is a Constructor of BH.Adapter.Revit.RevitAdapter"
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.CreateObjectComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.XML.Settings.XMLFileSettings\" }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"b8896466-3edd-4239-b866-517132fcedf3\", \"Name\" : \"FileName\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"This is a String\\r\\nFileName is a Property of BH.oM.XML.Settings.XMLFileSettings\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : \"\" }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"0ec5e00e-dfe0-454e-bb63-859beff14037\", \"Name\" : \"Directory\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"This is a String\\r\\nDirectory is a Property of BH.oM.XML.Settings.XMLFileSettings\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : \"\" }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"94722741-c4a4-4b93-ab63-761c8bd5ca5c\", \"Name\" : \"Name\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"This is a String\\r\\nName is a Property of BH.oM.XML.Settings.XMLFileSettings\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : \"\" }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"77a19ac9-8956-4cc5-b39e-aef7b3119297\", \"Name\" : \"X\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.XML.Settings.XMLFileSettings\" }, \"Description\" : \"This is a BH.oM.XML.Settings.XMLFileSettings\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"7147e927-fb8c-4b21-8d95-3843479bd1de\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "0c881ef78f1943b3a80e16c614482498",
+      "Inputs": [
+        {
+          "Id": "022b82103cde4e839aa0f4607a4112b4",
+          "Name": "FileName",
+          "Description": "This is a String\r\nFileName is a Property of BH.oM.XML.Settings.XMLFileSettings",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c5b8fae362bb4d97983281ca1a3eb41f",
+          "Name": "Directory",
+          "Description": "This is a String\r\nDirectory is a Property of BH.oM.XML.Settings.XMLFileSettings",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "79e97f4af2fc419cb7568ccd7d991c83",
+          "Name": "Name",
+          "Description": "This is a String\r\nName is a Property of BH.oM.XML.Settings.XMLFileSettings",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "74f9da8abf894cbdb2422a0d3f4c4f46",
+          "Name": "X",
+          "Description": "This is a BH.oM.XML.Settings.XMLFileSettings",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Shortest",
+      "Description": "This is a BH.oM.XML.Settings.XMLFileSettings"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "730417cd5cb143658654369f1e1d0033",
+      "End": "b900538b581b482787cd937790221421",
+      "Id": "da7bdb22515440c89507f6d0e23eeae0"
+    },
+    {
+      "Start": "730417cd5cb143658654369f1e1d0033",
+      "End": "cbb156445f7f4c42a376f1226daa66d8",
+      "Id": "380418af46574c019aca617cb5ca5720"
+    },
+    {
+      "Start": "730417cd5cb143658654369f1e1d0033",
+      "End": "a68f4834444846d7819f501b49351858",
+      "Id": "2acd5c5cf01a49de82a7c329c746fdc0"
+    },
+    {
+      "Start": "730417cd5cb143658654369f1e1d0033",
+      "End": "6d0a2da5882c479d8d4215b2c6193667",
+      "Id": "afbd1866d5694538baa68e5ab6763e02"
+    },
+    {
+      "Start": "730417cd5cb143658654369f1e1d0033",
+      "End": "6be3fd5f5c3e457fa9e8a43f73a401eb",
+      "Id": "a9e123f721004f689fdd09d3bc44d4fa"
+    },
+    {
+      "Start": "302dea5635e94ad1a7ca70ae643e98e8",
+      "End": "75ddd206ecc745838219b9b4e6dd05fa",
+      "Id": "44b1e2d234fb46f894a42aa953ff03e1"
+    },
+    {
+      "Start": "dddd40941a6742538b3e055907308106",
+      "End": "ca1886e91edb48b2bc278bc4d78b3f24",
+      "Id": "4bb9cc3babe6441bbf2a369b88322ab8"
+    },
+    {
+      "Start": "3127c9b9651d4220a89903df340c2a46",
+      "End": "0d57e9facf034977be2d7be3b2d14d61",
+      "Id": "a0c1a7c8499a4eb19bedb003044566e6"
+    },
+    {
+      "Start": "4405d64c7eca40baa9acbd024856c76c",
+      "End": "f7be9102991d4078b0e6b30d3b300e2e",
+      "Id": "073ecb3d405545dab44842bdf2ff1ecc"
+    },
+    {
+      "Start": "e9913bbd47134b0289c896e7368c6bfe",
+      "End": "3047466323bb48efa4c9e1ad5711e854",
+      "Id": "a6698bc9fc38494889ba420e1bc13e18"
+    },
+    {
+      "Start": "e9913bbd47134b0289c896e7368c6bfe",
+      "End": "c5b8fae362bb4d97983281ca1a3eb41f",
+      "Id": "d99415dee76943659c232a01199315d9"
+    },
+    {
+      "Start": "7bd848f5db31404db0b51f2ad756b178",
+      "End": "022b82103cde4e839aa0f4607a4112b4",
+      "Id": "0b7acac3c3404584987874e939e8332b"
+    },
+    {
+      "Start": "ed99761c78704f71b27c32d4825aab36",
+      "End": "b7ff63b9f19b416ca4fe6272e564ba85",
+      "Id": "ab25bf722bf04ba1a4fa55a6e2ee4ebb"
+    },
+    {
+      "Start": "ed99761c78704f71b27c32d4825aab36",
+      "End": "5c6900e777cf4b0ba32fbac4364a0aa4",
+      "Id": "4b78d992eb8148efa777c5b5a5b644a5"
+    },
+    {
+      "Start": "ed99761c78704f71b27c32d4825aab36",
+      "End": "b4ad9c9e0f0949ababb439b410b6ac3d",
+      "Id": "e65c6eb72fa84caa98d86236d8fe6ac4"
+    },
+    {
+      "Start": "f1a756e5201344b0b4ccf308837bbaeb",
+      "End": "469d467137ba4a46be358e24439ed8b8",
+      "Id": "2cc52d61a09748bdb8f0af6f06b6905b"
+    },
+    {
+      "Start": "375bb1a6d6e943abb32ac15461e14707",
+      "End": "71aa30d9a8be4fafa4d227ca2002a7aa",
+      "Id": "9a3d7dd0d8774067bf1345e0c6e52765"
+    },
+    {
+      "Start": "55398295f022463c8df68662036eab84",
+      "End": "41a2ff71cee5420fadc0d422d37800e3",
+      "Id": "2ba54bf931ca46b9a468998bfe9fa625"
+    },
+    {
+      "Start": "76b44643e8fb424b8a97e1aa27efc2ca",
+      "End": "51d09eff4eac45a5892402ae77aaf2d8",
+      "Id": "3f7bfd2461a940e888b47ab5d4ab0530"
+    },
+    {
+      "Start": "190912dddd50487ea57739cf4ca40645",
+      "End": "ac482940a4bb472898b42ea3bcc1b691",
+      "Id": "cc258cb8c55b4ba2b703efa81034fc3f"
+    },
+    {
+      "Start": "0105de6bf64b4d0da9bbe8564ee94b13",
+      "End": "79418e7df2a34416a93ec854b6bb8c39",
+      "Id": "363874537b1243538219c442ff2182c6"
+    },
+    {
+      "Start": "24ee34230fac46f3bfc966a2a9b2ccec",
+      "End": "600b078f4db24812979dfcee7b90526f",
+      "Id": "07cd3875902c498892db09a6aea10a47"
+    },
+    {
+      "Start": "74f9da8abf894cbdb2422a0d3f4c4f46",
+      "End": "7e8b3fa3aa844868b9e489cba023f5e4",
+      "Id": "96e2a67555904140baf97257234e55d2"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "BHoM",
+      "Version": "2.0.0",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "8d562e87649b4282ae8ee63dc76fed91",
+        "cec9977c1aea41e4bc13292541e46fcc",
+        "94dcdf3ea97a4532acbea587efd55954",
+        "68515c19c4f24d8cb05adf8f5f35c1f0",
+        "4eab1a214290429395ec8dcc5c1e7469",
+        "0e8d91570b3b4f0d9aae222201fb2783",
+        "09e1781c223d44fc95f3c90ab2f67612",
+        "cb84204bfd33449fb8f0163dbfbe5180",
+        "d13e702df480463695d774aa6f3f2e9e",
+        "e43ee10cdead4b239fb55df346979733",
+        "c23534564cb947feb76082c2e37462d6",
+        "111e824ed90a4aaf902d4dfb9dffb5d4",
+        "c44873afbcbf47c28df7c9c4c831d95e",
+        "ac4f2bbd31d04194aba091041f61dd21",
+        "662cdecd1ec34919876e7923a197b337",
+        "9575f2fe1c4b43bcbe46d43e8fa463b2",
+        "c1aa14f870514c46a7453befe91f1328",
+        "0c881ef78f1943b3a80e16c614482498"
+      ]
+    }
+  ],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.3.0.5885",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -82.411468505859375,
+      "EyeY": 74.233680725097656,
+      "EyeZ": -141.12614440917969,
+      "LookX": 113.73217010498047,
+      "LookY": -88.7962646484375,
+      "LookZ": 81.692855834960938,
+      "UpX": 0.277785986661911,
+      "UpY": 0.93969255685806274,
+      "UpZ": 0.19953131675720215
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Pull",
+        "Id": "8d562e87649b4282ae8ee63dc76fed91",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 353.727473377332,
+        "Y": 455.502932029212
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "RevitAdapter",
+        "Id": "cec9977c1aea41e4bc13292541e46fcc",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 41.88972742051601,
+        "Y": 351.12689167933019
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "CreateType",
+        "Id": "94dcdf3ea97a4532acbea587efd55954",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -71.543776018746,
+        "Y": 498.71039098121
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Push",
+        "Id": "68515c19c4f24d8cb05adf8f5f35c1f0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1525.35757482814,
+        "Y": 856.200331862453
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Boolean",
+        "Id": "ccdeb3fea1a84bd1ad76987dbde59fe4",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1281.65329768726,
+        "Y": 1102.28858614755
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "5add7c555d594005b2788510342ca505",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1870.56221646367,
+        "Y": 996.75689161677
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Directory Path",
+        "Id": "2dbb184eacec49758afd1e7f87756972",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 467.03094283596931,
+        "Y": 815.62056338783543
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "String",
+        "Id": "517fd572daaf4b76b7ad6e6e0ff5ec34",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 665.290528550256,
+        "Y": 955.005024151238
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Boolean",
+        "Id": "d83b19c422134c47ae35c1ce14342117",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -233.308431997743,
+        "Y": 579.072858290729
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "DocumentBuilder",
+        "Id": "4eab1a214290429395ec8dcc5c1e7469",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1144.0422120707451,
+        "Y": 611.31728604004775
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Panels",
+        "Id": "0e8d91570b3b4f0d9aae222201fb2783",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 790.666583603785,
+        "Y": -141.78960438020798
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Buildings",
+        "Id": "09e1781c223d44fc95f3c90ab2f67612",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 797.724926398225,
+        "Y": -32.091817086892917
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Spaces",
+        "Id": "cb84204bfd33449fb8f0163dbfbe5180",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 797.724926398225,
+        "Y": 78.3239233403721
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "FilterRequest",
+        "Id": "d13e702df480463695d774aa6f3f2e9e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 97.922954465750678,
+        "Y": 618.63091868028062
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Polyline",
+        "Id": "e43ee10cdead4b239fb55df346979733",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1172.4590109540061,
+        "Y": -77.390908816224936
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Boolean",
+        "Id": "f8aa6b5493fc46ad94702e78c3114441",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 458.371681010672,
+        "Y": 1032.76573983924
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Boolean",
+        "Id": "345220b600bc4bf6b8f4c60b78a5d4ea",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 458.371681010672,
+        "Y": 1098.04794504451
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Boolean",
+        "Id": "2b3588d33ca3422cb2ffe9cfed85d228",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 458.371681010672,
+        "Y": 1165.99738116649
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "UnitType",
+        "Id": "c23534564cb947feb76082c2e37462d6",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 458.371681010672,
+        "Y": 1293.89456066033
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "ExportDetail",
+        "Id": "111e824ed90a4aaf902d4dfb9dffb5d4",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 458.371681010672,
+        "Y": 1383.97676586561
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Boolean",
+        "Id": "ff30e27134304eb28f03f618a2fb218d",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 458.371681010672,
+        "Y": 1228.61235545506
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "FileAdapter",
+        "Id": "c44873afbcbf47c28df7c9c4c831d95e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1065.34306987233,
+        "Y": 728.867758043683
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "String",
+        "Id": "c1195d6ac4f14c7988ef69a01a31c0e3",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 918.96444733235626,
+        "Y": 786.5167445972387
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "XMLAdapter",
+        "Id": "ac4f2bbd31d04194aba091041f61dd21",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1193.5394247109,
+        "Y": 898.256635268617
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "XMLSettings",
+        "Id": "662cdecd1ec34919876e7923a197b337",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 774.3365406134335,
+        "Y": 1047.6222595770816
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Levels",
+        "Id": "9575f2fe1c4b43bcbe46d43e8fa463b2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 809.72735157554484,
+        "Y": 190.54374256581892
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "RevitAdapter",
+        "Id": "c1aa14f870514c46a7453befe91f1328",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -44.38730065084394,
+        "Y": 759.09590889418939
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "XMLFileSettings",
+        "Id": "0c881ef78f1943b3a80e16c614482498",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 922.53717967884108,
+        "Y": 895.83095167296051
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "1c726651c315420ba5cad37b3d3f9c23",
+        "Title": "Get \r\nThings",
+        "Nodes": [
+          "a6205d8b67634ef29528a3be48bd2b05"
+        ],
+        "Left": 158.86040044863,
+        "Top": -793.041513056878,
+        "Width": 174.4,
+        "Height": 126.4,
+        "FontSize": 30.0,
+        "InitialTop": -711.041513056878,
+        "InitialHeight": 140.0,
+        "TextblockHeight": 72.0,
+        "Background": "#FFD4B6DB"
+      },
+      {
+        "Id": "507533dad37e4ee69e2c3425be7fd22d",
+        "Title": "Chop / Change Things",
+        "Nodes": [
+          "91cca614db4f4a779bb6fb3f8c542904"
+        ],
+        "Left": 351.257201648021,
+        "Top": -793.041513056878,
+        "Width": 197.6,
+        "Height": 126.4,
+        "FontSize": 30.0,
+        "InitialTop": -711.041513056878,
+        "InitialHeight": 140.0,
+        "TextblockHeight": 72.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "16a82751d39249ed8f3851d173007618",
+        "Title": "Input Things",
+        "Nodes": [
+          "3f751ce6a46943f888b5ef98eeb26bc4"
+        ],
+        "Left": 568.88435300213,
+        "Top": -793.041513056878,
+        "Width": 150.4,
+        "Height": 126.4,
+        "FontSize": 30.0,
+        "InitialTop": -711.041513056878,
+        "InitialHeight": 140.0,
+        "TextblockHeight": 72.0,
+        "Background": "#FF48B9FF"
+      },
+      {
+        "Id": "0009eb0565bb4233bfe6aeeb83c59e23",
+        "Title": "Calculate Things",
+        "Nodes": [
+          "75e503bacbaa40d19c4f1cd09f45e75d"
+        ],
+        "Left": 742.823105624203,
+        "Top": -793.041513056878,
+        "Width": 130.32333333333332,
+        "Height": 126.4,
+        "FontSize": 30.0,
+        "InitialTop": -711.041513056878,
+        "InitialHeight": 140.0,
+        "TextblockHeight": 72.0,
+        "Background": "#FFFF7BAC"
+      },
+      {
+        "Id": "a8543ed3812d40609c39b18cb46f159b",
+        "Title": "Export \r\nThings",
+        "Nodes": [
+          "9b6cb3dfe71b47e4affef9d2675006e5"
+        ],
+        "Left": 893.521822668283,
+        "Top": -793.041513056878,
+        "Width": 214.4,
+        "Height": 126.4,
+        "FontSize": 30.0,
+        "InitialTop": -711.041513056878,
+        "InitialHeight": 140.0,
+        "TextblockHeight": 72.0,
+        "Background": "#FF71C6A8"
+      },
+      {
+        "Id": "68c9598092af42219ad2047785876418",
+        "Title": "See Things",
+        "Nodes": [
+          "46d3a0b530c842d68b9c68aad76f57dd"
+        ],
+        "Left": 1132.41360586773,
+        "Top": -793.041513056878,
+        "Width": 124.8,
+        "Height": 126.4,
+        "FontSize": 30.0,
+        "InitialTop": -711.041513056878,
+        "InitialHeight": 140.0,
+        "TextblockHeight": 72.0,
+        "Background": "#FFD8D8D8"
+      },
+      {
+        "Id": "84cc91301b7f47cda15b4cfd60afb128",
+        "Title": "WIP \r\nThings",
+        "Nodes": [
+          "6b56cbf4846f49da95c61d5c9b909330"
+        ],
+        "Left": 1285.3956733775,
+        "Top": -793.041513056878,
+        "Width": 180.0,
+        "Height": 126.4,
+        "FontSize": 30.0,
+        "InitialTop": -711.041513056878,
+        "InitialHeight": 140.0,
+        "TextblockHeight": 72.0,
+        "Background": "#FFB5B5B5"
+      },
+      {
+        "Id": "8024b19c0bb94964a22875bab50dd2a1",
+        "Title": "gbXML",
+        "Nodes": [
+          "68515c19c4f24d8cb05adf8f5f35c1f0"
+        ],
+        "Left": 1515.35757482814,
+        "Top": 810.200331862453,
+        "Width": 232.0,
+        "Height": 241.0,
+        "FontSize": 30.0,
+        "InitialTop": 856.200331862453,
+        "InitialHeight": 136.2,
+        "TextblockHeight": 36.0,
+        "Background": "#FF71C6A8"
+      },
+      {
+        "Id": "ffcf584efadc4dd9b5fc4520cf3cc9cd",
+        "Title": "Select Building",
+        "Nodes": [
+          "d83b19c422134c47ae35c1ce14342117",
+          "94dcdf3ea97a4532acbea587efd55954"
+        ],
+        "Left": -243.308431997743,
+        "Top": 467.11039098121,
+        "Width": 263.364655978997,
+        "Height": 179.76246730951897,
+        "FontSize": 18.0,
+        "InitialTop": 498.71039098121,
+        "InitialHeight": 195.621968529909,
+        "TextblockHeight": 21.6,
+        "Background": "#FF48B9FF"
+      },
+      {
+        "Id": "e0dec332474b47cdac536f6ce40962b2",
+        "Title": "",
+        "Nodes": [
+          "cec9977c1aea41e4bc13292541e46fcc"
+        ],
+        "Left": 31.88972742051601,
+        "Top": 305.12689167933019,
+        "Width": 260.8,
+        "Height": 164.2,
+        "FontSize": 30.0,
+        "InitialTop": 351.12689167933019,
+        "InitialHeight": 136.2,
+        "TextblockHeight": 36.0,
+        "Background": "#FFD4B6DB"
+      },
+      {
+        "Id": "7dc423010e154c7187c668115982a230",
+        "Title": "merged into one node",
+        "Nodes": [
+          "4eab1a214290429395ec8dcc5c1e7469"
+        ],
+        "Left": 1134.0422120707451,
+        "Top": 558.1172860400477,
+        "Width": 173.6,
+        "Height": 145.80000000000004,
+        "FontSize": 18.0,
+        "InitialTop": 611.31728604004775,
+        "InitialHeight": 122.6,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "1e990d371d874c3487ec7460abad3f06",
+        "Title": "expanded method",
+        "Nodes": [
+          "cb84204bfd33449fb8f0163dbfbe5180",
+          "09e1781c223d44fc95f3c90ab2f67612",
+          "0e8d91570b3b4f0d9aae222201fb2783",
+          "9575f2fe1c4b43bcbe46d43e8fa463b2"
+        ],
+        "Left": 780.666583603785,
+        "Top": -173.38960438020797,
+        "Width": 272.66076797175981,
+        "Height": 456.53334694602688,
+        "FontSize": 18.0,
+        "InitialTop": -141.78960438020798,
+        "InitialHeight": 920.944996342518,
+        "TextblockHeight": 21.6,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "3f35711756aa4d94a6f4e38820b495a4",
+        "Title": "Colour Coding Stategy",
+        "Nodes": [],
+        "Left": 158.74150512844,
+        "Top": -835.192291678019,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "a6205d8b67634ef29528a3be48bd2b05",
+        "Title": "Get Inputs from Revit etc.",
+        "Nodes": [],
+        "Left": 168.86040044863,
+        "Top": -711.041513056878,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "91cca614db4f4a779bb6fb3f8c542904",
+        "Title": "Managing List / Filter Lists etc",
+        "Nodes": [],
+        "Left": 361.257201648021,
+        "Top": -711.041513056878,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "3f751ce6a46943f888b5ef98eeb26bc4",
+        "Title": "User Inputs Required",
+        "Nodes": [],
+        "Left": 578.88435300213,
+        "Top": -711.041513056878,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "75e503bacbaa40d19c4f1cd09f45e75d",
+        "Title": "Calculations",
+        "Nodes": [],
+        "Left": 752.823105624203,
+        "Top": -711.041513056878,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "9b6cb3dfe71b47e4affef9d2675006e5",
+        "Title": "Export to external files / software",
+        "Nodes": [],
+        "Left": 903.521822668283,
+        "Top": -711.041513056878,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "46d3a0b530c842d68b9c68aad76f57dd",
+        "Title": "Dispay Outputs ",
+        "Nodes": [],
+        "Left": 1142.41360586773,
+        "Top": -711.041513056878,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "6b56cbf4846f49da95c61d5c9b909330",
+        "Title": "Things still under progress",
+        "Nodes": [],
+        "Left": 1295.3956733775,
+        "Top": -711.041513056878,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "7f65a6f2cb3148ed8e2762a4df0b4972",
+        "Title": "Script Purpose:\r\nPull data from Revit\r\n\r\nVersion Information to create script:\r\nDynamo 1.3.3.4111\r\nRevit 2018.8.3 \r\n\r\n\r\nDate created: 14/12/2018\r\nDate updated: 23/04/2019\r\n",
+        "Nodes": [],
+        "Left": 158.66222574607,
+        "Top": -638.037343326617,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 186.03438588423927,
+    "Y": 88.172952399291489,
+    "Zoom": 0.29944254109647744
+  }
+}
