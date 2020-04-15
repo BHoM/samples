@@ -1,0 +1,1224 @@
+{
+  "Uuid": "a63b9937-6c62-4c47-a656-5091f9c2a001",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "pullDisciplinesDynamo",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.CreateAdapterComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Adapter.Revit.RevitAdapter, Revit_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \".ctor\", \"Parameters\" : [\"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Adapters.Revit.Settings.RevitSettings\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\"] }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"afe54cd1-2c2e-4e4e-97e8-9a5089ec7dc7\", \"Name\" : \"revitSettings\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Settings.RevitSettings\" }, \"Description\" : \"General settings that are applicable to all actions performed by this adapter, e.g. connection settings, tolerances, parameter mapping settings etc.\\r\\nThis is a BH.oM.Adapters.Revit.Settings.RevitSettings:\\r\\nGeneral settings that are applicable to all actions performed by the instance of Revit adapter.\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : null }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"b9dc14ff-3142-4564-8c7a-c94dd38cb56b\", \"Name\" : \"active\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Establish connection with Revit by setting to 'True'\\r\\nThis is a Boolean\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : false }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"54dcfbbc-71f0-49b1-a3ec-4bed8f4b44fe\", \"Name\" : \"adapter\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.Revit.RevitAdapter, Revit_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\" }, \"Description\" : \"Adapter to Revit\\r\\nThis is a BH.Adapter.Revit.RevitAdapter\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"05752d46-cc3a-4441-a649-e98d4bd80ff9\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "796f92ef2e314b16b5f7f1ec43211da4",
+      "Inputs": [
+        {
+          "Id": "442f1292f16940cb8621e75943fc8f52",
+          "Name": "revitSettings",
+          "Description": "General settings that are applicable to all actions performed by this adapter, e.g. connection settings, tolerances, parameter mapping settings etc.\r\nThis is a BH.oM.Adapters.Revit.Settings.RevitSettings:\r\nGeneral settings that are applicable to all actions performed by the instance of Revit adapter.",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b9736fb8348040cb901a117674f00149",
+          "Name": "active",
+          "Description": "Establish connection with Revit by setting to 'True'\r\nThis is a Boolean",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9e6edf85c9ca49a39a972e870c3614fb",
+          "Name": "adapter",
+          "Description": "Adapter to Revit\r\nThis is a BH.Adapter.Revit.RevitAdapter",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Shortest",
+      "Description": "Adapter to connect to an open Revit file. Connection will be made to the active document (based on active view). Make sure to only have ONE Revit Window open, or connection will not work as intended.\r\n.ctor is a Constructor of BH.Adapter.Revit.RevitAdapter"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": false,
+      "Id": "b7dcd50427e540df90bc270477eec540",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "8e8dd8566def429ca451da518e8a053d",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.PullComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.UI.Components.PullCaller, BHoM_UI, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \"Pull\", \"Parameters\" : [\"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Adapter.BHoMAdapter, BHoM_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Adapter.PullType\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Adapter.ActionConfig\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\"] }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"f56c9ee8-5d0c-4cf0-a1ed-c37d1c3ee83c\", \"Name\" : \"adapter\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.BHoMAdapter, BHoM_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\" }, \"Description\" : \"Adapter to the external software\\r\\nThis is a BH.Adapter.BHoMAdapter\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : { \"_t\" : \"DBNull\", \"BHoM_Guid\" : \"21bd641e-c645-4aad-997c-d08824bc4391\" } }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"3d92de66-22a3-4076-b8e9-0545bd4a92ba\", \"Name\" : \"request\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Input a Request to pull only objects that satisfy a certain rule. \\nInput a Type to pull only objects of that type.\\r\\nThis is a Object\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : null }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"19db7eac-1d2a-41df-9716-c750eb4e963d\", \"Name\" : \"pullType\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapter.PullType\" }, \"Description\" : \"Pull type. Connect the enum PullType for all the alternatives.\\r\\nThis is a BH.oM.Adapter.PullType\\r\\nEnum values:\\r\\n-AdapterDefault: If this is chosen, then the m_AdapterSettings.DefaultPullType is picked.\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : 0 }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"8a0353d6-3ef5-46c6-a3d2-2922b79426d6\", \"Name\" : \"actionConfig\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapter.ActionConfig\" }, \"Description\" : \"Configuration for this Action. You can input an ActionConfig (it contains the configs common to all Toolkits); \\nconsider that Toolkits may have a custom ActionConfig (e.g. GSAConfig, SpeckleConfig).\\r\\nThis is a BH.oM.Adapter.ActionConfig:\\r\\nConfigurations specific for an Adapter Action (Push, Pull, etc).\\nConsider that your tookit might have a more specific implementation available. Try to look for [your toolkit name]ActionConfig.\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : null }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"a47a756f-e5fc-4142-b537-63ac8f84f012\", \"Name\" : \"active\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Execute the pull\\r\\nThis is a Boolean\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : false }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"8588e97a-63f4-4d1c-b09b-021438be2553\", \"Name\" : \"objects\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }] }, \"Description\" : \"Objects pulled\\r\\nThis is a IEnumerable<Object>\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"d035016c-e35a-4cd0-be09-325765f79337\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "9cd12c4540944197b3203690512d38d3",
+      "Inputs": [
+        {
+          "Id": "542d0322035344fe983239d7e6ad3576",
+          "Name": "adapter",
+          "Description": "Adapter to the external software\r\nThis is a BH.Adapter.BHoMAdapter",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e878999f815d441f9f5ffa5076e7aff0",
+          "Name": "request",
+          "Description": "Input a Request to pull only objects that satisfy a certain rule. \nInput a Type to pull only objects of that type.\r\nThis is a Object",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3be7e327d2514053899cc5303b9ac9a4",
+          "Name": "pullType",
+          "Description": "Pull type. Connect the enum PullType for all the alternatives.\r\nThis is a BH.oM.Adapter.PullType\r\nEnum values:\r\n-AdapterDefault: If this is chosen, then the m_AdapterSettings.DefaultPullType is picked.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bb2f8dc5bace41a9891349bb8820bf09",
+          "Name": "actionConfig",
+          "Description": "Configuration for this Action. You can input an ActionConfig (it contains the configs common to all Toolkits); \nconsider that Toolkits may have a custom ActionConfig (e.g. GSAConfig, SpeckleConfig).\r\nThis is a BH.oM.Adapter.ActionConfig:\r\nConfigurations specific for an Adapter Action (Push, Pull, etc).\nConsider that your tookit might have a more specific implementation available. Try to look for [your toolkit name]ActionConfig.",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1ab78509b9eb4faa8079e90615ed16e4",
+          "Name": "active",
+          "Description": "Execute the pull\r\nThis is a Boolean",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2f996330a7b245528506d8cf1ff6f42c",
+          "Name": "objects",
+          "Description": "Objects pulled\r\nThis is a IEnumerable<Object>",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Shortest",
+      "Description": "Adapter Action 'Pull': imports objects from an external software. \nAlso allows for querying through Requests.\r\nPull is a Method of BH.UI.Components.PullCaller"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": false,
+      "Id": "2fbbecf10c7542b282e2f7e9f1493725",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "9c1f8bd0e95646f9a2f4dc2ab6916ecf",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.CreateObjectComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Requests.FilterByCategory\" }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"b5437d79-1b63-4e99-901a-270b689304a9\", \"Name\" : \"CategoryName\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Revit category name, as shown in Revit user interface (currently only English supported).\\r\\nThis is a String\\r\\nCategoryName is a Property of BH.oM.Adapters.Revit.Requests.FilterByCategory\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : \"\" }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"2762f650-e7e4-4134-9dc2-bc3e2666dd18\", \"Name\" : \"CaseSensitive\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"If true: only perfect, case sensitive text match will be accepted. If false: capitals and small letters will be treated as equal.\\r\\nThis is a Boolean\\r\\nCaseSensitive is a Property of BH.oM.Adapters.Revit.Requests.FilterByCategory\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : true }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"7624a755-1134-4c41-95d5-f2dbbe22ba20\", \"Name\" : \"F\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Requests.FilterByCategory\" }, \"Description\" : \"This is a BH.oM.Adapters.Revit.Requests.FilterByCategory:\\r\\nIRequest that filters all elements of a Revit category.\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"5d9abf72-6cdc-49d0-8870-3358f3a9cc17\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "98e26a8aedc74e9f8d4460f4569ead9b",
+      "Inputs": [
+        {
+          "Id": "8ab76df55ec8427a87c7480c45dc3a84",
+          "Name": "CategoryName",
+          "Description": "Revit category name, as shown in Revit user interface (currently only English supported).\r\nThis is a String\r\nCategoryName is a Property of BH.oM.Adapters.Revit.Requests.FilterByCategory",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "78e2e1d3fbaf4f8e816297eb693da253",
+          "Name": "CaseSensitive",
+          "Description": "If true: only perfect, case sensitive text match will be accepted. If false: capitals and small letters will be treated as equal.\r\nThis is a Boolean\r\nCaseSensitive is a Property of BH.oM.Adapters.Revit.Requests.FilterByCategory",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "fc885f1741ed4d96a7d078a233b9a21c",
+          "Name": "F",
+          "Description": "This is a BH.oM.Adapters.Revit.Requests.FilterByCategory:\r\nIRequest that filters all elements of a Revit category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Shortest",
+      "Description": "This is a BH.oM.Adapters.Revit.Requests.FilterByCategory:\r\nIRequest that filters all elements of a Revit category."
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.CreateObjectComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Engine.Adapters.Revit.Create, Revit_Engine, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \"RevitPullConfig\", \"Parameters\" : [\"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Adapters.Revit.Enums.Discipline\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\"] }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"1fa6c654-5dcb-4718-bca4-c061c3e874c2\", \"Name\" : \"discipline\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Enums.Discipline\" }, \"Description\" : \"Discipline used on pull action. Default is Physical.\\r\\nThis is a BH.oM.Adapters.Revit.Enums.Discipline:\\r\\nEnumerator allowing choosing to which discipline (and corresponding namespace) should Revit elements be converted on pull.\\r\\nEnum values:\\r\\n-Undefined: Default discipline to be used.\\r\\n-Environmental: Elements to be converted to types from BH.oM.Environment. If no suitable conversion exists, default discipline to be used.\\r\\n-Structural: Elements to be converted to types from BH.oM.Structure. If no suitable conversion exists, default discipline to be used.\\r\\n-Architecture: Elements to be converted to types from BH.oM.Architecture. If no suitable conversion exists, default discipline to be used.\\r\\n-Physical: Elements to be converted to types from BH.oM.Physical. If no suitable conversion exists, default discipline to be used.\\r\\nDiscipline is a Property of BH.oM.Adapters.Revit.RevitPullConfig\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : 0 }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"2f53dcbb-231a-4a82-8276-c0e78a487380\", \"Name\" : \"includeClosedWorksets\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Elements from closed worksets will be processed if true.\\r\\nThis is a Boolean\\r\\nIncludeClosedWorksets is a Property of BH.oM.Adapters.Revit.RevitPullConfig\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : false }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"ffe2d2e0-0a20-4d27-8780-a19d5af52295\", \"Name\" : \"pullEdges\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"If true, edges of elements will be pulled and stored under Revit_edges in CustomData.\\r\\nThis is a Boolean\\r\\nPullEdges is a Property of BH.oM.Adapters.Revit.RevitPullConfig\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : false }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"4a77c136-4f2d-487a-8df1-07ba16f3bfcc\", \"Name\" : \"includeNonVisible\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Invisible element edges will be pulled and passed to CustomData if true. PullEdges switched to true needed for this to activate.\\r\\nThis is a Boolean\\r\\nIncludeNonVisible is a Property of BH.oM.Adapters.Revit.RevitPullConfig\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : false }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"9ec17a02-bb28-4564-a067-06f5d9a54049\", \"Name\" : \"R\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.RevitPullConfig\" }, \"Description\" : \"revitPullConfig\\r\\nThis is a BH.oM.Adapters.Revit.RevitPullConfig:\\r\\nConfiguration used for adapter interaction with Revit on Pull action.\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"03f77434-8638-4ea7-84f3-5d142febbb56\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "899c37a7830e435eb312b1d0bcca6a11",
+      "Inputs": [
+        {
+          "Id": "6c839d26d5194797976eea7045f3d45a",
+          "Name": "discipline",
+          "Description": "Discipline used on pull action. Default is Physical.\r\nThis is a BH.oM.Adapters.Revit.Enums.Discipline:\r\nEnumerator allowing choosing to which discipline (and corresponding namespace) should Revit elements be converted on pull.\r\nEnum values:\r\n-Undefined: Default discipline to be used.\r\n-Environmental: Elements to be converted to types from BH.oM.Environment. If no suitable conversion exists, default discipline to be used.\r\n-Structural: Elements to be converted to types from BH.oM.Structure. If no suitable conversion exists, default discipline to be used.\r\n-Architecture: Elements to be converted to types from BH.oM.Architecture. If no suitable conversion exists, default discipline to be used.\r\n-Physical: Elements to be converted to types from BH.oM.Physical. If no suitable conversion exists, default discipline to be used.\r\nDiscipline is a Property of BH.oM.Adapters.Revit.RevitPullConfig",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "af655133c1f14373a57be1222019daf7",
+          "Name": "includeClosedWorksets",
+          "Description": "Elements from closed worksets will be processed if true.\r\nThis is a Boolean\r\nIncludeClosedWorksets is a Property of BH.oM.Adapters.Revit.RevitPullConfig",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4f0fa58b8dda4fdbb25ca41a024380dd",
+          "Name": "pullEdges",
+          "Description": "If true, edges of elements will be pulled and stored under Revit_edges in CustomData.\r\nThis is a Boolean\r\nPullEdges is a Property of BH.oM.Adapters.Revit.RevitPullConfig",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f668d5ac81e048dfbcf961e61850f1bd",
+          "Name": "includeNonVisible",
+          "Description": "Invisible element edges will be pulled and passed to CustomData if true. PullEdges switched to true needed for this to activate.\r\nThis is a Boolean\r\nIncludeNonVisible is a Property of BH.oM.Adapters.Revit.RevitPullConfig",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "871b286b995043f0ae981a953e1ab756",
+          "Name": "R",
+          "Description": "revitPullConfig\r\nThis is a BH.oM.Adapters.Revit.RevitPullConfig:\r\nConfiguration used for adapter interaction with Revit on Pull action.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Shortest",
+      "Description": "Creates a pull action-specific configuration used for adapter interaction with Revit.\r\nRevitPullConfig is a Method of BH.Engine.Adapters.Revit.Create"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"Walls\";",
+      "Id": "f7e0d81a5b804483b1f710c81180734a",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4c84a862b3cc474e93dccdee55ccb8d0",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.CreateEnumComponent, Dynamo_UI",
+      "SelectedIndex": 4,
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Enums.Discipline\" }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"62e9d2c5-9a08-4c8a-8f75-db4cf7d48d29\", \"Name\" : \"index\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"index of the enum value\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"91536407-6430-4871-a301-a98ef2a3857c\", \"Name\" : \"enum\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Enum, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"enum value\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"6ad6b4b6-8035-455d-b518-5b7a25f316b6\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "47a823985171467e978fd09b7d2b8472",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "664cf87e585849c0afaad6a4d6be3249",
+          "Name": "enum",
+          "Description": "enum value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Shortest",
+      "Description": "This is a BH.oM.Adapters.Revit.Enums.Discipline:\r\nEnumerator allowing choosing to which discipline (and corresponding namespace) should Revit elements be converted on pull.\r\nEnum values:\r\n-Undefined: Default discipline to be used.\r\n-Environmental: Elements to be converted to types from BH.oM.Environment. If no suitable conversion exists, default discipline to be used.\r\n-Structural: Elements to be converted to types from BH.oM.Structure. If no suitable conversion exists, default discipline to be used.\r\n-Architecture: Elements to be converted to types from BH.oM.Architecture. If no suitable conversion exists, default discipline to be used.\r\n-Physical: Elements to be converted to types from BH.oM.Physical. If no suitable conversion exists, default discipline to be used."
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.PullComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.UI.Components.PullCaller, BHoM_UI, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \"Pull\", \"Parameters\" : [\"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Adapter.BHoMAdapter, BHoM_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Adapter.PullType\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Adapter.ActionConfig\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\"] }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"f56c9ee8-5d0c-4cf0-a1ed-c37d1c3ee83c\", \"Name\" : \"adapter\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.BHoMAdapter, BHoM_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\" }, \"Description\" : \"Adapter to the external software\\r\\nThis is a BH.Adapter.BHoMAdapter\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : { \"_t\" : \"DBNull\", \"BHoM_Guid\" : \"21bd641e-c645-4aad-997c-d08824bc4391\" } }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"3d92de66-22a3-4076-b8e9-0545bd4a92ba\", \"Name\" : \"request\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Input a Request to pull only objects that satisfy a certain rule. \\nInput a Type to pull only objects of that type.\\r\\nThis is a Object\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : null }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"19db7eac-1d2a-41df-9716-c750eb4e963d\", \"Name\" : \"pullType\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapter.PullType\" }, \"Description\" : \"Pull type. Connect the enum PullType for all the alternatives.\\r\\nThis is a BH.oM.Adapter.PullType\\r\\nEnum values:\\r\\n-AdapterDefault: If this is chosen, then the m_AdapterSettings.DefaultPullType is picked.\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : 0 }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"8a0353d6-3ef5-46c6-a3d2-2922b79426d6\", \"Name\" : \"actionConfig\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapter.ActionConfig\" }, \"Description\" : \"Configuration for this Action. You can input an ActionConfig (it contains the configs common to all Toolkits); \\nconsider that Toolkits may have a custom ActionConfig (e.g. GSAConfig, SpeckleConfig).\\r\\nThis is a BH.oM.Adapter.ActionConfig:\\r\\nConfigurations specific for an Adapter Action (Push, Pull, etc).\\nConsider that your tookit might have a more specific implementation available. Try to look for [your toolkit name]ActionConfig.\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : null }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"a47a756f-e5fc-4142-b537-63ac8f84f012\", \"Name\" : \"active\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Execute the pull\\r\\nThis is a Boolean\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : false }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"8588e97a-63f4-4d1c-b09b-021438be2553\", \"Name\" : \"objects\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }] }, \"Description\" : \"Objects pulled\\r\\nThis is a IEnumerable<Object>\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"b2b2054a-fe01-468a-859f-52fca0e010e5\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "4aa618c8048c44cf88978fd6461c20c5",
+      "Inputs": [
+        {
+          "Id": "7adc1e54a8ee4ce68f5b4ebcbbfc16dc",
+          "Name": "adapter",
+          "Description": "Adapter to the external software\r\nThis is a BH.Adapter.BHoMAdapter",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ec2b9b5f537d4991a2c090e6a77559bb",
+          "Name": "request",
+          "Description": "Input a Request to pull only objects that satisfy a certain rule. \nInput a Type to pull only objects of that type.\r\nThis is a Object",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "cfa2c98345af49b288e7a188301e64fe",
+          "Name": "pullType",
+          "Description": "Pull type. Connect the enum PullType for all the alternatives.\r\nThis is a BH.oM.Adapter.PullType\r\nEnum values:\r\n-AdapterDefault: If this is chosen, then the m_AdapterSettings.DefaultPullType is picked. (disabled)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "17f70bcdda8148cb99fe68347dfe0917",
+          "Name": "actionConfig",
+          "Description": "Configuration for this Action. You can input an ActionConfig (it contains the configs common to all Toolkits); \nconsider that Toolkits may have a custom ActionConfig (e.g. GSAConfig, SpeckleConfig).\r\nThis is a BH.oM.Adapter.ActionConfig:\r\nConfigurations specific for an Adapter Action (Push, Pull, etc).\nConsider that your tookit might have a more specific implementation available. Try to look for [your toolkit name]ActionConfig.",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c9e71661c9264b5f8cabb0845dd7b7c0",
+          "Name": "active",
+          "Description": "Execute the pull\r\nThis is a Boolean",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "48f75793855c41458d385c487840dc62",
+          "Name": "objects",
+          "Description": "Objects pulled\r\nThis is a IEnumerable<Object>",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Shortest",
+      "Description": "Adapter Action 'Pull': imports objects from an external software. \nAlso allows for querying through Requests.\r\nPull is a Method of BH.UI.Components.PullCaller"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": false,
+      "Id": "0a791add73e443b789089f165f76107b",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "31e92de2d6774717af8a14c978ba1d0f",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.CreateObjectComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Engine.Adapters.Revit.Create, Revit_Engine, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \"RevitPullConfig\", \"Parameters\" : [\"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Adapters.Revit.Enums.Discipline\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\"] }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"1fa6c654-5dcb-4718-bca4-c061c3e874c2\", \"Name\" : \"discipline\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Enums.Discipline\" }, \"Description\" : \"Discipline used on pull action. Default is Physical.\\r\\nThis is a BH.oM.Adapters.Revit.Enums.Discipline:\\r\\nEnumerator allowing choosing to which discipline (and corresponding namespace) should Revit elements be converted on pull.\\r\\nEnum values:\\r\\n-Undefined: Default discipline to be used.\\r\\n-Environmental: Elements to be converted to types from BH.oM.Environment. If no suitable conversion exists, default discipline to be used.\\r\\n-Structural: Elements to be converted to types from BH.oM.Structure. If no suitable conversion exists, default discipline to be used.\\r\\n-Architecture: Elements to be converted to types from BH.oM.Architecture. If no suitable conversion exists, default discipline to be used.\\r\\n-Physical: Elements to be converted to types from BH.oM.Physical. If no suitable conversion exists, default discipline to be used.\\r\\nDiscipline is a Property of BH.oM.Adapters.Revit.RevitPullConfig\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : 0 }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"2f53dcbb-231a-4a82-8276-c0e78a487380\", \"Name\" : \"includeClosedWorksets\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Elements from closed worksets will be processed if true.\\r\\nThis is a Boolean\\r\\nIncludeClosedWorksets is a Property of BH.oM.Adapters.Revit.RevitPullConfig\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : false }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"ffe2d2e0-0a20-4d27-8780-a19d5af52295\", \"Name\" : \"pullEdges\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"If true, edges of elements will be pulled and stored under Revit_edges in CustomData.\\r\\nThis is a Boolean\\r\\nPullEdges is a Property of BH.oM.Adapters.Revit.RevitPullConfig\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : false }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"4a77c136-4f2d-487a-8df1-07ba16f3bfcc\", \"Name\" : \"includeNonVisible\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Invisible element edges will be pulled and passed to CustomData if true. PullEdges switched to true needed for this to activate.\\r\\nThis is a Boolean\\r\\nIncludeNonVisible is a Property of BH.oM.Adapters.Revit.RevitPullConfig\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : false }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"9ec17a02-bb28-4564-a067-06f5d9a54049\", \"Name\" : \"R\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.RevitPullConfig\" }, \"Description\" : \"revitPullConfig\\r\\nThis is a BH.oM.Adapters.Revit.RevitPullConfig:\\r\\nConfiguration used for adapter interaction with Revit on Pull action.\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"f398112f-1425-488d-b845-ed0067dd228a\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "1b70792889a34634acd2d460b0d12dbd",
+      "Inputs": [
+        {
+          "Id": "72fb70bde6f04b41ace77c43efa57b69",
+          "Name": "discipline",
+          "Description": "Discipline used on pull action. Default is Physical.\r\nThis is a BH.oM.Adapters.Revit.Enums.Discipline:\r\nEnumerator allowing choosing to which discipline (and corresponding namespace) should Revit elements be converted on pull.\r\nEnum values:\r\n-Undefined: Default discipline to be used.\r\n-Environmental: Elements to be converted to types from BH.oM.Environment. If no suitable conversion exists, default discipline to be used.\r\n-Structural: Elements to be converted to types from BH.oM.Structure. If no suitable conversion exists, default discipline to be used.\r\n-Architecture: Elements to be converted to types from BH.oM.Architecture. If no suitable conversion exists, default discipline to be used.\r\n-Physical: Elements to be converted to types from BH.oM.Physical. If no suitable conversion exists, default discipline to be used.\r\nDiscipline is a Property of BH.oM.Adapters.Revit.RevitPullConfig",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "123e1dfc41434e04bfd4adc789431e22",
+          "Name": "includeClosedWorksets",
+          "Description": "Elements from closed worksets will be processed if true.\r\nThis is a Boolean\r\nIncludeClosedWorksets is a Property of BH.oM.Adapters.Revit.RevitPullConfig",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e069fad7cd6b4b14bf9f551a46b53e34",
+          "Name": "pullEdges",
+          "Description": "If true, edges of elements will be pulled and stored under Revit_edges in CustomData.\r\nThis is a Boolean\r\nPullEdges is a Property of BH.oM.Adapters.Revit.RevitPullConfig",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e9fc1a696aed4c77b56655bf50bc3ccd",
+          "Name": "includeNonVisible",
+          "Description": "Invisible element edges will be pulled and passed to CustomData if true. PullEdges switched to true needed for this to activate.\r\nThis is a Boolean\r\nIncludeNonVisible is a Property of BH.oM.Adapters.Revit.RevitPullConfig",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b0e31951a173466b8180b26b9c387a5a",
+          "Name": "R",
+          "Description": "revitPullConfig\r\nThis is a BH.oM.Adapters.Revit.RevitPullConfig:\r\nConfiguration used for adapter interaction with Revit on Pull action.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Shortest",
+      "Description": "Creates a pull action-specific configuration used for adapter interaction with Revit.\r\nRevitPullConfig is a Method of BH.Engine.Adapters.Revit.Create"
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.CreateObjectComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Requests.FilterByCategory\" }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"b5437d79-1b63-4e99-901a-270b689304a9\", \"Name\" : \"CategoryName\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Revit category name, as shown in Revit user interface (currently only English supported).\\r\\nThis is a String\\r\\nCategoryName is a Property of BH.oM.Adapters.Revit.Requests.FilterByCategory\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : \"\" }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"2762f650-e7e4-4134-9dc2-bc3e2666dd18\", \"Name\" : \"CaseSensitive\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"If true: only perfect, case sensitive text match will be accepted. If false: capitals and small letters will be treated as equal.\\r\\nThis is a Boolean\\r\\nCaseSensitive is a Property of BH.oM.Adapters.Revit.Requests.FilterByCategory\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : true }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"7624a755-1134-4c41-95d5-f2dbbe22ba20\", \"Name\" : \"F\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Requests.FilterByCategory\" }, \"Description\" : \"This is a BH.oM.Adapters.Revit.Requests.FilterByCategory:\\r\\nIRequest that filters all elements of a Revit category.\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"abb828f8-72d9-487c-a3f5-5b0e6c726d25\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "ab478e1862234ca0be2fe0f5d7f9f932",
+      "Inputs": [
+        {
+          "Id": "f211b1dcaf6f478aba68ab537195881b",
+          "Name": "CategoryName",
+          "Description": "Revit category name, as shown in Revit user interface (currently only English supported).\r\nThis is a String\r\nCategoryName is a Property of BH.oM.Adapters.Revit.Requests.FilterByCategory",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3f92101d3de84d9ab9655173fa29b0ce",
+          "Name": "CaseSensitive",
+          "Description": "If true: only perfect, case sensitive text match will be accepted. If false: capitals and small letters will be treated as equal.\r\nThis is a Boolean\r\nCaseSensitive is a Property of BH.oM.Adapters.Revit.Requests.FilterByCategory",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "cdc6d01dff714cca901d987f0353f36d",
+          "Name": "F",
+          "Description": "This is a BH.oM.Adapters.Revit.Requests.FilterByCategory:\r\nIRequest that filters all elements of a Revit category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Shortest",
+      "Description": "This is a BH.oM.Adapters.Revit.Requests.FilterByCategory:\r\nIRequest that filters all elements of a Revit category."
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.CreateEnumComponent, Dynamo_UI",
+      "SelectedIndex": 2,
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Enums.Discipline\" }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"62e9d2c5-9a08-4c8a-8f75-db4cf7d48d29\", \"Name\" : \"index\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"index of the enum value\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"91536407-6430-4871-a301-a98ef2a3857c\", \"Name\" : \"enum\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Enum, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"enum value\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"d67c8c13-61dd-451b-8e08-75b3c5425218\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "5788a114340549cb8bfd1092c2829977",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "dd6ca6759a4440b7a262e103505c8abf",
+          "Name": "enum",
+          "Description": "enum value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Shortest",
+      "Description": "This is a BH.oM.Adapters.Revit.Enums.Discipline:\r\nEnumerator allowing choosing to which discipline (and corresponding namespace) should Revit elements be converted on pull.\r\nEnum values:\r\n-Undefined: Default discipline to be used.\r\n-Environmental: Elements to be converted to types from BH.oM.Environment. If no suitable conversion exists, default discipline to be used.\r\n-Structural: Elements to be converted to types from BH.oM.Structure. If no suitable conversion exists, default discipline to be used.\r\n-Architecture: Elements to be converted to types from BH.oM.Architecture. If no suitable conversion exists, default discipline to be used.\r\n-Physical: Elements to be converted to types from BH.oM.Physical. If no suitable conversion exists, default discipline to be used."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"Walls\";",
+      "Id": "743dff914fdd48c3844f788b58f75a4c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e4ac671ca3734d4bad9ff72e4f2f551b",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.PullComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.UI.Components.PullCaller, BHoM_UI, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \"Pull\", \"Parameters\" : [\"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Adapter.BHoMAdapter, BHoM_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Adapter.PullType\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Adapter.ActionConfig\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\"] }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"f56c9ee8-5d0c-4cf0-a1ed-c37d1c3ee83c\", \"Name\" : \"adapter\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.BHoMAdapter, BHoM_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\" }, \"Description\" : \"Adapter to the external software\\r\\nThis is a BH.Adapter.BHoMAdapter\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : { \"_t\" : \"DBNull\", \"BHoM_Guid\" : \"21bd641e-c645-4aad-997c-d08824bc4391\" } }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"3d92de66-22a3-4076-b8e9-0545bd4a92ba\", \"Name\" : \"request\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Input a Request to pull only objects that satisfy a certain rule. \\nInput a Type to pull only objects of that type.\\r\\nThis is a Object\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : null }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"19db7eac-1d2a-41df-9716-c750eb4e963d\", \"Name\" : \"pullType\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapter.PullType\" }, \"Description\" : \"Pull type. Connect the enum PullType for all the alternatives.\\r\\nThis is a BH.oM.Adapter.PullType\\r\\nEnum values:\\r\\n-AdapterDefault: If this is chosen, then the m_AdapterSettings.DefaultPullType is picked.\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : 0 }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"8a0353d6-3ef5-46c6-a3d2-2922b79426d6\", \"Name\" : \"actionConfig\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapter.ActionConfig\" }, \"Description\" : \"Configuration for this Action. You can input an ActionConfig (it contains the configs common to all Toolkits); \\nconsider that Toolkits may have a custom ActionConfig (e.g. GSAConfig, SpeckleConfig).\\r\\nThis is a BH.oM.Adapter.ActionConfig:\\r\\nConfigurations specific for an Adapter Action (Push, Pull, etc).\\nConsider that your tookit might have a more specific implementation available. Try to look for [your toolkit name]ActionConfig.\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : null }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"a47a756f-e5fc-4142-b537-63ac8f84f012\", \"Name\" : \"active\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Execute the pull\\r\\nThis is a Boolean\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : false }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"8588e97a-63f4-4d1c-b09b-021438be2553\", \"Name\" : \"objects\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }] }, \"Description\" : \"Objects pulled\\r\\nThis is a IEnumerable<Object>\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"ab5e32d8-26eb-4d91-9d89-caa58071b802\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "729a754f501a4f389f198f2d2d68f879",
+      "Inputs": [
+        {
+          "Id": "80f89cfee47c438a872e36490bc9e82e",
+          "Name": "adapter",
+          "Description": "Adapter to the external software\r\nThis is a BH.Adapter.BHoMAdapter",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "cd9d0602e2f64ce6b87c2b79d1d13289",
+          "Name": "request",
+          "Description": "Input a Request to pull only objects that satisfy a certain rule. \nInput a Type to pull only objects of that type.\r\nThis is a Object",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "28df5178d7524416af6204b9c4731dac",
+          "Name": "pullType",
+          "Description": "Pull type. Connect the enum PullType for all the alternatives.\r\nThis is a BH.oM.Adapter.PullType\r\nEnum values:\r\n-AdapterDefault: If this is chosen, then the m_AdapterSettings.DefaultPullType is picked. (disabled)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a6864982b7e0485181669e7cbff94029",
+          "Name": "actionConfig",
+          "Description": "Configuration for this Action. You can input an ActionConfig (it contains the configs common to all Toolkits); \nconsider that Toolkits may have a custom ActionConfig (e.g. GSAConfig, SpeckleConfig).\r\nThis is a BH.oM.Adapter.ActionConfig:\r\nConfigurations specific for an Adapter Action (Push, Pull, etc).\nConsider that your tookit might have a more specific implementation available. Try to look for [your toolkit name]ActionConfig.",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "32decc2b9e244350a95280376ca0328a",
+          "Name": "active",
+          "Description": "Execute the pull\r\nThis is a Boolean",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "984fc0acb51948cc89f06b33ed8f15ba",
+          "Name": "objects",
+          "Description": "Objects pulled\r\nThis is a IEnumerable<Object>",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Shortest",
+      "Description": "Adapter Action 'Pull': imports objects from an external software. \nAlso allows for querying through Requests.\r\nPull is a Method of BH.UI.Components.PullCaller"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": false,
+      "Id": "1bd13d0d51e44c10b607900389b9aa12",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "fe701f7e748d433f85729c2849a2bb65",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.CreateObjectComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Engine.Adapters.Revit.Create, Revit_Engine, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \"RevitPullConfig\", \"Parameters\" : [\"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Adapters.Revit.Enums.Discipline\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\"] }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"1fa6c654-5dcb-4718-bca4-c061c3e874c2\", \"Name\" : \"discipline\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Enums.Discipline\" }, \"Description\" : \"Discipline used on pull action. Default is Physical.\\r\\nThis is a BH.oM.Adapters.Revit.Enums.Discipline:\\r\\nEnumerator allowing choosing to which discipline (and corresponding namespace) should Revit elements be converted on pull.\\r\\nEnum values:\\r\\n-Undefined: Default discipline to be used.\\r\\n-Environmental: Elements to be converted to types from BH.oM.Environment. If no suitable conversion exists, default discipline to be used.\\r\\n-Structural: Elements to be converted to types from BH.oM.Structure. If no suitable conversion exists, default discipline to be used.\\r\\n-Architecture: Elements to be converted to types from BH.oM.Architecture. If no suitable conversion exists, default discipline to be used.\\r\\n-Physical: Elements to be converted to types from BH.oM.Physical. If no suitable conversion exists, default discipline to be used.\\r\\nDiscipline is a Property of BH.oM.Adapters.Revit.RevitPullConfig\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : 0 }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"2f53dcbb-231a-4a82-8276-c0e78a487380\", \"Name\" : \"includeClosedWorksets\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Elements from closed worksets will be processed if true.\\r\\nThis is a Boolean\\r\\nIncludeClosedWorksets is a Property of BH.oM.Adapters.Revit.RevitPullConfig\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : false }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"ffe2d2e0-0a20-4d27-8780-a19d5af52295\", \"Name\" : \"pullEdges\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"If true, edges of elements will be pulled and stored under Revit_edges in CustomData.\\r\\nThis is a Boolean\\r\\nPullEdges is a Property of BH.oM.Adapters.Revit.RevitPullConfig\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : false }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"4a77c136-4f2d-487a-8df1-07ba16f3bfcc\", \"Name\" : \"includeNonVisible\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Invisible element edges will be pulled and passed to CustomData if true. PullEdges switched to true needed for this to activate.\\r\\nThis is a Boolean\\r\\nIncludeNonVisible is a Property of BH.oM.Adapters.Revit.RevitPullConfig\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : false }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"9ec17a02-bb28-4564-a067-06f5d9a54049\", \"Name\" : \"R\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.RevitPullConfig\" }, \"Description\" : \"revitPullConfig\\r\\nThis is a BH.oM.Adapters.Revit.RevitPullConfig:\\r\\nConfiguration used for adapter interaction with Revit on Pull action.\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"97952b4b-6b3b-43c0-a120-8cfd4acd9126\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "b34bbc15ad31449ea7ff916c394ef5e1",
+      "Inputs": [
+        {
+          "Id": "65cf5b4efa364cf7bdf58b4bf4c2f016",
+          "Name": "discipline",
+          "Description": "Discipline used on pull action. Default is Physical.\r\nThis is a BH.oM.Adapters.Revit.Enums.Discipline:\r\nEnumerator allowing choosing to which discipline (and corresponding namespace) should Revit elements be converted on pull.\r\nEnum values:\r\n-Undefined: Default discipline to be used.\r\n-Environmental: Elements to be converted to types from BH.oM.Environment. If no suitable conversion exists, default discipline to be used.\r\n-Structural: Elements to be converted to types from BH.oM.Structure. If no suitable conversion exists, default discipline to be used.\r\n-Architecture: Elements to be converted to types from BH.oM.Architecture. If no suitable conversion exists, default discipline to be used.\r\n-Physical: Elements to be converted to types from BH.oM.Physical. If no suitable conversion exists, default discipline to be used.\r\nDiscipline is a Property of BH.oM.Adapters.Revit.RevitPullConfig",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e221f95d08aa49b9a77414cfe5598cfa",
+          "Name": "includeClosedWorksets",
+          "Description": "Elements from closed worksets will be processed if true.\r\nThis is a Boolean\r\nIncludeClosedWorksets is a Property of BH.oM.Adapters.Revit.RevitPullConfig",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0c4e74cd4606485785bdd5c9553912bb",
+          "Name": "pullEdges",
+          "Description": "If true, edges of elements will be pulled and stored under Revit_edges in CustomData.\r\nThis is a Boolean\r\nPullEdges is a Property of BH.oM.Adapters.Revit.RevitPullConfig",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ee73db749e6b476da6ecc9f585c4689e",
+          "Name": "includeNonVisible",
+          "Description": "Invisible element edges will be pulled and passed to CustomData if true. PullEdges switched to true needed for this to activate.\r\nThis is a Boolean\r\nIncludeNonVisible is a Property of BH.oM.Adapters.Revit.RevitPullConfig",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d5cdd56b063749e496b6402651a57701",
+          "Name": "R",
+          "Description": "revitPullConfig\r\nThis is a BH.oM.Adapters.Revit.RevitPullConfig:\r\nConfiguration used for adapter interaction with Revit on Pull action.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Shortest",
+      "Description": "Creates a pull action-specific configuration used for adapter interaction with Revit.\r\nRevitPullConfig is a Method of BH.Engine.Adapters.Revit.Create"
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.CreateObjectComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Requests.FilterByCategory\" }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"b5437d79-1b63-4e99-901a-270b689304a9\", \"Name\" : \"CategoryName\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Revit category name, as shown in Revit user interface (currently only English supported).\\r\\nThis is a String\\r\\nCategoryName is a Property of BH.oM.Adapters.Revit.Requests.FilterByCategory\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : \"\" }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"2762f650-e7e4-4134-9dc2-bc3e2666dd18\", \"Name\" : \"CaseSensitive\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"If true: only perfect, case sensitive text match will be accepted. If false: capitals and small letters will be treated as equal.\\r\\nThis is a Boolean\\r\\nCaseSensitive is a Property of BH.oM.Adapters.Revit.Requests.FilterByCategory\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : true }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"7624a755-1134-4c41-95d5-f2dbbe22ba20\", \"Name\" : \"F\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Requests.FilterByCategory\" }, \"Description\" : \"This is a BH.oM.Adapters.Revit.Requests.FilterByCategory:\\r\\nIRequest that filters all elements of a Revit category.\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"72978960-e96a-4a03-8ccc-c84338e8f927\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "a9a71148a5c5483fb1ee50496062c096",
+      "Inputs": [
+        {
+          "Id": "ef2c8b7528b1406080c59edfb7102358",
+          "Name": "CategoryName",
+          "Description": "Revit category name, as shown in Revit user interface (currently only English supported).\r\nThis is a String\r\nCategoryName is a Property of BH.oM.Adapters.Revit.Requests.FilterByCategory",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c7c8750c718f4b738f1da36962ae3677",
+          "Name": "CaseSensitive",
+          "Description": "If true: only perfect, case sensitive text match will be accepted. If false: capitals and small letters will be treated as equal.\r\nThis is a Boolean\r\nCaseSensitive is a Property of BH.oM.Adapters.Revit.Requests.FilterByCategory",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "82146946af0947049b0a9fbdeb2e7b18",
+          "Name": "F",
+          "Description": "This is a BH.oM.Adapters.Revit.Requests.FilterByCategory:\r\nIRequest that filters all elements of a Revit category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Shortest",
+      "Description": "This is a BH.oM.Adapters.Revit.Requests.FilterByCategory:\r\nIRequest that filters all elements of a Revit category."
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.CreateEnumComponent, Dynamo_UI",
+      "SelectedIndex": 1,
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Enums.Discipline\" }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"62e9d2c5-9a08-4c8a-8f75-db4cf7d48d29\", \"Name\" : \"index\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"index of the enum value\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"91536407-6430-4871-a301-a98ef2a3857c\", \"Name\" : \"enum\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Enum, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"enum value\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"182887cb-264e-491c-b30c-16ad035374c8\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "c0c5e9d6d1da406782922a2962348efc",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "03d8158184b84c2aadea0a56eb30aace",
+          "Name": "enum",
+          "Description": "enum value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Shortest",
+      "Description": "This is a BH.oM.Adapters.Revit.Enums.Discipline:\r\nEnumerator allowing choosing to which discipline (and corresponding namespace) should Revit elements be converted on pull.\r\nEnum values:\r\n-Undefined: Default discipline to be used.\r\n-Environmental: Elements to be converted to types from BH.oM.Environment. If no suitable conversion exists, default discipline to be used.\r\n-Structural: Elements to be converted to types from BH.oM.Structure. If no suitable conversion exists, default discipline to be used.\r\n-Architecture: Elements to be converted to types from BH.oM.Architecture. If no suitable conversion exists, default discipline to be used.\r\n-Physical: Elements to be converted to types from BH.oM.Physical. If no suitable conversion exists, default discipline to be used."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"Walls\";",
+      "Id": "18ada138929d459b8fdc7eb0029e08de",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "0a505991bd1b4579a36b5137ac0fb043",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "9e6edf85c9ca49a39a972e870c3614fb",
+      "End": "542d0322035344fe983239d7e6ad3576",
+      "Id": "22bcde22c79e472195acd018e55302ec"
+    },
+    {
+      "Start": "9e6edf85c9ca49a39a972e870c3614fb",
+      "End": "7adc1e54a8ee4ce68f5b4ebcbbfc16dc",
+      "Id": "fe1926cb22df4012b626f9e659ed44ec"
+    },
+    {
+      "Start": "9e6edf85c9ca49a39a972e870c3614fb",
+      "End": "80f89cfee47c438a872e36490bc9e82e",
+      "Id": "4f4cbdb1327f47daa7657dabc838fab3"
+    },
+    {
+      "Start": "8e8dd8566def429ca451da518e8a053d",
+      "End": "b9736fb8348040cb901a117674f00149",
+      "Id": "63fcf21e4ca54567978608a8e949d0db"
+    },
+    {
+      "Start": "9c1f8bd0e95646f9a2f4dc2ab6916ecf",
+      "End": "1ab78509b9eb4faa8079e90615ed16e4",
+      "Id": "bfb117f7cb4d453d92feea58f6bec90a"
+    },
+    {
+      "Start": "fc885f1741ed4d96a7d078a233b9a21c",
+      "End": "e878999f815d441f9f5ffa5076e7aff0",
+      "Id": "f2844a8b99a34fdc940db73524f5644e"
+    },
+    {
+      "Start": "4c84a862b3cc474e93dccdee55ccb8d0",
+      "End": "8ab76df55ec8427a87c7480c45dc3a84",
+      "Id": "15d9fb783dbc4358952ac5f9014c9453"
+    },
+    {
+      "Start": "664cf87e585849c0afaad6a4d6be3249",
+      "End": "6c839d26d5194797976eea7045f3d45a",
+      "Id": "14c1606ddaab481588051eae9445934d"
+    },
+    {
+      "Start": "31e92de2d6774717af8a14c978ba1d0f",
+      "End": "c9e71661c9264b5f8cabb0845dd7b7c0",
+      "Id": "8c9ec1111eee4aacba0a53cd50baaefb"
+    },
+    {
+      "Start": "cdc6d01dff714cca901d987f0353f36d",
+      "End": "ec2b9b5f537d4991a2c090e6a77559bb",
+      "Id": "3f9818a6e74d42a2af6ee6ddba832584"
+    },
+    {
+      "Start": "dd6ca6759a4440b7a262e103505c8abf",
+      "End": "72fb70bde6f04b41ace77c43efa57b69",
+      "Id": "2840db94f42143869633af4e455598c6"
+    },
+    {
+      "Start": "e4ac671ca3734d4bad9ff72e4f2f551b",
+      "End": "f211b1dcaf6f478aba68ab537195881b",
+      "Id": "5df8789c845341638f004d099d1cdf36"
+    },
+    {
+      "Start": "fe701f7e748d433f85729c2849a2bb65",
+      "End": "32decc2b9e244350a95280376ca0328a",
+      "Id": "879e60ea987d42629a9a05ad82a47a79"
+    },
+    {
+      "Start": "82146946af0947049b0a9fbdeb2e7b18",
+      "End": "cd9d0602e2f64ce6b87c2b79d1d13289",
+      "Id": "43feaeeefbdd4406b0e1d2322dafe085"
+    },
+    {
+      "Start": "03d8158184b84c2aadea0a56eb30aace",
+      "End": "65cf5b4efa364cf7bdf58b4bf4c2f016",
+      "Id": "f2b0efc1e27f4cc896af85dc5b57ef2b"
+    },
+    {
+      "Start": "0a505991bd1b4579a36b5137ac0fb043",
+      "End": "ef2c8b7528b1406080c59edfb7102358",
+      "Id": "75bdb32180d146de95f45ad7ff2f1511"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.2.6826",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -196.47126979450897,
+      "EyeY": 22.965630634914447,
+      "EyeZ": 13.099854555379423,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "RevitAdapter",
+        "Id": "796f92ef2e314b16b5f7f1ec43211da4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 398.5,
+        "Y": 185.61837819852445
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Boolean",
+        "Id": "b7dcd50427e540df90bc270477eec540",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 198.5,
+        "Y": 211.618378198524
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Pull",
+        "Id": "9cd12c4540944197b3203690512d38d3",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 970.98376532943632,
+        "Y": 560.13969505084833
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Boolean",
+        "Id": "2fbbecf10c7542b282e2f7e9f1493725",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 765.09413381958154,
+        "Y": 723.4689278766009
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "FilterByCategory",
+        "Id": "98e26a8aedc74e9f8d4460f4569ead9b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 352.60925182491349,
+        "Y": 460.66113747492352
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "RevitPullConfig",
+        "Id": "899c37a7830e435eb312b1d0bcca6a11",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 392.077332024018,
+        "Y": 680.11698193726613
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "f7e0d81a5b804483b1f710c81180734a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 195.80828638907838,
+        "Y": 465.32471777486927
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Discipline",
+        "Id": "47a823985171467e978fd09b7d2b8472",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 195.46657356961339,
+        "Y": 679.40161617939987
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Pull",
+        "Id": "4aa618c8048c44cf88978fd6461c20c5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 970.72730523880193,
+        "Y": 1106.2455478943402
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Boolean",
+        "Id": "0a791add73e443b789089f165f76107b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 764.83767372895193,
+        "Y": 1269.5747807200933
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "RevitPullConfig",
+        "Id": "1b70792889a34634acd2d460b0d12dbd",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 391.82087193338805,
+        "Y": 1226.2228347807577
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "FilterByCategory",
+        "Id": "ab478e1862234ca0be2fe0f5d7f9f932",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 352.35279173428296,
+        "Y": 1006.7669903184157
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Discipline",
+        "Id": "5788a114340549cb8bfd1092c2829977",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 195.21011347898309,
+        "Y": 1225.5074690228917
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "743dff914fdd48c3844f788b58f75a4c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 195.55182629844796,
+        "Y": 1011.4305706183607
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Pull",
+        "Id": "729a754f501a4f389f198f2d2d68f879",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 970.3790540012285,
+        "Y": 1667.0862582480081
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Boolean",
+        "Id": "1bd13d0d51e44c10b607900389b9aa12",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 764.48942249137849,
+        "Y": 1830.4154910737611
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "RevitPullConfig",
+        "Id": "b34bbc15ad31449ea7ff916c394ef5e1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 391.47262069581461,
+        "Y": 1787.0635451344256
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "FilterByCategory",
+        "Id": "a9a71148a5c5483fb1ee50496062c096",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 352.00454049670952,
+        "Y": 1567.6077006720836
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Discipline",
+        "Id": "c0c5e9d6d1da406782922a2962348efc",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 194.86186224140965,
+        "Y": 1786.3481793765595
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "18ada138929d459b8fdc7eb0029e08de",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 195.20357506087453,
+        "Y": 1572.2712809720288
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "f1070454146e4536a5b9b56fc7723d01",
+        "Title": "Revit adapter",
+        "Nodes": [
+          "796f92ef2e314b16b5f7f1ec43211da4",
+          "b7dcd50427e540df90bc270477eec540"
+        ],
+        "Left": 188.5,
+        "Top": 132.61837819852445,
+        "Width": 462.0,
+        "Height": 172.0,
+        "FontSize": 36.0,
+        "InitialTop": 185.61837819852445,
+        "InitialHeight": 170.99999999999955,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "e96a63f616234234a149cd13ea60244e",
+        "Title": "Pull physical",
+        "Nodes": [
+          "9cd12c4540944197b3203690512d38d3",
+          "2fbbecf10c7542b282e2f7e9f1493725"
+        ],
+        "Left": 755.09413381958154,
+        "Top": 507.13969505084833,
+        "Width": 463.88963150985478,
+        "Height": 284.32923282575257,
+        "FontSize": 36.0,
+        "InitialTop": 560.13969505084833,
+        "InitialHeight": 308.32923282575257,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "6f1e8886f73b4e7eb2a5fcbcd9cf09b9",
+        "Title": "Category filter",
+        "Nodes": [
+          "98e26a8aedc74e9f8d4460f4569ead9b",
+          "f7e0d81a5b804483b1f710c81180734a"
+        ],
+        "Left": 185.80828638907838,
+        "Top": 407.66113747492352,
+        "Width": 393.80096543583511,
+        "Height": 172.00000000000006,
+        "FontSize": 36.0,
+        "InitialTop": 460.66113747492352,
+        "InitialHeight": 148.99999999999994,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "ed6bbfe51ad34cd38ea4109b2c04f7a0",
+        "Title": "Physical discipline",
+        "Nodes": [
+          "899c37a7830e435eb312b1d0bcca6a11",
+          "47a823985171467e978fd09b7d2b8472"
+        ],
+        "Left": 185.46657356961339,
+        "Top": 626.40161617939987,
+        "Width": 484.61075845440462,
+        "Height": 224.71536575786627,
+        "FontSize": 36.0,
+        "InitialTop": 679.40161617939987,
+        "InitialHeight": 201.71536575786627,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "9ecd417ea52449f384d2539233ab720b",
+        "Title": "Pull structural",
+        "Nodes": [
+          "4aa618c8048c44cf88978fd6461c20c5",
+          "0a791add73e443b789089f165f76107b"
+        ],
+        "Left": 754.83767372895193,
+        "Top": 1053.2455478943402,
+        "Width": 463.88963150985,
+        "Height": 284.329232825753,
+        "FontSize": 36.0,
+        "InitialTop": 1106.2455478943402,
+        "InitialHeight": 261.329232825753,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "f1b55ec0f1604987a1208d42e289958e",
+        "Title": "Structural discipline",
+        "Nodes": [
+          "1b70792889a34634acd2d460b0d12dbd",
+          "5788a114340549cb8bfd1092c2829977"
+        ],
+        "Left": 185.21011347898309,
+        "Top": 1172.5074690228917,
+        "Width": 484.61075845440496,
+        "Height": 224.71536575786604,
+        "FontSize": 36.0,
+        "InitialTop": 1225.5074690228917,
+        "InitialHeight": 201.71536575786604,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "810f0532ab774e3ebc66c17baaa15e88",
+        "Title": "Category filter",
+        "Nodes": [
+          "ab478e1862234ca0be2fe0f5d7f9f932",
+          "743dff914fdd48c3844f788b58f75a4c"
+        ],
+        "Left": 185.55182629844796,
+        "Top": 953.76699031841565,
+        "Width": 393.800965435835,
+        "Height": 171.99999999999989,
+        "FontSize": 36.0,
+        "InitialTop": 1006.7669903184157,
+        "InitialHeight": 149.0,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "6595d8be193d4b6f91cf960d9decebd0",
+        "Title": "Pull environmental",
+        "Nodes": [
+          "729a754f501a4f389f198f2d2d68f879",
+          "1bd13d0d51e44c10b607900389b9aa12"
+        ],
+        "Left": 754.48942249137849,
+        "Top": 1614.0862582480081,
+        "Width": 463.88963150985,
+        "Height": 284.329232825753,
+        "FontSize": 36.0,
+        "InitialTop": 1667.0862582480081,
+        "InitialHeight": 261.329232825753,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "af4ca4973cd84024b1609186396b80d4",
+        "Title": "Environmental discipline",
+        "Nodes": [
+          "b34bbc15ad31449ea7ff916c394ef5e1",
+          "c0c5e9d6d1da406782922a2962348efc"
+        ],
+        "Left": 184.86186224140965,
+        "Top": 1733.3481793765595,
+        "Width": 484.61075845440496,
+        "Height": 224.71536575786604,
+        "FontSize": 36.0,
+        "InitialTop": 1786.3481793765595,
+        "InitialHeight": 201.71536575786604,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "0ca37e4167964f27ad56691e86b95b12",
+        "Title": "Category filter",
+        "Nodes": [
+          "a9a71148a5c5483fb1ee50496062c096",
+          "18ada138929d459b8fdc7eb0029e08de"
+        ],
+        "Left": 185.20357506087453,
+        "Top": 1514.6077006720836,
+        "Width": 393.800965435835,
+        "Height": 172.0,
+        "FontSize": 36.0,
+        "InitialTop": 1567.6077006720836,
+        "InitialHeight": 149.0,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 176.87258606912934,
+    "Y": -22.530174335730749,
+    "Zoom": 0.41716842415180982
+  }
+}

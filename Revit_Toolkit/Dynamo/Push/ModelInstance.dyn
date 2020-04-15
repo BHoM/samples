@@ -1,0 +1,907 @@
+{
+  "Uuid": "b6b6b721-2cb0-49d7-9a49-adb6ac53b4b0",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "ModelInstance",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": false,
+      "Id": "8731005dafe1488699cff5a1c0cbd08a",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "43f75205aa3d426fa24464d2a0855cf1",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.CreateAdapterComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Adapter.Revit.RevitAdapter, Revit_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \".ctor\", \"Parameters\" : [\"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Adapters.Revit.Settings.RevitSettings\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\"] }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"810420c4-8fa2-45ee-9e77-8e117a8bfaa4\", \"Name\" : \"revitSettings\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Settings.RevitSettings\" }, \"Description\" : \"General settings that are applicable to all actions performed by this adapter, e.g. connection settings, tolerances, parameter mapping settings etc.\\r\\nThis is a BH.oM.Adapters.Revit.Settings.RevitSettings:\\r\\nGeneral settings that are applicable to all actions performed by the instance of Revit adapter.\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : null }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"1a6433a9-f3f7-4aef-bd51-46f43113dbc0\", \"Name\" : \"active\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Establish connection with Revit by setting to 'True'\\r\\nThis is a Boolean\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : false }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"321aa8cd-3a70-44a4-9af6-1f414d97a1cb\", \"Name\" : \"adapter\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.Revit.RevitAdapter, Revit_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\" }, \"Description\" : \"Adapter to Revit\\r\\nThis is a BH.Adapter.Revit.RevitAdapter\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"3ae7a58d-2d55-4462-bff0-8935aa8a9fa4\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "abb8307545644159895892aae794c4ee",
+      "Inputs": [
+        {
+          "Id": "d6979ea80e72474caec46023c3218576",
+          "Name": "revitSettings",
+          "Description": "General settings that are applicable to all actions performed by this adapter, e.g. connection settings, tolerances, parameter mapping settings etc.\r\nThis is a BH.oM.Adapters.Revit.Settings.RevitSettings:\r\nGeneral settings that are applicable to all actions performed by the instance of Revit adapter.",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "155fdc3ea7ce449a835d6fd998d7d7b8",
+          "Name": "active",
+          "Description": "Establish connection with Revit by setting to 'True'\r\nThis is a Boolean",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5315f539999e47fd94b92f1ba5d09d7d",
+          "Name": "adapter",
+          "Description": "Adapter to Revit\r\nThis is a BH.Adapter.Revit.RevitAdapter",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Shortest",
+      "Description": "Adapter to connect to an open Revit file. Connection will be made to the active document (based on active view). Make sure to only have ONE Revit Window open, or connection will not work as intended.\r\n.ctor is a Constructor of BH.Adapter.Revit.RevitAdapter"
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.CreateObjectComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Engine.Adapters.Revit.Create, Revit_Engine, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \"ModelInstance\", \"Parameters\" : [\"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Geometry.ICurve\\\" }\"] }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"ee9b0af0-6d18-4290-a52e-aca335d1085a\", \"Name\" : \"familyName\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Name of Revit family to be used when creating the element.\\r\\nThis is a String\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : { \"_t\" : \"DBNull\", \"BHoM_Guid\" : \"724f2fcc-fb3a-4c16-8190-b38d27a653fb\" } }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"c139306d-b795-4900-a6f5-549f5d08b881\", \"Name\" : \"familyTypeName\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Name of Revit family type to be used when creating the element.\\r\\nThis is a String\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : { \"_t\" : \"DBNull\", \"BHoM_Guid\" : \"9605f46c-bdfe-4d72-9355-d128178bf395\" } }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"694ef72a-1879-4e41-88b9-c73a97c4ffb7\", \"Name\" : \"location\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Geometry.ICurve\" }, \"Description\" : \"This is a BH.oM.Geometry.ICurve:\\r\\nThe interface for all one-dimensional geometrical objects.\\r\\nThis can be of the following types: Arc, Circle, Ellipse, Line, NurbsCurve, PolyCurve, Polyline\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : { \"_t\" : \"DBNull\", \"BHoM_Guid\" : \"b3bcc348-d2bf-4d79-ba12-07b2d0902e2d\" } }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"aa3056e8-5b35-4ccf-97fe-907452457016\", \"Name\" : \"M\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Elements.ModelInstance\" }, \"Description\" : \"modelInstance\\r\\nThis is a BH.oM.Adapters.Revit.Elements.ModelInstance:\\r\\nA generic wrapper BHoM type corresponding to any view-independent Revit element (model elements, e.g. duct or beam). On Push it can be used to generate or update Revit model elements that do not have a correspondent BHoM type, on Pull all Revit model elements that do not have explicit Convert method for given discipline will be converted to ModelInstance.\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"f7630814-2c94-48af-8df2-f9b253d08565\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "9665d77ee2984e89a0f4cb7f068d5463",
+      "Inputs": [
+        {
+          "Id": "3260f074692b498fa67df36808d18dd3",
+          "Name": "familyName",
+          "Description": "Name of Revit family to be used when creating the element.\r\nThis is a String",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "29ddbe0e94b84b15a9d6bcfe1359859a",
+          "Name": "familyTypeName",
+          "Description": "Name of Revit family type to be used when creating the element.\r\nThis is a String",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9deeb54b195445d2acfe0ebfbd96e276",
+          "Name": "location",
+          "Description": "This is a BH.oM.Geometry.ICurve:\r\nThe interface for all one-dimensional geometrical objects.\r\nThis can be of the following types: Arc, Circle, Ellipse, Line, NurbsCurve, PolyCurve, Polyline",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f149226078c54b9c940bd1cc8a5f24c4",
+          "Name": "M",
+          "Description": "modelInstance\r\nThis is a BH.oM.Adapters.Revit.Elements.ModelInstance:\r\nA generic wrapper BHoM type corresponding to any view-independent Revit element (model elements, e.g. duct or beam). On Push it can be used to generate or update Revit model elements that do not have a correspondent BHoM type, on Pull all Revit model elements that do not have explicit Convert method for given discipline will be converted to ModelInstance.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Longest",
+      "Description": "Creates ModelInstance object based on curve location, Revit family name and family type name. Such ModelInstance can be pushed to Revit as a curve-driven element, e.g. duct.\r\nModelInstance is a Method of BH.Engine.Adapters.Revit.Create"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"Rectangular Duct\";\n\"Default\";",
+      "Id": "f729e3659ea24b71ad3b90e13d7b5969",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "846e7096b33649d5b447fc3174d528b6",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "94188c010db3462182569b8aeb832fcd",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.CreateEnumComponent, Dynamo_UI",
+      "SelectedIndex": 1,
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapter.PushType\" }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"d8d99d3b-8a72-48c9-a8af-504ce755e68b\", \"Name\" : \"index\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"index of the enum value\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"578eed2f-0dcc-4dd1-9003-b1a3c1554f4d\", \"Name\" : \"enum\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Enum, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"enum value\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"a5474a8b-ebb8-417c-8d78-a70fd2ac5133\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "c301cbaeac194f7182cfe8e44eff2d68",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ff4b1035fcde4ea5bea282dcb2c1026f",
+          "Name": "enum",
+          "Description": "enum value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Shortest",
+      "Description": "Creates a selected enum value"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": false,
+      "Id": "773ab5bc4f6843ed93c14848875efd4c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "9dd41cb7176b4099867d709e1cc93327",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.PushComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.UI.Components.PushCaller, BHoM_UI, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \"Push\", \"Parameters\" : [\"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Adapter.BHoMAdapter, BHoM_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\", \\\"GenericArguments\\\" : [{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }] }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Adapter.PushType\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Adapter.ActionConfig\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\"] }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"4f0dc128-6396-4a99-a5fa-07b1f72f8675\", \"Name\" : \"adapter\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.BHoMAdapter, BHoM_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\" }, \"Description\" : \"Adapter to the external software\\r\\nThis is a BH.Adapter.BHoMAdapter\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : { \"_t\" : \"DBNull\", \"BHoM_Guid\" : \"74a292ff-e4ed-4332-b0c6-af9b3f6d450f\" } }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"c4e2319e-c2d6-42fe-a895-54440aea16ca\", \"Name\" : \"objects\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }] }, \"Description\" : \"Objects to push\\r\\nThis is a IEnumerable<Object>\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : { \"_t\" : \"DBNull\", \"BHoM_Guid\" : \"643d8457-e800-4345-9ef6-5d0c3fb4a337\" } }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"49c2ada1-d463-4af4-89ca-e42033f3a42d\", \"Name\" : \"tag\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Tag to apply to the objects being pushed\\r\\nThis is a String\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : \"\" }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"b24d986d-9044-49d1-b951-2ef2c38c401d\", \"Name\" : \"pushType\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapter.PushType\" }, \"Description\" : \"Push type. Connect the enum PushType for all the alternatives.\\r\\nThis is a BH.oM.Adapter.PushType:\\r\\nControls which type of export should be done by the Adapter `Push` action.\\r\\nEnum values:\\r\\n-FullPush: Calls all CRUD methods as appropriate.\\r\\n-CreateOnly: Uses only the Create CRUD method to export the objects. This may create duplicates if the object already exists.\\r\\n-CreateNonExisting: Same as FullPush, but does not update pre-existing objects.\\r\\n-UpdateOnly: Uses only the Update CRUD method to update the objects in the external software. All other objects in the model are left untouched.\\r\\n-DeleteThenCreate: For all objects being Pushed, identifies their type, calls Delete to remove all of those types, then it Creates them.\\r\\n-AdapterDefault: AdapterDefault - Picks the value hard-coded in the specific Adapter.\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : 5 }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"ea4bdb1e-4ec3-4ccf-9147-764262b62d97\", \"Name\" : \"actionConfig\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapter.ActionConfig\" }, \"Description\" : \"Configuration for this Action. You can input an ActionConfig (it contains the configs common to all Toolkits); \\nconsider that Toolkits may have a custom ActionConfig (e.g. GSAConfig, SpeckleConfig).\\r\\nThis is a BH.oM.Adapter.ActionConfig:\\r\\nConfigurations specific for an Adapter Action (Push, Pull, etc).\\nConsider that your tookit might have a more specific implementation available. Try to look for [your toolkit name]ActionConfig.\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : null }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"13523f79-1107-4ac3-a192-043121d8c551\", \"Name\" : \"active\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Execute the push\\r\\nThis is a Boolean\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : false }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"b3886cbb-7d91-463e-b845-6a04cbc22ce3\", \"Name\" : \"objects\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }] }, \"Description\" : \"Objects that have been pushed.\\nThese objects may be different from the input objects (e.g. their correspondent external software id may be stored in their CustomData).\\r\\nThis is a Object\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"9878b6ca-2ced-4cff-a51f-72e368950af0\", \"Name\" : \"success\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Define if the push was sucessful\\r\\nThis is a Boolean\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"3382eda5-806d-4a21-a1cf-c47c8dd9d72f\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "05e8ce6a8b284796aa924ef6505aaed5",
+      "Inputs": [
+        {
+          "Id": "7764f4ee189b4aa0be9074ad0cb1914a",
+          "Name": "adapter",
+          "Description": "Adapter to the external software\r\nThis is a BH.Adapter.BHoMAdapter",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "149cddb49e1246dd8fa80bcc07d72e18",
+          "Name": "objects",
+          "Description": "Objects to push\r\nThis is a IEnumerable<Object>",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7e971494a74a406bb70efa053c409895",
+          "Name": "tag",
+          "Description": "Tag to apply to the objects being pushed\r\nThis is a String",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2fb003ad939b4498a445eb8d13c9ef06",
+          "Name": "pushType",
+          "Description": "Push type. Connect the enum PushType for all the alternatives.\r\nThis is a BH.oM.Adapter.PushType:\r\nControls which type of export should be done by the Adapter `Push` action.\r\nEnum values:\r\n-FullPush: Calls all CRUD methods as appropriate.\r\n-CreateOnly: Uses only the Create CRUD method to export the objects. This may create duplicates if the object already exists.\r\n-CreateNonExisting: Same as FullPush, but does not update pre-existing objects.\r\n-UpdateOnly: Uses only the Update CRUD method to update the objects in the external software. All other objects in the model are left untouched.\r\n-DeleteThenCreate: For all objects being Pushed, identifies their type, calls Delete to remove all of those types, then it Creates them.\r\n-AdapterDefault: AdapterDefault - Picks the value hard-coded in the specific Adapter. (disabled)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "aa394b024fe5451792c85766bb1b16bf",
+          "Name": "actionConfig",
+          "Description": "Configuration for this Action. You can input an ActionConfig (it contains the configs common to all Toolkits); \nconsider that Toolkits may have a custom ActionConfig (e.g. GSAConfig, SpeckleConfig).\r\nThis is a BH.oM.Adapter.ActionConfig:\r\nConfigurations specific for an Adapter Action (Push, Pull, etc).\nConsider that your tookit might have a more specific implementation available. Try to look for [your toolkit name]ActionConfig.",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3e95cceb4c034bf399c8fac9f07afe72",
+          "Name": "active",
+          "Description": "Execute the push\r\nThis is a Boolean",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "109a5468c5b74937a1c48546cb3efc2c",
+          "Name": "objects",
+          "Description": "Objects that have been pushed.\nThese objects may be different from the input objects (e.g. their correspondent external software id may be stored in their CustomData).\r\nThis is a Object",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e37e99b551824e16be2bf7094ecc6802",
+          "Name": "success",
+          "Description": "Define if the push was sucessful\r\nThis is a Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Shortest",
+      "Description": "Adapter Action 'Push': exports objects to the external software. \nIf the Toolkit supports it, this also performs the replace/update of the objects as appropriate.\r\nPush is a Method of BH.UI.Components.PushCaller"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Helix.ByAxis@Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Vector,Autodesk.DesignScript.Geometry.Point,double,double",
+      "Id": "cca9ca51a059454eb4ce22886749070a",
+      "Inputs": [
+        {
+          "Id": "8fd1b163f9a141d6989162d1a2d1c03a",
+          "Name": "axisPoint",
+          "Description": "Point\nDefault value : Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 0, 0)",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7a138c29095944e1b1760776859c2fc7",
+          "Name": "axisDirection",
+          "Description": "Vector\nDefault value : Autodesk.DesignScript.Geometry.Vector.ByCoordinates(0, 0, 1)",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "66a09d4d8ecb4277a3c7c64997f6c1cb",
+          "Name": "startPoint",
+          "Description": "Point\nDefault value : Autodesk.DesignScript.Geometry.Point.ByCoordinates(1, 0, 0)",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5b08c10ca5564444ba4a1a13b5b51c90",
+          "Name": "pitch",
+          "Description": "double\nDefault value : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "780cff879df94097a2fc5cb20401b33d",
+          "Name": "angleTurns",
+          "Description": "double\nDefault value : 360",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6d8366215e4847c29c9e6d8d3c56f83f",
+          "Name": "Helix",
+          "Description": "Helix",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create a Helix. The helix always rotates clockwise about the supplied axis direction. If viewing along the axis direction, the viewer will see the point turning clockwise around the axis as it moves along the curve in the direction of increasing parameter. Pitch is Distance the helix moves in the axis direction per turn. This can be positive or negative.\n\nHelix.ByAxis (axisPoint: Point = Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 0, 0), axisDirection: Vector = Autodesk.DesignScript.Geometry.Vector.ByCoordinates(0, 0, 1), startPoint: Point = Autodesk.DesignScript.Geometry.Point.ByCoordinates(1, 0, 0), pitch: double = 1, angleTurns: double = 360): Helix"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "10;\n360*10;",
+      "Id": "2728c996d8e34c6a9cd3cb98b2ff5362",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c30dd57586334b8aa427617b0a2e67d2",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bef4439d9b3d4203b125e722032f9655",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Curve.PointsAtEqualChordLength@int",
+      "Id": "75493ac777644879ad6fd06d01d9c88f",
+      "Inputs": [
+        {
+          "Id": "894b18291992421eb9793a3a54856448",
+          "Name": "curve",
+          "Description": "Autodesk.DesignScript.Geometry.Curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "73a67fb907d64b08b031e1c8ff173285",
+          "Name": "divisions",
+          "Description": "int\nDefault value : 10",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "16ad7bbf529e47a582b169b99739965f",
+          "Name": "Point[]",
+          "Description": "List of points on curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns points spaced along curve at equal chord length based on the input number of divisions\n\nCurve.PointsAtEqualChordLength (divisions: int = 10): Point[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "100;",
+      "Id": "99273a0f0ea44add869d04ba425cff4e",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "a1aef18510634ef48b90f1a3dfc22b43",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.DropItems@var[]..[],int",
+      "Id": "2986d8fd41fe46df9913e54d4b0eef9d",
+      "Inputs": [
+        {
+          "Id": "24b19172ff4d4d60bc77e6513cd70222",
+          "Name": "list",
+          "Description": "List to remove items from.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4b02056e0a994f7d9c352aa49d5cea2d",
+          "Name": "amount",
+          "Description": "Amount of items to remove. If negative, items are removed from the end of the list.\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2fdb36151ea347f2b144d1972466f8c9",
+          "Name": "list",
+          "Description": "List of remaining items.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Removes an amount of items from the start of the list. If the amount is a negative value, items are removed from the end of the list.\n\nList.DropItems (list: var[]..[], amount: int): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.DropItems@var[]..[],int",
+      "Id": "d4acad904dbd48d99c4e5e71ec012131",
+      "Inputs": [
+        {
+          "Id": "ce01e7e83ac94e2887bd5386b79a0924",
+          "Name": "list",
+          "Description": "List to remove items from.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4f56ca1325f64a30881a8fda7d04379c",
+          "Name": "amount",
+          "Description": "Amount of items to remove. If negative, items are removed from the end of the list.\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "86f199e265484e1bb6dd0373bdae822f",
+          "Name": "list",
+          "Description": "List of remaining items.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Removes an amount of items from the start of the list. If the amount is a negative value, items are removed from the end of the list.\n\nList.DropItems (list: var[]..[], amount: int): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "1;\n-1;",
+      "Id": "26ccceedbf134a9d896e05834f7754bb",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "7592b1d26c394aa7a1ed525090e0086b",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6bf4b7ce2e964e3fad9bf4ad52ee83aa",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Line.ByStartPointEndPoint@Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Point",
+      "Id": "bf169a0ba2cb4f9c9c9a9dc58b6a02a4",
+      "Inputs": [
+        {
+          "Id": "01ee703d0b7245b8ad1df480870151d5",
+          "Name": "startPoint",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9588dfb818c3485a9f08551b0c7c02e6",
+          "Name": "endPoint",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "67ca80f93a9b487884a3c57417f000a0",
+          "Name": "Line",
+          "Description": "Line",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Creates a straight Line between two input Points.\n\nLine.ByStartPointEndPoint (startPoint: Point, endPoint: Point): Line"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "43f75205aa3d426fa24464d2a0855cf1",
+      "End": "155fdc3ea7ce449a835d6fd998d7d7b8",
+      "Id": "af147ecb07664f5480526d66f802a631"
+    },
+    {
+      "Start": "5315f539999e47fd94b92f1ba5d09d7d",
+      "End": "7764f4ee189b4aa0be9074ad0cb1914a",
+      "Id": "761e034a400d4803896c539f3a3c4081"
+    },
+    {
+      "Start": "f149226078c54b9c940bd1cc8a5f24c4",
+      "End": "149cddb49e1246dd8fa80bcc07d72e18",
+      "Id": "0c38bd87f315490d85f37009a542f914"
+    },
+    {
+      "Start": "846e7096b33649d5b447fc3174d528b6",
+      "End": "3260f074692b498fa67df36808d18dd3",
+      "Id": "ad367a88239d4190920a7a66f2163734"
+    },
+    {
+      "Start": "94188c010db3462182569b8aeb832fcd",
+      "End": "29ddbe0e94b84b15a9d6bcfe1359859a",
+      "Id": "c315c12e38dc4b6f87c571cebdfd17ff"
+    },
+    {
+      "Start": "ff4b1035fcde4ea5bea282dcb2c1026f",
+      "End": "2fb003ad939b4498a445eb8d13c9ef06",
+      "Id": "88c6705e00994a1cb5ce5f05b873630d"
+    },
+    {
+      "Start": "9dd41cb7176b4099867d709e1cc93327",
+      "End": "3e95cceb4c034bf399c8fac9f07afe72",
+      "Id": "6338f8d37ce64303bbf2740667b509d5"
+    },
+    {
+      "Start": "6d8366215e4847c29c9e6d8d3c56f83f",
+      "End": "894b18291992421eb9793a3a54856448",
+      "Id": "a855d109c297411e84bb5a0056e29e97"
+    },
+    {
+      "Start": "c30dd57586334b8aa427617b0a2e67d2",
+      "End": "5b08c10ca5564444ba4a1a13b5b51c90",
+      "Id": "2115dcb1c193416aa4dd27ea57f3a060"
+    },
+    {
+      "Start": "bef4439d9b3d4203b125e722032f9655",
+      "End": "780cff879df94097a2fc5cb20401b33d",
+      "Id": "882435ced732417e84f52421fc825f95"
+    },
+    {
+      "Start": "16ad7bbf529e47a582b169b99739965f",
+      "End": "24b19172ff4d4d60bc77e6513cd70222",
+      "Id": "15d8c63cff854ba99868648d7d48e128"
+    },
+    {
+      "Start": "16ad7bbf529e47a582b169b99739965f",
+      "End": "ce01e7e83ac94e2887bd5386b79a0924",
+      "Id": "058a6b1d328b4cacb3835e73794f5799"
+    },
+    {
+      "Start": "a1aef18510634ef48b90f1a3dfc22b43",
+      "End": "73a67fb907d64b08b031e1c8ff173285",
+      "Id": "623f2273be8745fc8640c6e50578e3ea"
+    },
+    {
+      "Start": "2fdb36151ea347f2b144d1972466f8c9",
+      "End": "01ee703d0b7245b8ad1df480870151d5",
+      "Id": "20ba01f52f734363aa9af7ed3a8d80f2"
+    },
+    {
+      "Start": "86f199e265484e1bb6dd0373bdae822f",
+      "End": "9588dfb818c3485a9f08551b0c7c02e6",
+      "Id": "882d66acce4540d7ad168470fdb4812a"
+    },
+    {
+      "Start": "7592b1d26c394aa7a1ed525090e0086b",
+      "End": "4b02056e0a994f7d9c352aa49d5cea2d",
+      "Id": "8df65618ac394c678d24accf2c09c227"
+    },
+    {
+      "Start": "6bf4b7ce2e964e3fad9bf4ad52ee83aa",
+      "End": "4f56ca1325f64a30881a8fda7d04379c",
+      "Id": "3bb4346c809b4f52a14b47a745965d58"
+    },
+    {
+      "Start": "67ca80f93a9b487884a3c57417f000a0",
+      "End": "9deeb54b195445d2acfe0ebfbd96e276",
+      "Id": "b341abb3492a4cdf8ca5765e7e2d3d50"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.2.6826",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -121.2243226486198,
+      "EyeY": 19.188426398815832,
+      "EyeZ": -111.32683820829719,
+      "LookX": 48.528327620561413,
+      "LookY": -2.7597021521447616,
+      "LookZ": -25.597592802500397,
+      "UpX": -0.14598368728690722,
+      "UpY": 0.98628560153725586,
+      "UpZ": 0.077003085954162914
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Boolean",
+        "Id": "8731005dafe1488699cff5a1c0cbd08a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1012.4848876712825,
+        "Y": 2189.2050229255337
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "RevitAdapter",
+        "Id": "abb8307545644159895892aae794c4ee",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1194.5436514203284,
+        "Y": 2162.1216866111467
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "ModelInstance",
+        "Id": "9665d77ee2984e89a0f4cb7f068d5463",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1584.1221799222583,
+        "Y": 2442.4489951748687
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "f729e3659ea24b71ad3b90e13d7b5969",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1332.3360241548767,
+        "Y": 2410.6963493209983
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "PushType",
+        "Id": "c301cbaeac194f7182cfe8e44eff2d68",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1936.7889417345373,
+        "Y": 2360.9834028719247
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Boolean",
+        "Id": "773ab5bc4f6843ed93c14848875efd4c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1950.2583569671774,
+        "Y": 2449.9078142225244
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Push",
+        "Id": "05e8ce6a8b284796aa924ef6505aaed5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2118.7691992006676,
+        "Y": 2282.8699517538844
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Helix.ByAxis",
+        "Id": "cca9ca51a059454eb4ce22886749070a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 512.48096270226051,
+        "Y": 2394.1800263940631
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "2728c996d8e34c6a9cd3cb98b2ff5362",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 378.96377571568428,
+        "Y": 2482.7860055812666
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Curve.PointsAtEqualChordLength",
+        "Id": "75493ac777644879ad6fd06d01d9c88f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 794.71539977098473,
+        "Y": 2474.2834637913788
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "99273a0f0ea44add869d04ba425cff4e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 662.85352661930983,
+        "Y": 2597.6761096452483
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.DropItems",
+        "Id": "2986d8fd41fe46df9913e54d4b0eef9d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1073.3981181410513,
+        "Y": 2474.0903701337947
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.DropItems",
+        "Id": "d4acad904dbd48d99c4e5e71ec012131",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1073.3981181410513,
+        "Y": 2608.0903701337947
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "26ccceedbf134a9d896e05834f7754bb",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 930.92243230454392,
+        "Y": 2608.6204741977767
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Line.ByStartPointEndPoint",
+        "Id": "bf169a0ba2cb4f9c9c9a9dc58b6a02a4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1332.3360241548767,
+        "Y": 2530.269682654332
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "087d8eb607e64b859afb01ee37a45268",
+        "Title": "Revit adapter",
+        "Nodes": [
+          "abb8307545644159895892aae794c4ee",
+          "8731005dafe1488699cff5a1c0cbd08a"
+        ],
+        "Left": 1002.4848876712825,
+        "Top": 2109.1216866111467,
+        "Width": 444.05876374904585,
+        "Height": 172.0,
+        "FontSize": 36.0,
+        "InitialTop": 2162.1216866111467,
+        "InitialHeight": 172.083336314387,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "197ef5126a074cc99e088036aad9b99c",
+        "Title": "Push model instance",
+        "Nodes": [
+          "773ab5bc4f6843ed93c14848875efd4c",
+          "05e8ce6a8b284796aa924ef6505aaed5",
+          "c301cbaeac194f7182cfe8e44eff2d68"
+        ],
+        "Left": 1926.7889417345373,
+        "Top": 2229.8699517538844,
+        "Width": 442.9802574661303,
+        "Height": 288.03786246864,
+        "FontSize": 36.0,
+        "InitialTop": 2282.8699517538844,
+        "InitialHeight": 312.03786246864,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "62c6e819a0e140e28736183a2089fac6",
+        "Title": "Create model instance",
+        "Nodes": [
+          "9665d77ee2984e89a0f4cb7f068d5463",
+          "f729e3659ea24b71ad3b90e13d7b5969",
+          "cca9ca51a059454eb4ce22886749070a",
+          "2728c996d8e34c6a9cd3cb98b2ff5362",
+          "75493ac777644879ad6fd06d01d9c88f",
+          "99273a0f0ea44add869d04ba425cff4e",
+          "2986d8fd41fe46df9913e54d4b0eef9d",
+          "d4acad904dbd48d99c4e5e71ec012131",
+          "26ccceedbf134a9d896e05834f7754bb",
+          "bf169a0ba2cb4f9c9c9a9dc58b6a02a4"
+        ],
+        "Left": 368.96377571568428,
+        "Top": 2341.1800263940631,
+        "Width": 1458.158404206574,
+        "Height": 385.91034373973162,
+        "FontSize": 36.0,
+        "InitialTop": 2394.1800263940631,
+        "InitialHeight": 359.4404478037136,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": -263.29052782480341,
+    "Y": -1442.1436349067635,
+    "Zoom": 0.77392760632837687
+  }
+}
