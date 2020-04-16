@@ -1,0 +1,497 @@
+{
+  "Uuid": "a63b9937-6c62-4c47-a656-5091f9c2a001",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "RemovePinnedDynamo",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.CreateAdapterComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Adapter.Revit.RevitAdapter, Revit_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \".ctor\", \"Parameters\" : [\"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Adapters.Revit.Settings.RevitSettings\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\"] }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"afe54cd1-2c2e-4e4e-97e8-9a5089ec7dc7\", \"Name\" : \"revitSettings\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Settings.RevitSettings\" }, \"Description\" : \"General settings that are applicable to all actions performed by this adapter, e.g. connection settings, tolerances, parameter mapping settings etc.\\r\\nThis is a BH.oM.Adapters.Revit.Settings.RevitSettings:\\r\\nGeneral settings that are applicable to all actions performed by the instance of Revit adapter.\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : null }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"b9dc14ff-3142-4564-8c7a-c94dd38cb56b\", \"Name\" : \"active\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Establish connection with Revit by setting to 'True'\\r\\nThis is a Boolean\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : false }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"54dcfbbc-71f0-49b1-a3ec-4bed8f4b44fe\", \"Name\" : \"adapter\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.Revit.RevitAdapter, Revit_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\" }, \"Description\" : \"Adapter to Revit\\r\\nThis is a BH.Adapter.Revit.RevitAdapter\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"1eedde00-7c76-43a8-8363-aed0365efa20\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "796f92ef2e314b16b5f7f1ec43211da4",
+      "Inputs": [
+        {
+          "Id": "442f1292f16940cb8621e75943fc8f52",
+          "Name": "revitSettings",
+          "Description": "General settings that are applicable to all actions performed by this adapter, e.g. connection settings, tolerances, parameter mapping settings etc.\r\nThis is a BH.oM.Adapters.Revit.Settings.RevitSettings:\r\nGeneral settings that are applicable to all actions performed by the instance of Revit adapter.",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b9736fb8348040cb901a117674f00149",
+          "Name": "active",
+          "Description": "Establish connection with Revit by setting to 'True'\r\nThis is a Boolean",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9e6edf85c9ca49a39a972e870c3614fb",
+          "Name": "adapter",
+          "Description": "Adapter to Revit\r\nThis is a BH.Adapter.Revit.RevitAdapter",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Shortest",
+      "Description": "Adapter to connect to an open Revit file. Connection will be made to the active document (based on active view). Make sure to only have ONE Revit Window open, or connection will not work as intended.\r\n.ctor is a Constructor of BH.Adapter.Revit.RevitAdapter"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": true,
+      "Id": "b7dcd50427e540df90bc270477eec540",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "8e8dd8566def429ca451da518e8a053d",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"Generic Annotations\";",
+      "Id": "6df895a4768d465789616e30b63b7658",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "cae9950b5f954f8da395d05cba672227",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.CreateObjectComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Requests.FilterByCategory\" }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"65918f66-14fe-48e6-a13e-d90abc0bf4c0\", \"Name\" : \"CategoryName\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Revit category name, as shown in Revit user interface (currently only English supported).\\r\\nThis is a String\\r\\nCategoryName is a Property of BH.oM.Adapters.Revit.Requests.FilterByCategory\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : \"\" }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"7851e06d-e0f0-44a2-86f1-536c523e3a05\", \"Name\" : \"CaseSensitive\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"If true: only perfect, case sensitive text match will be accepted. If false: capitals and small letters will be treated as equal.\\r\\nThis is a Boolean\\r\\nCaseSensitive is a Property of BH.oM.Adapters.Revit.Requests.FilterByCategory\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : true }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"9a0de86d-3658-428c-ade2-b8a44508b8d1\", \"Name\" : \"F\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Requests.FilterByCategory\" }, \"Description\" : \"This is a BH.oM.Adapters.Revit.Requests.FilterByCategory:\\r\\nIRequest that filters all elements of a Revit category.\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"e8dae89e-3a62-4c9d-bbf8-da1bfd78557a\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "fb2bdb63e73e421b887f9c4b260a5138",
+      "Inputs": [
+        {
+          "Id": "de5a59375dca49a9ad2c6ae0e4fd8454",
+          "Name": "CategoryName",
+          "Description": "Revit category name, as shown in Revit user interface (currently only English supported).\r\nThis is a String\r\nCategoryName is a Property of BH.oM.Adapters.Revit.Requests.FilterByCategory",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "cf14dc63ae834fe785c2d86524d9d15f",
+          "Name": "CaseSensitive",
+          "Description": "If true: only perfect, case sensitive text match will be accepted. If false: capitals and small letters will be treated as equal.\r\nThis is a Boolean\r\nCaseSensitive is a Property of BH.oM.Adapters.Revit.Requests.FilterByCategory",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "216da803566f47dfbd65fe59a97ce0a3",
+          "Name": "F",
+          "Description": "This is a BH.oM.Adapters.Revit.Requests.FilterByCategory:\r\nIRequest that filters all elements of a Revit category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Shortest",
+      "Description": "This is a BH.oM.Adapters.Revit.Requests.FilterByCategory:\r\nIRequest that filters all elements of a Revit category."
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.RemoveComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.UI.Components.RemoveCaller, BHoM_UI, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \"Remove\", \"Parameters\" : [\"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Adapter.BHoMAdapter, BHoM_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Data.Requests.IRequest\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Adapter.ActionConfig\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\"] }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"2c8b0971-99b0-438a-b8e9-6043d5c85bca\", \"Name\" : \"adapter\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.BHoMAdapter, BHoM_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\" }, \"Description\" : \"Adapter to the external software\\r\\nThis is a BH.Adapter.BHoMAdapter\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : { \"_t\" : \"DBNull\" } }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"728da550-eba1-4eb2-857f-813e8f363da7\", \"Name\" : \"request\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Data.Requests.IRequest\" }, \"Description\" : \"Specifies which objects to be removed\\r\\nThis is a BH.oM.Data.Requests.IRequest\\r\\nThis can be of the following types: EnergyAnalysisModelRequest, FilterActiveView, FilterByActiveWorkset, FilterByCategory, FilterByDBTypeName, FilterByElementIds, FilterByFamilyAndTypeName, FilterByParameterBool, FilterByParameterElementId, FilterByParameterExistence, FilterByParameterInteger, FilterByParameterNumber, FilterByParameterText, FilterBySelectionSet, FilterByUniqueIds, and more...\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : null }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"94b623d6-9117-4942-8e50-33554e3741eb\", \"Name\" : \"actionConfig\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapter.ActionConfig\" }, \"Description\" : \"Configuration for this Action. You can input an ActionConfig (it contains the configs common to all Toolkits); \\nconsider that Toolkits may have a custom ActionConfig (e.g. GSAConfig, SpeckleConfig).\\r\\nThis is a BH.oM.Adapter.ActionConfig:\\r\\nConfigurations specific for an Adapter Action (Push, Pull, etc).\\nConsider that your tookit might have a more specific implementation available. Try to look for [your toolkit name]ActionConfig.\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : null }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"27e287b3-f83c-41aa-bf1b-e01f800bb605\", \"Name\" : \"active\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Execute the delete\\r\\nThis is a Boolean\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : false }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"1febf923-f54a-4deb-883d-31bed5ff125b\", \"Name\" : \"#removed\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Number of objects that have been removed\\r\\nThis is a Int32\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"b17debd3-19ed-40e2-8f4a-a7c5afc86662\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "bb9598a552f9435c9b9a1e30b1094920",
+      "Inputs": [
+        {
+          "Id": "5dd1fdd1f54f462e966c6ab69193e95d",
+          "Name": "adapter",
+          "Description": "Adapter to the external software\r\nThis is a BH.Adapter.BHoMAdapter",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9ced06ad5f5746218695bcec9277c667",
+          "Name": "request",
+          "Description": "Specifies which objects to be removed\r\nThis is a BH.oM.Data.Requests.IRequest\r\nThis can be of the following types: EnergyAnalysisModelRequest, FilterActiveView, FilterByActiveWorkset, FilterByCategory, FilterByDBTypeName, FilterByElementIds, FilterByFamilyAndTypeName, FilterByParameterBool, FilterByParameterElementId, FilterByParameterExistence, FilterByParameterInteger, FilterByParameterNumber, FilterByParameterText, FilterBySelectionSet, FilterByUniqueIds, and more...",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "900598e6c3d64fe2bdaa4f71c30240a8",
+          "Name": "actionConfig",
+          "Description": "Configuration for this Action. You can input an ActionConfig (it contains the configs common to all Toolkits); \nconsider that Toolkits may have a custom ActionConfig (e.g. GSAConfig, SpeckleConfig).\r\nThis is a BH.oM.Adapter.ActionConfig:\r\nConfigurations specific for an Adapter Action (Push, Pull, etc).\nConsider that your tookit might have a more specific implementation available. Try to look for [your toolkit name]ActionConfig.",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "59068f1b34a54d97b6bf7cae7cdb81fd",
+          "Name": "active",
+          "Description": "Execute the delete\r\nThis is a Boolean",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "22f91378c8974f56b180f07041e406fd",
+          "Name": "#removed",
+          "Description": "Number of objects that have been removed\r\nThis is a Int32",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Shortest",
+      "Description": "Adapter Action 'Remove': removes the objects from an external software.\r\nRemove is a Method of BH.UI.Components.RemoveCaller"
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.CreateObjectComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Engine.Adapters.Revit.Create, Revit_Engine, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \"RevitRemoveConfig\", \"Parameters\" : [\"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\"] }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"026b13d4-e9f0-4295-ab18-e26ac93140f1\", \"Name\" : \"suppressFailureMessages\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"If true, Revit warnings and failure messages will be suppressed (not shown to the user). Whilst this option may speed the pushing process up in case of multiple warnings, it may lead to important issues.\\r\\nThis is a Boolean\\r\\nSuppressFailureMessages is a Property of BH.oM.Adapters.Revit.RevitRemoveConfig\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : false }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"69e70dea-f3ae-47a6-8308-7e86ecedcb46\", \"Name\" : \"includeClosedWorksets\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Elements from closed worksets will be processed if true.\\r\\nThis is a Boolean\\r\\nIncludeClosedWorksets is a Property of BH.oM.Adapters.Revit.RevitRemoveConfig\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : false }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"abb76dfd-6f09-463a-b2e1-471e82ea22e0\", \"Name\" : \"removePinned\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Pinned elements will be processed if true.\\r\\nThis is a Boolean\\r\\nRemovePinned is a Property of BH.oM.Adapters.Revit.RevitRemoveConfig\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : false }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"09190067-32f1-4222-87f1-9a7acc7916fd\", \"Name\" : \"R\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.RevitRemoveConfig\" }, \"Description\" : \"revitRemoveConfig\\r\\nThis is a BH.oM.Adapters.Revit.RevitRemoveConfig:\\r\\nConfiguration used for adapter interaction with Revit on Remove action.\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"f1dddd3c-77d9-4da3-8701-a4084d0970cc\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "5fe89f1baacc4201bb003dfa0c6c9fbc",
+      "Inputs": [
+        {
+          "Id": "28958552dbae422d8014536309130e2e",
+          "Name": "suppressFailureMessages",
+          "Description": "If true, Revit warnings and failure messages will be suppressed (not shown to the user). Whilst this option may speed the pushing process up in case of multiple warnings, it may lead to important issues.\r\nThis is a Boolean\r\nSuppressFailureMessages is a Property of BH.oM.Adapters.Revit.RevitRemoveConfig",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "23a8cf27d29440a891b7dc521c3c7bca",
+          "Name": "includeClosedWorksets",
+          "Description": "Elements from closed worksets will be processed if true.\r\nThis is a Boolean\r\nIncludeClosedWorksets is a Property of BH.oM.Adapters.Revit.RevitRemoveConfig",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "06989b3fafe64dc7928d34939fc6ff68",
+          "Name": "removePinned",
+          "Description": "Pinned elements will be processed if true.\r\nThis is a Boolean\r\nRemovePinned is a Property of BH.oM.Adapters.Revit.RevitRemoveConfig",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "cf44041ca398425e9c7c4d6bd9515a46",
+          "Name": "R",
+          "Description": "revitRemoveConfig\r\nThis is a BH.oM.Adapters.Revit.RevitRemoveConfig:\r\nConfiguration used for adapter interaction with Revit on Remove action.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Shortest",
+      "Description": "Creates a remove action-specific configuration used for adapter interaction with Revit.\r\nRevitRemoveConfig is a Method of BH.Engine.Adapters.Revit.Create"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "true;",
+      "Id": "d41f1d548bb04d63ac049b59dc5d590c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "48488483024c462e9191b08962db3820",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": false,
+      "Id": "ea352999f75049669816b728cd36d28b",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "9139977ccfc542d0baf9b5ea654e62b1",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Selection between a true and false."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "9e6edf85c9ca49a39a972e870c3614fb",
+      "End": "5dd1fdd1f54f462e966c6ab69193e95d",
+      "Id": "302dfdc43f594fd4b053a2f61674c5e6"
+    },
+    {
+      "Start": "8e8dd8566def429ca451da518e8a053d",
+      "End": "b9736fb8348040cb901a117674f00149",
+      "Id": "63fcf21e4ca54567978608a8e949d0db"
+    },
+    {
+      "Start": "cae9950b5f954f8da395d05cba672227",
+      "End": "de5a59375dca49a9ad2c6ae0e4fd8454",
+      "Id": "8404d698c3ea4adc99924a8b3ce8184c"
+    },
+    {
+      "Start": "216da803566f47dfbd65fe59a97ce0a3",
+      "End": "9ced06ad5f5746218695bcec9277c667",
+      "Id": "87c279964db741d0be35700648ca5745"
+    },
+    {
+      "Start": "cf44041ca398425e9c7c4d6bd9515a46",
+      "End": "900598e6c3d64fe2bdaa4f71c30240a8",
+      "Id": "6b3220241d6946098202afd5fc67589c"
+    },
+    {
+      "Start": "48488483024c462e9191b08962db3820",
+      "End": "23a8cf27d29440a891b7dc521c3c7bca",
+      "Id": "ceabf9c6e40c46b388619c712e693052"
+    },
+    {
+      "Start": "48488483024c462e9191b08962db3820",
+      "End": "06989b3fafe64dc7928d34939fc6ff68",
+      "Id": "69cced752bed4c2d96fd52528bb30396"
+    },
+    {
+      "Start": "9139977ccfc542d0baf9b5ea654e62b1",
+      "End": "59068f1b34a54d97b6bf7cae7cdb81fd",
+      "Id": "a2b8324b56a5429aa2c9d41b28cfafee"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.2.6826",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -196.47126979450897,
+      "EyeY": 22.965630634914447,
+      "EyeZ": 13.099854555379423,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "Id": "796f92ef2e314b16b5f7f1ec43211da4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "RevitAdapter",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 398.5,
+        "Y": 185.61837819852445
+      },
+      {
+        "Id": "b7dcd50427e540df90bc270477eec540",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Boolean",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 198.5,
+        "Y": 211.61837819852445
+      },
+      {
+        "Id": "6df895a4768d465789616e30b63b7658",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 197.5,
+        "Y": 409.21333333333337
+      },
+      {
+        "Id": "fb2bdb63e73e421b887f9c4b260a5138",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "FilterByCategory",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 489.5,
+        "Y": 405.0
+      },
+      {
+        "Id": "bb9598a552f9435c9b9a1e30b1094920",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Remove",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 1004.4481069598103,
+        "Y": 362.04864892534704
+      },
+      {
+        "Id": "5fe89f1baacc4201bb003dfa0c6c9fbc",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "RevitRemoveConfig",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 362.54756755373262,
+        "Y": 617.47783828055515
+      },
+      {
+        "Id": "d41f1d548bb04d63ac049b59dc5d590c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 197.54756755373262,
+        "Y": 659.69117161388851
+      },
+      {
+        "Id": "ea352999f75049669816b728cd36d28b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Boolean",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 818.131348259248,
+        "Y": 511.29405629531044
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "f1070454146e4536a5b9b56fc7723d01",
+        "Title": "Revit adapter",
+        "Nodes": [
+          "796f92ef2e314b16b5f7f1ec43211da4",
+          "b7dcd50427e540df90bc270477eec540"
+        ],
+        "Left": 188.5,
+        "Top": 132.61837819852445,
+        "Width": 462.0,
+        "Height": 172.0,
+        "FontSize": 36.0,
+        "InitialTop": 185.61837819852445,
+        "InitialHeight": 149.0,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "9d9541b1fa0a4ad89e5411643b47ccc0",
+        "Title": "Request",
+        "Nodes": [
+          "6df895a4768d465789616e30b63b7658",
+          "fb2bdb63e73e421b887f9c4b260a5138"
+        ],
+        "Left": 187.5,
+        "Top": 352.0,
+        "Width": 529.0,
+        "Height": 172.0,
+        "FontSize": 36.0,
+        "InitialTop": 405.0,
+        "InitialHeight": 149.0,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "572a4dc4d2494f3a8392ea8b76c15a10",
+        "Title": "Action config",
+        "Nodes": [
+          "5fe89f1baacc4201bb003dfa0c6c9fbc",
+          "d41f1d548bb04d63ac049b59dc5d590c"
+        ],
+        "Left": 187.54756755373262,
+        "Top": 564.47783828055515,
+        "Width": 467.0,
+        "Height": 188.21333333333337,
+        "FontSize": 36.0,
+        "InitialTop": 617.47783828055515,
+        "InitialHeight": 165.21333333333337,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "da2e86c3e8b04b54967f663a002bd610",
+        "Title": "Remove",
+        "Nodes": [
+          "bb9598a552f9435c9b9a1e30b1094920",
+          "ea352999f75049669816b728cd36d28b"
+        ],
+        "Left": 808.131348259248,
+        "Top": 309.04864892534704,
+        "Width": 464.31675870056222,
+        "Height": 270.2454073699634,
+        "FontSize": 36.0,
+        "InitialTop": 362.04864892534704,
+        "InitialHeight": 247.2454073699634,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": -88.189519120919783,
+    "Y": -89.255970715875321,
+    "Zoom": 0.97676875
+  }
+}
