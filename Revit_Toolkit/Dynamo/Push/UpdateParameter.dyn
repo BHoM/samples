@@ -2,7 +2,7 @@
   "Uuid": "b6b6b721-2cb0-49d7-9a49-adb6ac53b4b0",
   "IsCustomNode": false,
   "Description": null,
-  "Name": "UpdateProperty",
+  "Name": "UpdateParameter",
   "ElementResolver": {
     "ResolutionMap": {}
   },
@@ -12,7 +12,7 @@
     {
       "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
       "NodeType": "BooleanInputNode",
-      "InputValue": true,
+      "InputValue": false,
       "Id": "dd00baeba5d74b5fb7f74a5daffca53a",
       "Inputs": [],
       "Outputs": [
@@ -31,7 +31,7 @@
     },
     {
       "ConcreteType": "BH.UI.Dynamo.Components.CreateAdapterComponent, Dynamo_UI",
-      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Adapter.Revit.RevitAdapter, Revit_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \".ctor\", \"Parameters\" : [\"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Adapters.Revit.Settings.RevitSettings\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\"] }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"810420c4-8fa2-45ee-9e77-8e117a8bfaa4\", \"Name\" : \"revitSettings\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Settings.RevitSettings\" }, \"Description\" : \"General settings that are applicable to all actions performed by this adapter, e.g. connection settings, tolerances, parameter mapping settings etc.\\r\\nThis is a BH.oM.Adapters.Revit.Settings.RevitSettings:\\r\\nGeneral settings that are applicable to all actions performed by the instance of Revit adapter.\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : null }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"1a6433a9-f3f7-4aef-bd51-46f43113dbc0\", \"Name\" : \"active\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Establish connection with Revit by setting to 'True'\\r\\nThis is a Boolean\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : false }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"321aa8cd-3a70-44a4-9af6-1f414d97a1cb\", \"Name\" : \"adapter\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.Revit.RevitAdapter, Revit_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\" }, \"Description\" : \"Adapter to Revit\\r\\nThis is a BH.Adapter.Revit.RevitAdapter\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"591f9a69-61e8-4616-88ec-2b807f06f8ac\" }",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Adapter.Revit.RevitAdapter, Revit_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \".ctor\", \"Parameters\" : [\"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Adapters.Revit.Settings.RevitSettings\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\"] }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"17d4ab2b-f9b6-4331-92ad-17427ea5b31e\", \"Name\" : \"revitSettings\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapters.Revit.Settings.RevitSettings\" }, \"Description\" : \"General settings that are applicable to all actions performed by this adapter, e.g. connection settings, tolerances, parameter mapping settings etc.\\r\\nThis is a BH.oM.Adapters.Revit.Settings.RevitSettings:\\r\\nGeneral settings that are applicable to all actions performed by the instance of Revit adapter.\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : null }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"06a0b80b-5f07-4934-beaa-fe53c2871deb\", \"Name\" : \"active\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Establish connection with Revit by setting to 'True'\\r\\nThis is a Boolean\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : false }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"3ecfa86d-6022-4ecc-a2f8-820dfe288917\", \"Name\" : \"adapter\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.Revit.RevitAdapter, Revit_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\" }, \"Description\" : \"Adapter to Revit\\r\\nThis is a BH.Adapter.Revit.RevitAdapter\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"c8b4097c-a9e0-459b-ab9f-78829f4548c4\" }",
       "NodeType": "ExtensionNode",
       "Id": "e3dd4f1421b146b08acfc5eb0c05d6d3",
       "Inputs": [
@@ -70,7 +70,7 @@
     },
     {
       "ConcreteType": "BH.UI.Dynamo.Components.PullComponent, Dynamo_UI",
-      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.UI.Components.PullCaller, BHoM_UI, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \"Pull\", \"Parameters\" : [\"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Adapter.BHoMAdapter, BHoM_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Adapter.PullType\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Adapter.ActionConfig\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\"] }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"4819211d-cb5d-4c2b-976c-c77e48e05ffb\", \"Name\" : \"adapter\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.BHoMAdapter, BHoM_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\" }, \"Description\" : \"Adapter to the external software\\r\\nThis is a BH.Adapter.BHoMAdapter\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : { \"_t\" : \"DBNull\" } }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"899f69ce-d9b7-4bb2-abc4-db2eb71504dc\", \"Name\" : \"request\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Input a Request to pull only objects that satisfy a certain rule. \\nInput a Type to pull only objects of that type.\\r\\nThis is a Object\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : null }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"a8b5c9d0-2e01-44de-87eb-2e2b488825e3\", \"Name\" : \"pullType\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapter.PullType\" }, \"Description\" : \"Pull type. Connect the enum PullType for all the alternatives.\\r\\nThis is a BH.oM.Adapter.PullType\\r\\nEnum values:\\r\\n-AdapterDefault: If this is chosen, then the m_AdapterSettings.DefaultPullType is picked.\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : 0 }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"b060c724-9d41-442d-bb66-2ef7895b027e\", \"Name\" : \"actionConfig\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapter.ActionConfig\" }, \"Description\" : \"Configuration for this Action. You can input an ActionConfig (it contains the configs common to all Toolkits); \\nconsider that Toolkits may have a custom ActionConfig (e.g. GSAConfig, SpeckleConfig).\\r\\nThis is a BH.oM.Adapter.ActionConfig:\\r\\nConfigurations specific for an Adapter Action (Push, Pull, etc).\\nConsider that your tookit might have a more specific implementation available. Try to look for [your toolkit name]ActionConfig.\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : null }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"92390a14-2fa1-415e-a290-122ed32e332f\", \"Name\" : \"active\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Execute the pull\\r\\nThis is a Boolean\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : false }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"b3788392-2a27-45b7-bb5b-0c586b006548\", \"Name\" : \"objects\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }] }, \"Description\" : \"Objects pulled\\r\\nThis is a IEnumerable<Object>\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"96aaf6ae-6b30-487d-ab4b-b48b539f3fba\" }",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.UI.Components.PullCaller, BHoM_UI, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \"Pull\", \"Parameters\" : [\"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Adapter.BHoMAdapter, BHoM_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Adapter.PullType\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Adapter.ActionConfig\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\"] }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"1cc0465f-1155-4132-aeb2-4ca5e3bc167b\", \"Name\" : \"adapter\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.BHoMAdapter, BHoM_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\" }, \"Description\" : \"Adapter to the external software\\r\\nThis is a BH.Adapter.BHoMAdapter\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : { \"_t\" : \"System.DBNull\" } }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"1aae05cd-fbd3-4169-80d7-054308f1efa1\", \"Name\" : \"request\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Input a Request to pull only objects that satisfy a certain rule. \\nInput a Type to pull only objects of that type.\\r\\nThis is a Object\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : null }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"f30196db-3812-43b5-b631-d308bc72a70f\", \"Name\" : \"pullType\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapter.PullType\" }, \"Description\" : \"Pull type. Connect the enum PullType for all the alternatives.\\r\\nThis is a BH.oM.Adapter.PullType\\r\\nEnum values:\\r\\n-AdapterDefault: If this is chosen, then the m_AdapterSettings.DefaultPullType is picked.\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : 0 }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"c270ae87-ae21-45e2-b7c2-6d5ea3945148\", \"Name\" : \"actionConfig\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapter.ActionConfig\" }, \"Description\" : \"Configuration for this Action. You can input an ActionConfig (it contains the configs common to all Toolkits); \\nconsider that Toolkits may have a custom ActionConfig (e.g. GSAConfig, SpeckleConfig).\\r\\nThis is a BH.oM.Adapter.ActionConfig:\\r\\nConfigurations specific for an Adapter Action (Push, Pull, etc).\\nConsider that your tookit might have a more specific implementation available. Try to look for [your toolkit name]ActionConfig.\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : null }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"0518b7c2-9ab7-4265-82bf-d00b8bc45b9a\", \"Name\" : \"active\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Execute the pull\\r\\nThis is a Boolean\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : false }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"63d39eb8-8e55-4ee8-b67c-ab410a523573\", \"Name\" : \"objects\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }] }, \"Description\" : \"Objects pulled\\r\\nThis is a IEnumerable<Object>\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"39f95318-4c90-43a4-af23-546918906ccb\" }",
       "NodeType": "ExtensionNode",
       "Id": "a20569e3bb3e4483a55e5db7a954f14a",
       "Inputs": [
@@ -137,7 +137,7 @@
     {
       "ConcreteType": "BH.UI.Dynamo.Components.CreateEnumComponent, Dynamo_UI",
       "SelectedIndex": 3,
-      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapter.PushType\" }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"d8d99d3b-8a72-48c9-a8af-504ce755e68b\", \"Name\" : \"index\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"index of the enum value\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"578eed2f-0dcc-4dd1-9003-b1a3c1554f4d\", \"Name\" : \"enum\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Enum, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"enum value\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"71e51820-ebff-4fda-8ba3-d0f2a732e3f4\" }",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapter.PushType\" }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"ff0da6f5-2c73-495d-b40c-073a0267561e\", \"Name\" : \"index\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"index of the enum value\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"218a6bd3-4580-4127-a8d1-a6cbb37b5218\", \"Name\" : \"enum\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Enum, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"enum value\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"faa7acfc-a7a8-4b95-9a4c-0815b76b30e8\" }",
       "NodeType": "ExtensionNode",
       "Id": "e09aea0d9afc450fa801e056f71904a1",
       "Inputs": [],
@@ -196,28 +196,8 @@
       "Description": "Selection between a true and false."
     },
     {
-      "ConcreteType": "BH.UI.Dynamo.Components.CreateObjectComponent, Dynamo_UI",
-      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Engine.Adapters.Revit.Create, Revit_Engine, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \"FilterBySelection\", \"Parameters\" : [] }, \"InputParams\" : [], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"e9d87a1d-c5ec-4592-afde-e92fa132ff5c\", \"Name\" : \"F\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Data.Requests.SelectionRequest\" }, \"Description\" : \"SelectionRequest, an IRequest to be used to filter elements selected in Revit.\\r\\nThis is a BH.oM.Data.Requests.SelectionRequest:\\r\\nIRequest that filters all elements currently selected in the software.\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"9f03d6c5-9a66-4d4d-8b20-407cec1a9cd7\" }",
-      "NodeType": "ExtensionNode",
-      "Id": "802de9b773fa4d8cb348fad9d0f5ac6c",
-      "Inputs": [],
-      "Outputs": [
-        {
-          "Id": "91efca3a3bc148c79f399379edd452e2",
-          "Name": "F",
-          "Description": "SelectionRequest, an IRequest to be used to filter elements selected in Revit.\r\nThis is a BH.oM.Data.Requests.SelectionRequest:\r\nIRequest that filters all elements currently selected in the software.",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Shortest",
-      "Description": "Creates an IRequest that filters elements selected in Revit. Wrapper for BH.oM.Data.Requests.SelectionRequest.\r\nFilterBySelection is a Method of BH.Engine.Adapters.Revit.Create"
-    },
-    {
       "ConcreteType": "BH.UI.Dynamo.Components.PushComponent, Dynamo_UI",
-      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.UI.Components.PushCaller, BHoM_UI, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \"Push\", \"Parameters\" : [\"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Adapter.BHoMAdapter, BHoM_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\", \\\"GenericArguments\\\" : [{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }] }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Adapter.PushType\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Adapter.ActionConfig\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\"] }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"4f0dc128-6396-4a99-a5fa-07b1f72f8675\", \"Name\" : \"adapter\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.BHoMAdapter, BHoM_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\" }, \"Description\" : \"Adapter to the external software\\r\\nThis is a BH.Adapter.BHoMAdapter\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : { \"_t\" : \"DBNull\", \"BHoM_Guid\" : \"74a292ff-e4ed-4332-b0c6-af9b3f6d450f\" } }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"c4e2319e-c2d6-42fe-a895-54440aea16ca\", \"Name\" : \"objects\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }] }, \"Description\" : \"Objects to push\\r\\nThis is a IEnumerable<Object>\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : { \"_t\" : \"DBNull\", \"BHoM_Guid\" : \"643d8457-e800-4345-9ef6-5d0c3fb4a337\" } }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"49c2ada1-d463-4af4-89ca-e42033f3a42d\", \"Name\" : \"tag\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Tag to apply to the objects being pushed\\r\\nThis is a String\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : \"\" }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"b24d986d-9044-49d1-b951-2ef2c38c401d\", \"Name\" : \"pushType\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapter.PushType\" }, \"Description\" : \"Push type. Connect the enum PushType for all the alternatives.\\r\\nThis is a BH.oM.Adapter.PushType:\\r\\nControls which type of export should be done by the Adapter `Push` action.\\r\\nEnum values:\\r\\n-FullPush: Calls all CRUD methods as appropriate.\\r\\n-CreateOnly: Uses only the Create CRUD method to export the objects. This may create duplicates if the object already exists.\\r\\n-CreateNonExisting: Same as FullPush, but does not update pre-existing objects.\\r\\n-UpdateOnly: Uses only the Update CRUD method to update the objects in the external software. All other objects in the model are left untouched.\\r\\n-DeleteThenCreate: For all objects being Pushed, identifies their type, calls Delete to remove all of those types, then it Creates them.\\r\\n-AdapterDefault: AdapterDefault - Picks the value hard-coded in the specific Adapter.\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : 5 }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"ea4bdb1e-4ec3-4ccf-9147-764262b62d97\", \"Name\" : \"actionConfig\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapter.ActionConfig\" }, \"Description\" : \"Configuration for this Action. You can input an ActionConfig (it contains the configs common to all Toolkits); \\nconsider that Toolkits may have a custom ActionConfig (e.g. GSAConfig, SpeckleConfig).\\r\\nThis is a BH.oM.Adapter.ActionConfig:\\r\\nConfigurations specific for an Adapter Action (Push, Pull, etc).\\nConsider that your tookit might have a more specific implementation available. Try to look for [your toolkit name]ActionConfig.\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : null }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"13523f79-1107-4ac3-a192-043121d8c551\", \"Name\" : \"active\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Execute the push\\r\\nThis is a Boolean\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : false }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"b3886cbb-7d91-463e-b845-6a04cbc22ce3\", \"Name\" : \"objects\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }] }, \"Description\" : \"Objects that have been pushed.\\nThese objects may be different from the input objects (e.g. their correspondent external software id may be stored in their CustomData).\\r\\nThis is a Object\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"9878b6ca-2ced-4cff-a51f-72e368950af0\", \"Name\" : \"success\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Define if the push was sucessful\\r\\nThis is a Boolean\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"6d3f1a98-652b-425f-a6e0-d3c96cec5fd4\" }",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.UI.Components.PushCaller, BHoM_UI, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \"Push\", \"Parameters\" : [\"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Adapter.BHoMAdapter, BHoM_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\", \\\"GenericArguments\\\" : [{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }] }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Adapter.PushType\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Adapter.ActionConfig\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\"] }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"2d6b8ba4-765c-4f97-acac-157d1fa30f45\", \"Name\" : \"adapter\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.Adapter.BHoMAdapter, BHoM_Adapter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\" }, \"Description\" : \"Adapter to the external software\\r\\nThis is a BH.Adapter.BHoMAdapter\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : { \"_t\" : \"System.DBNull\" } }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"6dd384bf-d513-4f08-bdc8-b9542bb51d39\", \"Name\" : \"objects\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.IEnumerable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }] }, \"Description\" : \"Objects to push\\r\\nThis is a IEnumerable<Object>\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : { \"_t\" : \"System.DBNull\" } }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"dc932be8-d9b1-40b8-97d9-1253166bba5a\", \"Name\" : \"tag\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Tag to apply to the objects being pushed\\r\\nThis is a String\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : \"\" }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"2e2979b0-db7a-4b26-91af-7ff24783e646\", \"Name\" : \"pushType\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapter.PushType\" }, \"Description\" : \"Push type. Connect the enum PushType for all the alternatives.\\r\\nThis is a BH.oM.Adapter.PushType:\\r\\nControls which type of export should be done by the Adapter `Push` action.\\r\\nEnum values:\\r\\n-FullPush: Calls all CRUD methods as appropriate.\\r\\n-CreateOnly: Uses only the Create CRUD method to export the objects. This may create duplicates if the object already exists.\\r\\n-CreateNonExisting: Same as FullPush, but does not update pre-existing objects.\\r\\n-UpdateOnly: Uses only the Update CRUD method to update the objects in the external software. All other objects in the model are left untouched.\\r\\n-DeleteThenCreate: For all objects being Pushed, identifies their type, calls Delete to remove all of those types, then it Creates them.\\r\\n-AdapterDefault: AdapterDefault - Picks the value hard-coded in the specific Adapter.\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : 5 }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"a143d628-c820-44ec-946b-bde54ef4865b\", \"Name\" : \"actionConfig\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Adapter.ActionConfig\" }, \"Description\" : \"Configuration for this Action. You can input an ActionConfig (it contains the configs common to all Toolkits); \\nconsider that Toolkits may have a custom ActionConfig (e.g. GSAConfig, SpeckleConfig).\\r\\nThis is a BH.oM.Adapter.ActionConfig:\\r\\nConfigurations specific for an Adapter Action (Push, Pull, etc).\\nConsider that your tookit might have a more specific implementation available. Try to look for [your toolkit name]ActionConfig.\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : null }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"9b24f972-a160-4752-984b-8a512e47f4d9\", \"Name\" : \"active\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Execute the push\\r\\nThis is a Boolean\", \"Kind\" : \"Input\", \"HasDefaultValue\" : true, \"DefaultValue\" : false }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"621631a1-d78b-4ced-90f4-de23ff9046eb\", \"Name\" : \"objects\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\", \"GenericArguments\" : [{ \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }] }, \"Description\" : \"Objects that have been pushed.\\nThese objects may be different from the input objects (e.g. their correspondent external software id may be stored in their CustomData).\\r\\nThis is a Object\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"f9b26f99-1e7d-4285-9f82-5e564c09f5dd\", \"Name\" : \"success\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Define if the push was sucessful\\r\\nThis is a Boolean\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"3e936eb4-89f4-4eea-b001-33dd21c35efe\" }",
       "NodeType": "ExtensionNode",
       "Id": "8d0c3ab7e03b4128a3e4ed9c90c17c0a",
       "Inputs": [
@@ -300,54 +280,6 @@
       "Description": "Adapter Action 'Push': exports objects to the external software. \nIf the Toolkit supports it, this also performs the replace/update of the objects as appropriate.\r\nPush is a Method of BH.UI.Components.PushCaller"
     },
     {
-      "ConcreteType": "BH.UI.Dynamo.Components.SetPropertyComponent, Dynamo_UI",
-      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Engine.Reflection.Modify, Reflection_Engine, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \"PropertyValue\", \"Parameters\" : [\"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Base.BHoMObject\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\"] }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"ee8ad735-62a7-434c-adf1-7dc76f3cf26d\", \"Name\" : \"obj\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.BHoMObject\" }, \"Description\" : \"object to set the value for\\r\\nThis is a BH.oM.Base.BHoMObject\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : { \"_t\" : \"DBNull\" } }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"1c17c7e2-8aa9-45f9-9699-01419ecdc8da\", \"Name\" : \"propName\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"name of the property to set the value of\\r\\nThis is a String\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : { \"_t\" : \"DBNull\" } }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"752e47f3-4e1c-44f2-a2af-05636ce50d6a\", \"Name\" : \"value\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"new value of the property\\r\\nThis is a Object\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : { \"_t\" : \"DBNull\" } }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"8c42caa8-8cd3-41cf-87cb-4f45da8a25cc\", \"Name\" : \"result\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.BHoMObject\" }, \"Description\" : \"New object with its property changed to the new value\\r\\nThis is a BH.oM.Base.BHoMObject\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"5773795c-816e-43f4-acdd-b8653ad54321\" }",
-      "NodeType": "ExtensionNode",
-      "Id": "dee3679ea0bb45a3b33e5cb0fbbcc571",
-      "Inputs": [
-        {
-          "Id": "eea389c062b24a6493d70192a5d40ef5",
-          "Name": "obj",
-          "Description": "object to set the value for\r\nThis is a BH.oM.Base.BHoMObject",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "5bb2858d4bc04e9fb69b859f356d617e",
-          "Name": "propName",
-          "Description": "name of the property to set the value of\r\nThis is a String",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "0431e32e499c484e983c461ce0ae9ab0",
-          "Name": "value",
-          "Description": "new value of the property\r\nThis is a Object",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [
-        {
-          "Id": "c7b1959f33ff4166a91974f989b536cc",
-          "Name": "result",
-          "Description": "New object with its property changed to the new value\r\nThis is a BH.oM.Base.BHoMObject",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Shortest",
-      "Description": "Set the value of a property with a given name for an object\r\nPropertyValue is a Method of BH.Engine.Reflection.Modify"
-    },
-    {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
       "NodeType": "CodeBlockNode",
       "Code": "\"Comments\";\n\"Hello World\";",
@@ -375,6 +307,74 @@
       ],
       "Replication": "Disabled",
       "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.CreateObjectComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Engine.Adapters.Revit.Create, Revit_Engine, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \"FilterBySelection\", \"Parameters\" : [] }, \"InputParams\" : [], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"a7fabf1e-afe8-445a-9f81-04a88ab4a416\", \"Name\" : \"request\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Data.Requests.SelectionRequest\" }, \"Description\" : \"Created request.\\r\\nThis is a BH.oM.Data.Requests.SelectionRequest:\\r\\nIRequest that filters all elements currently selected in the software.\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"489a44c7-ed48-4525-af77-e830283df2d9\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "b5a0145940de4f13b61676921e627498",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "82725dc5a8034999bbcf72bd7bf2fc54",
+          "Name": "request",
+          "Description": "Created request.\r\nThis is a BH.oM.Data.Requests.SelectionRequest:\r\nIRequest that filters all elements currently selected in the software.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Creates IRequest that filters elements selected in Revit. Wrapper for BH.oM.Data.Requests.SelectionRequest.\r\n"
+    },
+    {
+      "ConcreteType": "BH.UI.Dynamo.Components.ModifyComponent, Dynamo_UI",
+      "SerialisedCaller": "{ \"SelectedItem\" : { \"_t\" : \"System.Reflection.MethodBase\", \"TypeName\" : \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.Engine.Adapters.Revit.Modify, Revit_Engine, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null\\\" }\", \"MethodName\" : \"SetRevitParameter\", \"Parameters\" : [\"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"BH.oM.Base.IBHoMObject\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\", \"{ \\\"_t\\\" : \\\"System.Type\\\", \\\"Name\\\" : \\\"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\\\" }\"] }, \"InputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"91448292-03b9-41e9-99d6-5c7c7f9852bf\", \"Name\" : \"bHoMObject\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.IBHoMObject\" }, \"Description\" : \"BHoMObject to which the parameter will be attached.\\r\\nThis is a BH.oM.Base.IBHoMObject\\r\\nThis can be of the following types: FileSettings, ObjectWrapper, Dataset, Source, Table, UnderlyingType, Event, Log, CustomObject, BHoMObject, BHoMGroup<T>, FamilyLoadSettings, ConnectionSettings, ParameterSettings, RevitSettings, and more...\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : { \"_t\" : \"System.DBNull\" } }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"fa9d80e5-aac5-476d-99b5-4fe79a5c358d\", \"Name\" : \"paramName\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"This is a String\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : { \"_t\" : \"System.DBNull\" } }, { \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"5af37ef5-c18b-465c-9dc4-340b8f3d8c5e\", \"Name\" : \"value\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" }, \"Description\" : \"Value of the parameter to be attached.\\r\\nThis is a Object\", \"Kind\" : \"Input\", \"HasDefaultValue\" : false, \"DefaultValue\" : { \"_t\" : \"System.DBNull\" } }], \"OutputParams\" : [{ \"_t\" : \"BH.oM.UI.ParamInfo\", \"BHoM_Guid\" : \"ad241f4a-d190-48ce-a359-69627e6d835c\", \"Name\" : \"I\", \"Fragments\" : [], \"Tags\" : [], \"CustomData\" : { }, \"DataType\" : { \"_t\" : \"System.Type\", \"Name\" : \"BH.oM.Base.IBHoMObject\" }, \"Description\" : \"bHoMObject\\r\\nThis is a BH.oM.Base.IBHoMObject\\r\\nThis can be of the following types: FileSettings, ObjectWrapper, Dataset, Source, Table, UnderlyingType, Event, Log, CustomObject, BHoMObject, BHoMGroup<T>, FamilyLoadSettings, ConnectionSettings, ParameterSettings, RevitSettings, and more...\", \"Kind\" : \"Output\", \"HasDefaultValue\" : false, \"DefaultValue\" : null }], \"BHoM_Guid\" : \"11852ed1-d9f0-4b95-bf0f-e9a257e77bb3\" }",
+      "NodeType": "ExtensionNode",
+      "Id": "cb5b3acdce644e9f8a6d2b2a4da99b8b",
+      "Inputs": [
+        {
+          "Id": "687b12e5c1054f03a98506c7abcb23f9",
+          "Name": "bHoMObject",
+          "Description": "BHoMObject to which the parameter will be attached.\r\nThis is a BH.oM.Base.IBHoMObject\r\nThis can be of the following types: FileSettings, ObjectWrapper, Dataset, Source, Table, UnderlyingType, Event, Log, CustomObject, BHoMObject, BHoMGroup<T>, FamilyLoadSettings, ConnectionSettings, ParameterSettings, RevitSettings, and more...",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "420e86f398b24711a8a7247bcdd3d9af",
+          "Name": "paramName",
+          "Description": "This is a String",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f7f3497a59ed46189bd1248dd4da6b87",
+          "Name": "value",
+          "Description": "Value of the parameter to be attached.\r\nThis is a Object",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7d61d269de1b460bb0b765d73458ae86",
+          "Name": "I",
+          "Description": "bHoMObject\r\nThis is a BH.oM.Base.IBHoMObject\r\nThis can be of the following types: FileSettings, ObjectWrapper, Dataset, Source, Table, UnderlyingType, Event, Log, CustomObject, BHoMObject, BHoMGroup<T>, FamilyLoadSettings, ConnectionSettings, ParameterSettings, RevitSettings, and more...",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Attaches parameter to a BHoM object, which will be applied to a correspondent Revit element on Push.\r\n"
     }
   ],
   "Connectors": [
@@ -395,8 +395,8 @@
     },
     {
       "Start": "af126452dfe84c9392397aa53cfa6106",
-      "End": "eea389c062b24a6493d70192a5d40ef5",
-      "Id": "b9f4250c0d724fb0a146418888deff43"
+      "End": "687b12e5c1054f03a98506c7abcb23f9",
+      "Id": "86d6dc4d77ba41cf852dac6bdd4b1c65"
     },
     {
       "Start": "d7e1392cdd5240d3958ec3bdf5c3010c",
@@ -414,24 +414,24 @@
       "Id": "76fb89f75e6d4713b8e48246d0b5dd99"
     },
     {
-      "Start": "91efca3a3bc148c79f399379edd452e2",
-      "End": "7d5f0683a1b64f40a842153616faaf4d",
-      "Id": "3d2297c5b9104d35b1f189b63f2a11b4"
-    },
-    {
-      "Start": "c7b1959f33ff4166a91974f989b536cc",
-      "End": "c2f118a5b4ee4afbb9c19728d55ee0ed",
-      "Id": "8b15758534f842b0b1e473b274dc7dd4"
-    },
-    {
       "Start": "e2c3242932ed4377bef0df5b2462180f",
-      "End": "5bb2858d4bc04e9fb69b859f356d617e",
-      "Id": "b4e9890d07c741c08ebb99b7736689a8"
+      "End": "420e86f398b24711a8a7247bcdd3d9af",
+      "Id": "efe9d5f100c142838e834d89b2a6d892"
     },
     {
       "Start": "9d58a4e60e20438e80267da13a567b6c",
-      "End": "0431e32e499c484e983c461ce0ae9ab0",
-      "Id": "bfb7c4d787cd4a56a1f8ad8c9cdec9fe"
+      "End": "f7f3497a59ed46189bd1248dd4da6b87",
+      "Id": "f323015c078c4e05b8b5ab46251f331f"
+    },
+    {
+      "Start": "82725dc5a8034999bbcf72bd7bf2fc54",
+      "End": "7d5f0683a1b64f40a842153616faaf4d",
+      "Id": "ae2e2f47160443cfbbcdbadf71640b6f"
+    },
+    {
+      "Start": "7d61d269de1b460bb0b765d73458ae86",
+      "End": "c2f118a5b4ee4afbb9c19728d55ee0ed",
+      "Id": "a294a83d26e940d7ac3a533ed59d347a"
     }
   ],
   "Dependencies": [],
@@ -520,16 +520,6 @@
       },
       {
         "ShowGeometry": true,
-        "Name": "FilterBySelection",
-        "Id": "802de9b773fa4d8cb348fad9d0f5ac6c",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "X": 868.40060435921941,
-        "Y": 5390.38148413953
-      },
-      {
-        "ShowGeometry": true,
         "Name": "Push",
         "Id": "8d0c3ab7e03b4128a3e4ed9c90c17c0a",
         "IsSetAsInput": false,
@@ -540,16 +530,6 @@
       },
       {
         "ShowGeometry": true,
-        "Name": "SetProperty",
-        "Id": "dee3679ea0bb45a3b33e5cb0fbbcc571",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "X": 1601.745684931042,
-        "Y": 5381.3291164450975
-      },
-      {
-        "ShowGeometry": true,
         "Name": "Code Block",
         "Id": "70c14be0db4246be852e5980374e5395",
         "IsSetAsInput": false,
@@ -557,6 +537,26 @@
         "Excluded": false,
         "X": 1415.0150956322859,
         "Y": 5435.8090449488191
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "FilterBySelection",
+        "Id": "b5a0145940de4f13b61676921e627498",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 867.53169667318332,
+        "Y": 5378.42967438153
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "SetRevitParameter",
+        "Id": "cb5b3acdce644e9f8a6d2b2a4da99b8b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1615.3094027821587,
+        "Y": 5390.91469714173
       }
     ],
     "Annotations": [
@@ -601,7 +601,7 @@
         "Nodes": [
           "a20569e3bb3e4483a55e5db7a954f14a",
           "5fcbf1a7cc864056a5cc26f873c56231",
-          "802de9b773fa4d8cb348fad9d0f5ac6c"
+          "b5a0145940de4f13b61676921e627498"
         ],
         "Left": 839.82366383973249,
         "Top": 5324.2655820792843,
@@ -617,22 +617,22 @@
         "Id": "697c4c3aae544c1d9130aa3d930aaef9",
         "Title": "Set property",
         "Nodes": [
-          "dee3679ea0bb45a3b33e5cb0fbbcc571",
-          "70c14be0db4246be852e5980374e5395"
+          "70c14be0db4246be852e5980374e5395",
+          "cb5b3acdce644e9f8a6d2b2a4da99b8b"
         ],
         "Left": 1405.0150956322859,
-        "Top": 5328.3291164450975,
-        "Width": 426.73058929875606,
-        "Height": 210.47992850372157,
+        "Top": 5337.91469714173,
+        "Width": 423.29430714987279,
+        "Height": 200.89434780708871,
         "FontSize": 36.0,
-        "InitialTop": 5381.3291164450975,
+        "InitialTop": 5390.91469714173,
         "InitialHeight": 199.47992850372157,
         "TextblockHeight": 43.0,
         "Background": "#FFC1D676"
       }
     ],
-    "X": -448.9302538477005,
-    "Y": -4157.5019206483285,
-    "Zoom": 0.85911593888977544
+    "X": -321.01311936651337,
+    "Y": -3832.3360458671696,
+    "Zoom": 0.78581885530538853
   }
 }
